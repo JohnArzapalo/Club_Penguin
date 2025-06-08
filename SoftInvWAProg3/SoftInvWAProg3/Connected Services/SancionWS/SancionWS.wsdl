@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.softinv.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="SancionWS" targetNamespace="http://ws.softinv.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/SancionWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerPorId">
+    <part name="parameters" element="tns:obtenerPorId" />
+  </message>
+  <message name="obtenerPorIdResponse">
+    <part name="parameters" element="tns:obtenerPorIdResponse" />
+  </message>
+  <message name="listarSanciones">
+    <part name="parameters" element="tns:listarSanciones" />
+  </message>
+  <message name="listarSancionesResponse">
+    <part name="parameters" element="tns:listarSancionesResponse" />
+  </message>
+  <message name="buscarSancionesFlexible">
+    <part name="parameters" element="tns:buscarSancionesFlexible" />
+  </message>
+  <message name="buscarSancionesFlexibleResponse">
+    <part name="parameters" element="tns:buscarSancionesFlexibleResponse" />
+  </message>
+  <portType name="SancionWS">
+    <operation name="obtenerPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/SancionWS/obtenerPorIdRequest" message="tns:obtenerPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/SancionWS/obtenerPorIdResponse" message="tns:obtenerPorIdResponse" />
+    </operation>
+    <operation name="listarSanciones">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/SancionWS/listarSancionesRequest" message="tns:listarSanciones" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/SancionWS/listarSancionesResponse" message="tns:listarSancionesResponse" />
+    </operation>
+    <operation name="buscarSancionesFlexible">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleRequest" message="tns:buscarSancionesFlexible" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleResponse" message="tns:buscarSancionesFlexibleResponse" />
+    </operation>
+  </portType>
+  <binding name="SancionWSPortBinding" type="tns:SancionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarSanciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarSancionesFlexible">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="SancionWS">
+    <port name="SancionWSPort" binding="tns:SancionWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftInvWSProg3/SancionWS" />
+    </port>
+  </service>
+</definitions>

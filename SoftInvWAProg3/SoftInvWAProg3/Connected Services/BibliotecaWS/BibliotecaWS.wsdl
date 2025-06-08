@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.softinv.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="BibliotecaWS" targetNamespace="http://ws.softinv.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/BibliotecaWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerBibliotecasPorMaterial">
+    <part name="parameters" element="tns:obtenerBibliotecasPorMaterial" />
+  </message>
+  <message name="obtenerBibliotecasPorMaterialResponse">
+    <part name="parameters" element="tns:obtenerBibliotecasPorMaterialResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="listarBibliotecas">
+    <part name="parameters" element="tns:listarBibliotecas" />
+  </message>
+  <message name="listarBibliotecasResponse">
+    <part name="parameters" element="tns:listarBibliotecasResponse" />
+  </message>
+  <message name="obtenerBibliotecaPorId">
+    <part name="parameters" element="tns:obtenerBibliotecaPorId" />
+  </message>
+  <message name="obtenerBibliotecaPorIdResponse">
+    <part name="parameters" element="tns:obtenerBibliotecaPorIdResponse" />
+  </message>
+  <portType name="BibliotecaWS">
+    <operation name="obtenerBibliotecasPorMaterial">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest" message="tns:obtenerBibliotecasPorMaterial" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse" message="tns:obtenerBibliotecasPorMaterialResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="listarBibliotecas">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecasRequest" message="tns:listarBibliotecas" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecasResponse" message="tns:listarBibliotecasResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecas/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerBibliotecaPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest" message="tns:obtenerBibliotecaPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse" message="tns:obtenerBibliotecaPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="BibliotecaWSPortBinding" type="tns:BibliotecaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerBibliotecasPorMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarBibliotecas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerBibliotecaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="BibliotecaWS">
+    <port name="BibliotecaWSPort" binding="tns:BibliotecaWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftInvWSProg3/BibliotecaWS" />
+    </port>
+  </service>
+</definitions>

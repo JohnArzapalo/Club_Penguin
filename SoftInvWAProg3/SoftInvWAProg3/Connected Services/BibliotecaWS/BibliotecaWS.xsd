@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.softinv.pucp.edu.pe/" targetNamespace="http://ws.softinv.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SQLException" type="tns:SQLException" />
+  <xs:element name="listarBibliotecas" type="tns:listarBibliotecas" />
+  <xs:element name="listarBibliotecasResponse" type="tns:listarBibliotecasResponse" />
+  <xs:element name="obtenerBibliotecaPorId" type="tns:obtenerBibliotecaPorId" />
+  <xs:element name="obtenerBibliotecaPorIdResponse" type="tns:obtenerBibliotecaPorIdResponse" />
+  <xs:element name="obtenerBibliotecasPorMaterial" type="tns:obtenerBibliotecasPorMaterial" />
+  <xs:element name="obtenerBibliotecasPorMaterialResponse" type="tns:obtenerBibliotecasPorMaterialResponse" />
+  <xs:complexType name="obtenerBibliotecaPorId">
+    <xs:sequence>
+      <xs:element name="bibliotecaId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerBibliotecaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:bibliotecaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bibliotecaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bibliotecaId" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SQLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SQLState" type="xs:string" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sqlException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="exception">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:throwable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="throwable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stackTrace" nillable="true" type="tns:stackTraceElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stackTraceElement" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerBibliotecasPorMaterial">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerBibliotecasPorMaterialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:bibliotecaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarBibliotecasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:bibliotecaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

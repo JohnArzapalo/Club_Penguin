@@ -1,0 +1,154 @@
+.form-group-material {
+    position: relative;
+    width: 100%;
+}
+
+.form-group-material input {
+    width: 100%;
+    padding: 12px 12px 12px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease;
+}
+
+.form-group-material label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    background: #fff;
+    padding: 0 4px;
+    transition: all 0.2s ease;
+}
+
+.form-group-material input:focus {
+    border-color: #0a4fd5;
+    box-shadow: none;
+}
+
+.form-group-material input:focus + label {
+    top: -8px;
+    font-size: 12px;
+    color: #0a4fd5 !important;
+}
+
+.form-group-material input:not(:placeholder-shown) + label {
+    top: -8px;
+    font-size: 12px;
+    color: #999;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #0a4fd5;
+    color: #fff;
+    border-color: #0a4fd5;
+}
+
+.btn-outline-primary:hover {
+    background-color: #0a4fd5;
+    color: #fff;
+    border-color: #0a4fd5;
+}
+
+.filtros-sidebar {
+    top: 80px; /* Altura estimada de la cabecera */
+    z-index: 1;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #0a4fd5;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e3eeff;
+    color: #0a4fd5;
+}
+
+
+/* Estilo para filas clickeables */
+.table-hover tbody tr {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/*Estilo para el detalle de sanciones*/
+
+.sancion-header {
+    color: #dc3545;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.detail-row {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+    padding: 0.4rem 0;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #495057;
+    display: inline-block;
+    width: 160px;
+}
+
+.detail-value {
+    color: #212529;
+}
+
+.observaciones-container {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #eee;
+}
+
+
+/*ESTILOS DE USUARIOS*/
+
+.user-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.user-icon {
+    color: #007bff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-status {
+    color: green;
+    font-weight: bold;
+    float: right;
+}
+
+.user-info {
+    margin-top: 20px;
+}
+
+.user-info b {
+    display: inline-block;
+    min-width: 150px;
+}

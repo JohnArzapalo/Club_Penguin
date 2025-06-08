@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.softinv.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="DiaAtencionWS" targetNamespace="http://ws.softinv.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/DiaAtencionWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarDiasAtencionPorBiblioteca">
+    <part name="parameters" element="tns:listarDiasAtencionPorBiblioteca" />
+  </message>
+  <message name="listarDiasAtencionPorBibliotecaResponse">
+    <part name="parameters" element="tns:listarDiasAtencionPorBibliotecaResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="listarTodosDiasAtencion">
+    <part name="parameters" element="tns:listarTodosDiasAtencion" />
+  </message>
+  <message name="listarTodosDiasAtencionResponse">
+    <part name="parameters" element="tns:listarTodosDiasAtencionResponse" />
+  </message>
+  <message name="obtenerDiaAtencionPorId">
+    <part name="parameters" element="tns:obtenerDiaAtencionPorId" />
+  </message>
+  <message name="obtenerDiaAtencionPorIdResponse">
+    <part name="parameters" element="tns:obtenerDiaAtencionPorIdResponse" />
+  </message>
+  <portType name="DiaAtencionWS">
+    <operation name="listarDiasAtencionPorBiblioteca">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/listarDiasAtencionPorBibliotecaRequest" message="tns:listarDiasAtencionPorBiblioteca" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/listarDiasAtencionPorBibliotecaResponse" message="tns:listarDiasAtencionPorBibliotecaResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/listarDiasAtencionPorBiblioteca/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="listarTodosDiasAtencion">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/listarTodosDiasAtencionRequest" message="tns:listarTodosDiasAtencion" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/listarTodosDiasAtencionResponse" message="tns:listarTodosDiasAtencionResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/listarTodosDiasAtencion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerDiaAtencionPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/obtenerDiaAtencionPorIdRequest" message="tns:obtenerDiaAtencionPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/obtenerDiaAtencionPorIdResponse" message="tns:obtenerDiaAtencionPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/DiaAtencionWS/obtenerDiaAtencionPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="DiaAtencionWSPortBinding" type="tns:DiaAtencionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarDiasAtencionPorBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodosDiasAtencion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerDiaAtencionPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="DiaAtencionWS">
+    <port name="DiaAtencionWSPort" binding="tns:DiaAtencionWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftInvWSProg3/DiaAtencionWS" />
+    </port>
+  </service>
+</definitions>
