@@ -680,14 +680,14 @@ namespace SoftInvWAProg3.UsuarioWS {
     public interface UsuarioWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.UsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuario/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.UsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorId/Fault/SQLException", Name="SQLException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.UsuarioWS.validarUsuarioResponse validarUsuario(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request);
+        SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse obtenerUsuarioPorId(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.validarUsuarioResponse> validarUsuarioAsync(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse")]
@@ -700,6 +700,16 @@ namespace SoftInvWAProg3.UsuarioWS {
         System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.insertarUsuarioResponse> insertarUsuarioAsync(SoftInvWAProg3.UsuarioWS.insertarUsuarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.UsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuario/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.UsuarioWS.validarUsuarioResponse validarUsuario(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.validarUsuarioResponse> validarUsuarioAsync(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -707,16 +717,78 @@ namespace SoftInvWAProg3.UsuarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoResponse")]
         System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.buscarUsuariosAvanzadoResponse> buscarUsuariosAvanzadoAsync(SoftInvWAProg3.UsuarioWS.buscarUsuariosAvanzadoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerUsuarioPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerUsuarioPorIdRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.UsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorId/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse obtenerUsuarioPorId(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request);
+        public obtenerUsuarioPorIdRequest() {
+        }
+        
+        public obtenerUsuarioPorIdRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerUsuarioPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerUsuarioPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.UsuarioWS.usuarioDTO @return;
+        
+        public obtenerUsuarioPorIdResponse() {
+        }
+        
+        public obtenerUsuarioPorIdResponse(SoftInvWAProg3.UsuarioWS.usuarioDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.UsuarioWS.usuarioDTO usuario;
+        
+        public insertarUsuarioRequest() {
+        }
+        
+        public insertarUsuarioRequest(SoftInvWAProg3.UsuarioWS.usuarioDTO usuario) {
+            this.usuario = usuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarUsuarioResponse() {
+        }
+        
+        public insertarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -756,42 +828,6 @@ namespace SoftInvWAProg3.UsuarioWS {
         }
         
         public validarUsuarioResponse(SoftInvWAProg3.UsuarioWS.usuarioDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuario", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.UsuarioWS.usuarioDTO usuario;
-        
-        public insertarUsuarioRequest() {
-        }
-        
-        public insertarUsuarioRequest(SoftInvWAProg3.UsuarioWS.usuarioDTO usuario) {
-            this.usuario = usuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarUsuarioResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarUsuarioResponse() {
-        }
-        
-        public insertarUsuarioResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -857,42 +893,6 @@ namespace SoftInvWAProg3.UsuarioWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerUsuarioPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerUsuarioPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public obtenerUsuarioPorIdRequest() {
-        }
-        
-        public obtenerUsuarioPorIdRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerUsuarioPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerUsuarioPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.UsuarioWS.usuarioDTO @return;
-        
-        public obtenerUsuarioPorIdResponse() {
-        }
-        
-        public obtenerUsuarioPorIdResponse(SoftInvWAProg3.UsuarioWS.usuarioDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : SoftInvWAProg3.UsuarioWS.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -921,28 +921,26 @@ namespace SoftInvWAProg3.UsuarioWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.UsuarioWS.validarUsuarioResponse SoftInvWAProg3.UsuarioWS.UsuarioWS.validarUsuario(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request) {
-            return base.Channel.validarUsuario(request);
+        SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse SoftInvWAProg3.UsuarioWS.UsuarioWS.obtenerUsuarioPorId(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request) {
+            return base.Channel.obtenerUsuarioPorId(request);
         }
         
-        public SoftInvWAProg3.UsuarioWS.usuarioDTO validarUsuario(string correo, string contrasena) {
-            SoftInvWAProg3.UsuarioWS.validarUsuarioRequest inValue = new SoftInvWAProg3.UsuarioWS.validarUsuarioRequest();
-            inValue.correo = correo;
-            inValue.contrasena = contrasena;
-            SoftInvWAProg3.UsuarioWS.validarUsuarioResponse retVal = ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).validarUsuario(inValue);
+        public SoftInvWAProg3.UsuarioWS.usuarioDTO obtenerUsuarioPorId(int id) {
+            SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest inValue = new SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest();
+            inValue.id = id;
+            SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse retVal = ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).obtenerUsuarioPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.validarUsuarioResponse> SoftInvWAProg3.UsuarioWS.UsuarioWS.validarUsuarioAsync(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request) {
-            return base.Channel.validarUsuarioAsync(request);
+        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse> SoftInvWAProg3.UsuarioWS.UsuarioWS.obtenerUsuarioPorIdAsync(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request) {
+            return base.Channel.obtenerUsuarioPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.validarUsuarioResponse> validarUsuarioAsync(string correo, string contrasena) {
-            SoftInvWAProg3.UsuarioWS.validarUsuarioRequest inValue = new SoftInvWAProg3.UsuarioWS.validarUsuarioRequest();
-            inValue.correo = correo;
-            inValue.contrasena = contrasena;
-            return ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).validarUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(int id) {
+            SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest inValue = new SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest();
+            inValue.id = id;
+            return ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).obtenerUsuarioPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -966,6 +964,31 @@ namespace SoftInvWAProg3.UsuarioWS {
             SoftInvWAProg3.UsuarioWS.insertarUsuarioRequest inValue = new SoftInvWAProg3.UsuarioWS.insertarUsuarioRequest();
             inValue.usuario = usuario;
             return ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).insertarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.UsuarioWS.validarUsuarioResponse SoftInvWAProg3.UsuarioWS.UsuarioWS.validarUsuario(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request) {
+            return base.Channel.validarUsuario(request);
+        }
+        
+        public SoftInvWAProg3.UsuarioWS.usuarioDTO validarUsuario(string correo, string contrasena) {
+            SoftInvWAProg3.UsuarioWS.validarUsuarioRequest inValue = new SoftInvWAProg3.UsuarioWS.validarUsuarioRequest();
+            inValue.correo = correo;
+            inValue.contrasena = contrasena;
+            SoftInvWAProg3.UsuarioWS.validarUsuarioResponse retVal = ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).validarUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.validarUsuarioResponse> SoftInvWAProg3.UsuarioWS.UsuarioWS.validarUsuarioAsync(SoftInvWAProg3.UsuarioWS.validarUsuarioRequest request) {
+            return base.Channel.validarUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.validarUsuarioResponse> validarUsuarioAsync(string correo, string contrasena) {
+            SoftInvWAProg3.UsuarioWS.validarUsuarioRequest inValue = new SoftInvWAProg3.UsuarioWS.validarUsuarioRequest();
+            inValue.correo = correo;
+            inValue.contrasena = contrasena;
+            return ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).validarUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -999,29 +1022,6 @@ namespace SoftInvWAProg3.UsuarioWS {
             inValue.primerApellido = primerApellido;
             inValue.estado = estado;
             return ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).buscarUsuariosAvanzadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse SoftInvWAProg3.UsuarioWS.UsuarioWS.obtenerUsuarioPorId(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request) {
-            return base.Channel.obtenerUsuarioPorId(request);
-        }
-        
-        public SoftInvWAProg3.UsuarioWS.usuarioDTO obtenerUsuarioPorId(int id) {
-            SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest inValue = new SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest();
-            inValue.id = id;
-            SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse retVal = ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).obtenerUsuarioPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse> SoftInvWAProg3.UsuarioWS.UsuarioWS.obtenerUsuarioPorIdAsync(SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest request) {
-            return base.Channel.obtenerUsuarioPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(int id) {
-            SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest inValue = new SoftInvWAProg3.UsuarioWS.obtenerUsuarioPorIdRequest();
-            inValue.id = id;
-            return ((SoftInvWAProg3.UsuarioWS.UsuarioWS)(this)).obtenerUsuarioPorIdAsync(inValue);
         }
     }
 }

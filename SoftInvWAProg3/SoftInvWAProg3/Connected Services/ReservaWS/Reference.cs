@@ -176,316 +176,103 @@ namespace SoftInvWAProg3.ReservaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class Exception : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class tipoUsuarioDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string messageField;
+        private string nombreField;
         
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string message {
-            get {
-                return this.messageField;
-            }
-            set {
-                this.messageField = value;
-                this.RaisePropertyChanged("message");
-            }
-        }
+        private int numeroMaxDiasField;
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        private bool numeroMaxDiasFieldSpecified;
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", ConfigurationName="ReservaWS.ReservaWS")]
-    public interface ReservaWS {
+        private int numeroMaxItemsField;
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReserva/Fault/SQL" +
-            "Exception", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaResponse calcularFechaVencimientoReserva(SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaRequest request);
+        private bool numeroMaxItemsFieldSpecified;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaResponse> calcularFechaVencimientoReservaAsync(SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaRequest request);
+        private int tipoUsuarioIdField;
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuario/Fault/SQ" +
-            "LException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse listarReservasVigentesPorUsuario(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse> listarReservasVigentesPorUsuarioAsync(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReserva/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.insertarReservaResponse insertarReserva(SoftInvWAProg3.ReservaWS.insertarReservaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.insertarReservaResponse> insertarReservaAsync(SoftInvWAProg3.ReservaWS.insertarReservaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReserva/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.modificarReservaResponse modificarReserva(SoftInvWAProg3.ReservaWS.modificarReservaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.modificarReservaResponse> modificarReservaAsync(SoftInvWAProg3.ReservaWS.modificarReservaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReserva/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.eliminarReservaResponse eliminarReserva(SoftInvWAProg3.ReservaWS.eliminarReservaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.eliminarReservaResponse> eliminarReservaAsync(SoftInvWAProg3.ReservaWS.eliminarReservaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservas/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.listarTodasReservasResponse listarTodasReservas(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarTodasReservasResponse> listarTodasReservasAsync(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.Exception), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorId/Fault/Exceptio" +
-            "n", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse obtenerTipoDeMaterialPorId(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse> obtenerTipoDeMaterialPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.Exception), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzado/Fault/Exception", Name="Exception")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse buscarReservasAvanzado(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse> buscarReservasAvanzadoAsync(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorId/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse obtenerReservaPorId(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse> obtenerReservaPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularFechaVencimientoReserva", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class calcularFechaVencimientoReservaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime fechaReserva;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int bibliotecaId;
-        
-        public calcularFechaVencimientoReservaRequest() {
-        }
-        
-        public calcularFechaVencimientoReservaRequest(System.DateTime fechaReserva, int bibliotecaId) {
-            this.fechaReserva = fechaReserva;
-            this.bibliotecaId = bibliotecaId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularFechaVencimientoReservaResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class calcularFechaVencimientoReservaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime @return;
-        
-        public calcularFechaVencimientoReservaResponse() {
-        }
-        
-        public calcularFechaVencimientoReservaResponse(System.DateTime @return) {
-            this.@return = @return;
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class reservaDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private estadoReserva estadoReservaField;
-        
-        private bool estadoReservaFieldSpecified;
-        
-        private System.DateTime fechaReservaField;
-        
-        private bool fechaReservaFieldSpecified;
-        
-        private System.DateTime fechaVencimientoField;
-        
-        private bool fechaVencimientoFieldSpecified;
-        
-        private materialDTO materialField;
-        
-        private int reservaIdField;
-        
-        private bool reservaIdFieldSpecified;
-        
-        private usuarioDTO usuarioField;
+        private bool tipoUsuarioIdFieldSpecified;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public estadoReserva estadoReserva {
+        public string nombre {
             get {
-                return this.estadoReservaField;
+                return this.nombreField;
             }
             set {
-                this.estadoReservaField = value;
-                this.RaisePropertyChanged("estadoReserva");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool estadoReservaSpecified {
-            get {
-                return this.estadoReservaFieldSpecified;
-            }
-            set {
-                this.estadoReservaFieldSpecified = value;
-                this.RaisePropertyChanged("estadoReservaSpecified");
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime fechaReserva {
+        public int numeroMaxDias {
             get {
-                return this.fechaReservaField;
+                return this.numeroMaxDiasField;
             }
             set {
-                this.fechaReservaField = value;
-                this.RaisePropertyChanged("fechaReserva");
+                this.numeroMaxDiasField = value;
+                this.RaisePropertyChanged("numeroMaxDias");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaReservaSpecified {
+        public bool numeroMaxDiasSpecified {
             get {
-                return this.fechaReservaFieldSpecified;
+                return this.numeroMaxDiasFieldSpecified;
             }
             set {
-                this.fechaReservaFieldSpecified = value;
-                this.RaisePropertyChanged("fechaReservaSpecified");
+                this.numeroMaxDiasFieldSpecified = value;
+                this.RaisePropertyChanged("numeroMaxDiasSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime fechaVencimiento {
+        public int numeroMaxItems {
             get {
-                return this.fechaVencimientoField;
+                return this.numeroMaxItemsField;
             }
             set {
-                this.fechaVencimientoField = value;
-                this.RaisePropertyChanged("fechaVencimiento");
+                this.numeroMaxItemsField = value;
+                this.RaisePropertyChanged("numeroMaxItems");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fechaVencimientoSpecified {
+        public bool numeroMaxItemsSpecified {
             get {
-                return this.fechaVencimientoFieldSpecified;
+                return this.numeroMaxItemsFieldSpecified;
             }
             set {
-                this.fechaVencimientoFieldSpecified = value;
-                this.RaisePropertyChanged("fechaVencimientoSpecified");
+                this.numeroMaxItemsFieldSpecified = value;
+                this.RaisePropertyChanged("numeroMaxItemsSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public materialDTO material {
+        public int tipoUsuarioId {
             get {
-                return this.materialField;
+                return this.tipoUsuarioIdField;
             }
             set {
-                this.materialField = value;
-                this.RaisePropertyChanged("material");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int reservaId {
-            get {
-                return this.reservaIdField;
-            }
-            set {
-                this.reservaIdField = value;
-                this.RaisePropertyChanged("reservaId");
+                this.tipoUsuarioIdField = value;
+                this.RaisePropertyChanged("tipoUsuarioId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool reservaIdSpecified {
+        public bool tipoUsuarioIdSpecified {
             get {
-                return this.reservaIdFieldSpecified;
+                return this.tipoUsuarioIdFieldSpecified;
             }
             set {
-                this.reservaIdFieldSpecified = value;
-                this.RaisePropertyChanged("reservaIdSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public usuarioDTO usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
+                this.tipoUsuarioIdFieldSpecified = value;
+                this.RaisePropertyChanged("tipoUsuarioIdSpecified");
             }
         }
         
@@ -497,221 +284,6 @@ namespace SoftInvWAProg3.ReservaWS {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public enum estadoReserva {
-        
-        /// <remarks/>
-        VIGENTE,
-        
-        /// <remarks/>
-        VENCIDA,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class materialDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int anioPublicacionField;
-        
-        private bool anioPublicacionFieldSpecified;
-        
-        private string autorField;
-        
-        private string idiomaField;
-        
-        private int materialIdField;
-        
-        private bool materialIdFieldSpecified;
-        
-        private int numeroPaginasField;
-        
-        private bool numeroPaginasFieldSpecified;
-        
-        private string temaField;
-        
-        private tipoMaterial tipoMaterialField;
-        
-        private bool tipoMaterialFieldSpecified;
-        
-        private string tituloField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int anioPublicacion {
-            get {
-                return this.anioPublicacionField;
-            }
-            set {
-                this.anioPublicacionField = value;
-                this.RaisePropertyChanged("anioPublicacion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool anioPublicacionSpecified {
-            get {
-                return this.anioPublicacionFieldSpecified;
-            }
-            set {
-                this.anioPublicacionFieldSpecified = value;
-                this.RaisePropertyChanged("anioPublicacionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string autor {
-            get {
-                return this.autorField;
-            }
-            set {
-                this.autorField = value;
-                this.RaisePropertyChanged("autor");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string idioma {
-            get {
-                return this.idiomaField;
-            }
-            set {
-                this.idiomaField = value;
-                this.RaisePropertyChanged("idioma");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int materialId {
-            get {
-                return this.materialIdField;
-            }
-            set {
-                this.materialIdField = value;
-                this.RaisePropertyChanged("materialId");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool materialIdSpecified {
-            get {
-                return this.materialIdFieldSpecified;
-            }
-            set {
-                this.materialIdFieldSpecified = value;
-                this.RaisePropertyChanged("materialIdSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int numeroPaginas {
-            get {
-                return this.numeroPaginasField;
-            }
-            set {
-                this.numeroPaginasField = value;
-                this.RaisePropertyChanged("numeroPaginas");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numeroPaginasSpecified {
-            get {
-                return this.numeroPaginasFieldSpecified;
-            }
-            set {
-                this.numeroPaginasFieldSpecified = value;
-                this.RaisePropertyChanged("numeroPaginasSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string tema {
-            get {
-                return this.temaField;
-            }
-            set {
-                this.temaField = value;
-                this.RaisePropertyChanged("tema");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public tipoMaterial tipoMaterial {
-            get {
-                return this.tipoMaterialField;
-            }
-            set {
-                this.tipoMaterialField = value;
-                this.RaisePropertyChanged("tipoMaterial");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool tipoMaterialSpecified {
-            get {
-                return this.tipoMaterialFieldSpecified;
-            }
-            set {
-                this.tipoMaterialFieldSpecified = value;
-                this.RaisePropertyChanged("tipoMaterialSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string titulo {
-            get {
-                return this.tituloField;
-            }
-            set {
-                this.tituloField = value;
-                this.RaisePropertyChanged("titulo");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public enum tipoMaterial {
-        
-        /// <remarks/>
-        LIBRO,
-        
-        /// <remarks/>
-        ARTICULO,
-        
-        /// <remarks/>
-        TESIS,
     }
     
     /// <remarks/>
@@ -963,103 +535,173 @@ namespace SoftInvWAProg3.ReservaWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class tipoUsuarioDTO : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class materialDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string nombreField;
+        private int anioPublicacionField;
         
-        private int numeroMaxDiasField;
+        private bool anioPublicacionFieldSpecified;
         
-        private bool numeroMaxDiasFieldSpecified;
+        private string autorField;
         
-        private int numeroMaxItemsField;
+        private string idiomaField;
         
-        private bool numeroMaxItemsFieldSpecified;
+        private int materialIdField;
         
-        private int tipoUsuarioIdField;
+        private bool materialIdFieldSpecified;
         
-        private bool tipoUsuarioIdFieldSpecified;
+        private int numeroPaginasField;
+        
+        private bool numeroPaginasFieldSpecified;
+        
+        private string temaField;
+        
+        private tipoMaterial tipoMaterialField;
+        
+        private bool tipoMaterialFieldSpecified;
+        
+        private string tituloField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string nombre {
+        public int anioPublicacion {
             get {
-                return this.nombreField;
+                return this.anioPublicacionField;
             }
             set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
+                this.anioPublicacionField = value;
+                this.RaisePropertyChanged("anioPublicacion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool anioPublicacionSpecified {
+            get {
+                return this.anioPublicacionFieldSpecified;
+            }
+            set {
+                this.anioPublicacionFieldSpecified = value;
+                this.RaisePropertyChanged("anioPublicacionSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int numeroMaxDias {
+        public string autor {
             get {
-                return this.numeroMaxDiasField;
+                return this.autorField;
             }
             set {
-                this.numeroMaxDiasField = value;
-                this.RaisePropertyChanged("numeroMaxDias");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numeroMaxDiasSpecified {
-            get {
-                return this.numeroMaxDiasFieldSpecified;
-            }
-            set {
-                this.numeroMaxDiasFieldSpecified = value;
-                this.RaisePropertyChanged("numeroMaxDiasSpecified");
+                this.autorField = value;
+                this.RaisePropertyChanged("autor");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int numeroMaxItems {
+        public string idioma {
             get {
-                return this.numeroMaxItemsField;
+                return this.idiomaField;
             }
             set {
-                this.numeroMaxItemsField = value;
-                this.RaisePropertyChanged("numeroMaxItems");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numeroMaxItemsSpecified {
-            get {
-                return this.numeroMaxItemsFieldSpecified;
-            }
-            set {
-                this.numeroMaxItemsFieldSpecified = value;
-                this.RaisePropertyChanged("numeroMaxItemsSpecified");
+                this.idiomaField = value;
+                this.RaisePropertyChanged("idioma");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public int tipoUsuarioId {
+        public int materialId {
             get {
-                return this.tipoUsuarioIdField;
+                return this.materialIdField;
             }
             set {
-                this.tipoUsuarioIdField = value;
-                this.RaisePropertyChanged("tipoUsuarioId");
+                this.materialIdField = value;
+                this.RaisePropertyChanged("materialId");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool tipoUsuarioIdSpecified {
+        public bool materialIdSpecified {
             get {
-                return this.tipoUsuarioIdFieldSpecified;
+                return this.materialIdFieldSpecified;
             }
             set {
-                this.tipoUsuarioIdFieldSpecified = value;
-                this.RaisePropertyChanged("tipoUsuarioIdSpecified");
+                this.materialIdFieldSpecified = value;
+                this.RaisePropertyChanged("materialIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int numeroPaginas {
+            get {
+                return this.numeroPaginasField;
+            }
+            set {
+                this.numeroPaginasField = value;
+                this.RaisePropertyChanged("numeroPaginas");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool numeroPaginasSpecified {
+            get {
+                return this.numeroPaginasFieldSpecified;
+            }
+            set {
+                this.numeroPaginasFieldSpecified = value;
+                this.RaisePropertyChanged("numeroPaginasSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string tema {
+            get {
+                return this.temaField;
+            }
+            set {
+                this.temaField = value;
+                this.RaisePropertyChanged("tema");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public tipoMaterial tipoMaterial {
+            get {
+                return this.tipoMaterialField;
+            }
+            set {
+                this.tipoMaterialField = value;
+                this.RaisePropertyChanged("tipoMaterial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool tipoMaterialSpecified {
+            get {
+                return this.tipoMaterialFieldSpecified;
+            }
+            set {
+                this.tipoMaterialFieldSpecified = value;
+                this.RaisePropertyChanged("tipoMaterialSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string titulo {
+            get {
+                return this.tituloField;
+            }
+            set {
+                this.tituloField = value;
+                this.RaisePropertyChanged("titulo");
             }
         }
         
@@ -1071,6 +713,323 @@ namespace SoftInvWAProg3.ReservaWS {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public enum tipoMaterial {
+        
+        /// <remarks/>
+        LIBRO,
+        
+        /// <remarks/>
+        ARTICULO,
+        
+        /// <remarks/>
+        TESIS,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public partial class reservaDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private estadoReserva estadoReservaField;
+        
+        private bool estadoReservaFieldSpecified;
+        
+        private System.DateTime fechaReservaField;
+        
+        private bool fechaReservaFieldSpecified;
+        
+        private System.DateTime fechaVencimientoField;
+        
+        private bool fechaVencimientoFieldSpecified;
+        
+        private materialDTO materialField;
+        
+        private int reservaIdField;
+        
+        private bool reservaIdFieldSpecified;
+        
+        private usuarioDTO usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public estadoReserva estadoReserva {
+            get {
+                return this.estadoReservaField;
+            }
+            set {
+                this.estadoReservaField = value;
+                this.RaisePropertyChanged("estadoReserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool estadoReservaSpecified {
+            get {
+                return this.estadoReservaFieldSpecified;
+            }
+            set {
+                this.estadoReservaFieldSpecified = value;
+                this.RaisePropertyChanged("estadoReservaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public System.DateTime fechaReserva {
+            get {
+                return this.fechaReservaField;
+            }
+            set {
+                this.fechaReservaField = value;
+                this.RaisePropertyChanged("fechaReserva");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaReservaSpecified {
+            get {
+                return this.fechaReservaFieldSpecified;
+            }
+            set {
+                this.fechaReservaFieldSpecified = value;
+                this.RaisePropertyChanged("fechaReservaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime fechaVencimiento {
+            get {
+                return this.fechaVencimientoField;
+            }
+            set {
+                this.fechaVencimientoField = value;
+                this.RaisePropertyChanged("fechaVencimiento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool fechaVencimientoSpecified {
+            get {
+                return this.fechaVencimientoFieldSpecified;
+            }
+            set {
+                this.fechaVencimientoFieldSpecified = value;
+                this.RaisePropertyChanged("fechaVencimientoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public materialDTO material {
+            get {
+                return this.materialField;
+            }
+            set {
+                this.materialField = value;
+                this.RaisePropertyChanged("material");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int reservaId {
+            get {
+                return this.reservaIdField;
+            }
+            set {
+                this.reservaIdField = value;
+                this.RaisePropertyChanged("reservaId");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool reservaIdSpecified {
+            get {
+                return this.reservaIdFieldSpecified;
+            }
+            set {
+                this.reservaIdFieldSpecified = value;
+                this.RaisePropertyChanged("reservaIdSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public usuarioDTO usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public enum estadoReserva {
+        
+        /// <remarks/>
+        VIGENTE,
+        
+        /// <remarks/>
+        VENCIDA,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public partial class Exception : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string messageField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string message {
+            get {
+                return this.messageField;
+            }
+            set {
+                this.messageField = value;
+                this.RaisePropertyChanged("message");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", ConfigurationName="ReservaWS.ReservaWS")]
+    public interface ReservaWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuario/Fault/SQ" +
+            "LException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse listarReservasVigentesPorUsuario(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse> listarReservasVigentesPorUsuarioAsync(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReserva/Fault/SQL" +
+            "Exception", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaResponse calcularFechaVencimientoReserva(SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaResponse> calcularFechaVencimientoReservaAsync(SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.Exception), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzado/Fault/Exception", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse buscarReservasAvanzado(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse> buscarReservasAvanzadoAsync(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservas/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.listarTodasReservasResponse listarTodasReservas(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarTodasReservasResponse> listarTodasReservasAsync(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.Exception), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorId/Fault/Exceptio" +
+            "n", Name="Exception")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse obtenerTipoDeMaterialPorId(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse> obtenerTipoDeMaterialPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorId/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse obtenerReservaPorId(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse> obtenerReservaPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReserva/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.insertarReservaResponse insertarReserva(SoftInvWAProg3.ReservaWS.insertarReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.insertarReservaResponse> insertarReservaAsync(SoftInvWAProg3.ReservaWS.insertarReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReserva/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.modificarReservaResponse modificarReserva(SoftInvWAProg3.ReservaWS.modificarReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/modificarReservaResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.modificarReservaResponse> modificarReservaAsync(SoftInvWAProg3.ReservaWS.modificarReservaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.ReservaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReserva/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.ReservaWS.eliminarReservaResponse eliminarReserva(SoftInvWAProg3.ReservaWS.eliminarReservaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.eliminarReservaResponse> eliminarReservaAsync(SoftInvWAProg3.ReservaWS.eliminarReservaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1105,6 +1064,208 @@ namespace SoftInvWAProg3.ReservaWS {
         }
         
         public listarReservasVigentesPorUsuarioResponse(SoftInvWAProg3.ReservaWS.reservaDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularFechaVencimientoReserva", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class calcularFechaVencimientoReservaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime fechaReserva;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int bibliotecaId;
+        
+        public calcularFechaVencimientoReservaRequest() {
+        }
+        
+        public calcularFechaVencimientoReservaRequest(System.DateTime fechaReserva, int bibliotecaId) {
+            this.fechaReserva = fechaReserva;
+            this.bibliotecaId = bibliotecaId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularFechaVencimientoReservaResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class calcularFechaVencimientoReservaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime @return;
+        
+        public calcularFechaVencimientoReservaResponse() {
+        }
+        
+        public calcularFechaVencimientoReservaResponse(System.DateTime @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarReservasAvanzado", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class buscarReservasAvanzadoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string reservaId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string usuarioNombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string materialTitulo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string estado;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaDesde;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaHasta;
+        
+        public buscarReservasAvanzadoRequest() {
+        }
+        
+        public buscarReservasAvanzadoRequest(string reservaId, string usuarioNombre, string materialTitulo, string estado, string fechaDesde, string fechaHasta) {
+            this.reservaId = reservaId;
+            this.usuarioNombre = usuarioNombre;
+            this.materialTitulo = materialTitulo;
+            this.estado = estado;
+            this.fechaDesde = fechaDesde;
+            this.fechaHasta = fechaHasta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarReservasAvanzadoResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class buscarReservasAvanzadoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.ReservaWS.reservaDTO[] @return;
+        
+        public buscarReservasAvanzadoResponse() {
+        }
+        
+        public buscarReservasAvanzadoResponse(SoftInvWAProg3.ReservaWS.reservaDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasReservas", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasReservasRequest {
+        
+        public listarTodasReservasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasReservasResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasReservasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.ReservaWS.reservaDTO[] @return;
+        
+        public listarTodasReservasResponse() {
+        }
+        
+        public listarTodasReservasResponse(SoftInvWAProg3.ReservaWS.reservaDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoDeMaterialPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerTipoDeMaterialPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idMaterial;
+        
+        public obtenerTipoDeMaterialPorIdRequest() {
+        }
+        
+        public obtenerTipoDeMaterialPorIdRequest(int idMaterial) {
+            this.idMaterial = idMaterial;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoDeMaterialPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerTipoDeMaterialPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public obtenerTipoDeMaterialPorIdResponse() {
+        }
+        
+        public obtenerTipoDeMaterialPorIdResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerReservaPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerReservaPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idReserva;
+        
+        public obtenerReservaPorIdRequest() {
+        }
+        
+        public obtenerReservaPorIdRequest(int idReserva) {
+            this.idReserva = idReserva;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerReservaPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerReservaPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.ReservaWS.reservaDTO @return;
+        
+        public obtenerReservaPorIdResponse() {
+        }
+        
+        public obtenerReservaPorIdResponse(SoftInvWAProg3.ReservaWS.reservaDTO @return) {
             this.@return = @return;
         }
     }
@@ -1222,167 +1383,6 @@ namespace SoftInvWAProg3.ReservaWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasReservas", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodasReservasRequest {
-        
-        public listarTodasReservasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasReservasResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodasReservasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.ReservaWS.reservaDTO[] @return;
-        
-        public listarTodasReservasResponse() {
-        }
-        
-        public listarTodasReservasResponse(SoftInvWAProg3.ReservaWS.reservaDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoDeMaterialPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerTipoDeMaterialPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMaterial;
-        
-        public obtenerTipoDeMaterialPorIdRequest() {
-        }
-        
-        public obtenerTipoDeMaterialPorIdRequest(int idMaterial) {
-            this.idMaterial = idMaterial;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoDeMaterialPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerTipoDeMaterialPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public obtenerTipoDeMaterialPorIdResponse() {
-        }
-        
-        public obtenerTipoDeMaterialPorIdResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarReservasAvanzado", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class buscarReservasAvanzadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string reservaId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string usuarioNombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string materialTitulo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string estado;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaDesde;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaHasta;
-        
-        public buscarReservasAvanzadoRequest() {
-        }
-        
-        public buscarReservasAvanzadoRequest(string reservaId, string usuarioNombre, string materialTitulo, string estado, string fechaDesde, string fechaHasta) {
-            this.reservaId = reservaId;
-            this.usuarioNombre = usuarioNombre;
-            this.materialTitulo = materialTitulo;
-            this.estado = estado;
-            this.fechaDesde = fechaDesde;
-            this.fechaHasta = fechaHasta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarReservasAvanzadoResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class buscarReservasAvanzadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.ReservaWS.reservaDTO[] @return;
-        
-        public buscarReservasAvanzadoResponse() {
-        }
-        
-        public buscarReservasAvanzadoResponse(SoftInvWAProg3.ReservaWS.reservaDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerReservaPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerReservaPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idReserva;
-        
-        public obtenerReservaPorIdRequest() {
-        }
-        
-        public obtenerReservaPorIdRequest(int idReserva) {
-            this.idReserva = idReserva;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerReservaPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerReservaPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.ReservaWS.reservaDTO @return;
-        
-        public obtenerReservaPorIdResponse() {
-        }
-        
-        public obtenerReservaPorIdResponse(SoftInvWAProg3.ReservaWS.reservaDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ReservaWSChannel : SoftInvWAProg3.ReservaWS.ReservaWS, System.ServiceModel.IClientChannel {
     }
@@ -1411,6 +1411,29 @@ namespace SoftInvWAProg3.ReservaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse SoftInvWAProg3.ReservaWS.ReservaWS.listarReservasVigentesPorUsuario(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request) {
+            return base.Channel.listarReservasVigentesPorUsuario(request);
+        }
+        
+        public SoftInvWAProg3.ReservaWS.reservaDTO[] listarReservasVigentesPorUsuario(int usuarioId) {
+            SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest inValue = new SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest();
+            inValue.usuarioId = usuarioId;
+            SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarReservasVigentesPorUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse> SoftInvWAProg3.ReservaWS.ReservaWS.listarReservasVigentesPorUsuarioAsync(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request) {
+            return base.Channel.listarReservasVigentesPorUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse> listarReservasVigentesPorUsuarioAsync(int usuarioId) {
+            SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest inValue = new SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest();
+            inValue.usuarioId = usuarioId;
+            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarReservasVigentesPorUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaResponse SoftInvWAProg3.ReservaWS.ReservaWS.calcularFechaVencimientoReserva(SoftInvWAProg3.ReservaWS.calcularFechaVencimientoReservaRequest request) {
             return base.Channel.calcularFechaVencimientoReserva(request);
         }
@@ -1436,26 +1459,103 @@ namespace SoftInvWAProg3.ReservaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse SoftInvWAProg3.ReservaWS.ReservaWS.listarReservasVigentesPorUsuario(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request) {
-            return base.Channel.listarReservasVigentesPorUsuario(request);
+        SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse SoftInvWAProg3.ReservaWS.ReservaWS.buscarReservasAvanzado(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request) {
+            return base.Channel.buscarReservasAvanzado(request);
         }
         
-        public SoftInvWAProg3.ReservaWS.reservaDTO[] listarReservasVigentesPorUsuario(int usuarioId) {
-            SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest inValue = new SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest();
-            inValue.usuarioId = usuarioId;
-            SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarReservasVigentesPorUsuario(inValue);
+        public SoftInvWAProg3.ReservaWS.reservaDTO[] buscarReservasAvanzado(string reservaId, string usuarioNombre, string materialTitulo, string estado, string fechaDesde, string fechaHasta) {
+            SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest inValue = new SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest();
+            inValue.reservaId = reservaId;
+            inValue.usuarioNombre = usuarioNombre;
+            inValue.materialTitulo = materialTitulo;
+            inValue.estado = estado;
+            inValue.fechaDesde = fechaDesde;
+            inValue.fechaHasta = fechaHasta;
+            SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).buscarReservasAvanzado(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse> SoftInvWAProg3.ReservaWS.ReservaWS.listarReservasVigentesPorUsuarioAsync(SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest request) {
-            return base.Channel.listarReservasVigentesPorUsuarioAsync(request);
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse> SoftInvWAProg3.ReservaWS.ReservaWS.buscarReservasAvanzadoAsync(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request) {
+            return base.Channel.buscarReservasAvanzadoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioResponse> listarReservasVigentesPorUsuarioAsync(int usuarioId) {
-            SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest inValue = new SoftInvWAProg3.ReservaWS.listarReservasVigentesPorUsuarioRequest();
-            inValue.usuarioId = usuarioId;
-            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarReservasVigentesPorUsuarioAsync(inValue);
+        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse> buscarReservasAvanzadoAsync(string reservaId, string usuarioNombre, string materialTitulo, string estado, string fechaDesde, string fechaHasta) {
+            SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest inValue = new SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest();
+            inValue.reservaId = reservaId;
+            inValue.usuarioNombre = usuarioNombre;
+            inValue.materialTitulo = materialTitulo;
+            inValue.estado = estado;
+            inValue.fechaDesde = fechaDesde;
+            inValue.fechaHasta = fechaHasta;
+            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).buscarReservasAvanzadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.ReservaWS.listarTodasReservasResponse SoftInvWAProg3.ReservaWS.ReservaWS.listarTodasReservas(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request) {
+            return base.Channel.listarTodasReservas(request);
+        }
+        
+        public SoftInvWAProg3.ReservaWS.reservaDTO[] listarTodasReservas() {
+            SoftInvWAProg3.ReservaWS.listarTodasReservasRequest inValue = new SoftInvWAProg3.ReservaWS.listarTodasReservasRequest();
+            SoftInvWAProg3.ReservaWS.listarTodasReservasResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarTodasReservas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarTodasReservasResponse> SoftInvWAProg3.ReservaWS.ReservaWS.listarTodasReservasAsync(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request) {
+            return base.Channel.listarTodasReservasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarTodasReservasResponse> listarTodasReservasAsync() {
+            SoftInvWAProg3.ReservaWS.listarTodasReservasRequest inValue = new SoftInvWAProg3.ReservaWS.listarTodasReservasRequest();
+            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarTodasReservasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse SoftInvWAProg3.ReservaWS.ReservaWS.obtenerTipoDeMaterialPorId(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request) {
+            return base.Channel.obtenerTipoDeMaterialPorId(request);
+        }
+        
+        public string obtenerTipoDeMaterialPorId(int idMaterial) {
+            SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest();
+            inValue.idMaterial = idMaterial;
+            SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerTipoDeMaterialPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse> SoftInvWAProg3.ReservaWS.ReservaWS.obtenerTipoDeMaterialPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request) {
+            return base.Channel.obtenerTipoDeMaterialPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse> obtenerTipoDeMaterialPorIdAsync(int idMaterial) {
+            SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest();
+            inValue.idMaterial = idMaterial;
+            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerTipoDeMaterialPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse SoftInvWAProg3.ReservaWS.ReservaWS.obtenerReservaPorId(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request) {
+            return base.Channel.obtenerReservaPorId(request);
+        }
+        
+        public SoftInvWAProg3.ReservaWS.reservaDTO obtenerReservaPorId(int idReserva) {
+            SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest();
+            inValue.idReserva = idReserva;
+            SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerReservaPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse> SoftInvWAProg3.ReservaWS.ReservaWS.obtenerReservaPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request) {
+            return base.Channel.obtenerReservaPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse> obtenerReservaPorIdAsync(int idReserva) {
+            SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest();
+            inValue.idReserva = idReserva;
+            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerReservaPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1527,106 +1627,6 @@ namespace SoftInvWAProg3.ReservaWS {
             SoftInvWAProg3.ReservaWS.eliminarReservaRequest inValue = new SoftInvWAProg3.ReservaWS.eliminarReservaRequest();
             inValue.idReserva = idReserva;
             return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).eliminarReservaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.ReservaWS.listarTodasReservasResponse SoftInvWAProg3.ReservaWS.ReservaWS.listarTodasReservas(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request) {
-            return base.Channel.listarTodasReservas(request);
-        }
-        
-        public SoftInvWAProg3.ReservaWS.reservaDTO[] listarTodasReservas() {
-            SoftInvWAProg3.ReservaWS.listarTodasReservasRequest inValue = new SoftInvWAProg3.ReservaWS.listarTodasReservasRequest();
-            SoftInvWAProg3.ReservaWS.listarTodasReservasResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarTodasReservas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarTodasReservasResponse> SoftInvWAProg3.ReservaWS.ReservaWS.listarTodasReservasAsync(SoftInvWAProg3.ReservaWS.listarTodasReservasRequest request) {
-            return base.Channel.listarTodasReservasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.listarTodasReservasResponse> listarTodasReservasAsync() {
-            SoftInvWAProg3.ReservaWS.listarTodasReservasRequest inValue = new SoftInvWAProg3.ReservaWS.listarTodasReservasRequest();
-            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).listarTodasReservasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse SoftInvWAProg3.ReservaWS.ReservaWS.obtenerTipoDeMaterialPorId(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request) {
-            return base.Channel.obtenerTipoDeMaterialPorId(request);
-        }
-        
-        public string obtenerTipoDeMaterialPorId(int idMaterial) {
-            SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest();
-            inValue.idMaterial = idMaterial;
-            SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerTipoDeMaterialPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse> SoftInvWAProg3.ReservaWS.ReservaWS.obtenerTipoDeMaterialPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest request) {
-            return base.Channel.obtenerTipoDeMaterialPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdResponse> obtenerTipoDeMaterialPorIdAsync(int idMaterial) {
-            SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerTipoDeMaterialPorIdRequest();
-            inValue.idMaterial = idMaterial;
-            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerTipoDeMaterialPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse SoftInvWAProg3.ReservaWS.ReservaWS.buscarReservasAvanzado(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request) {
-            return base.Channel.buscarReservasAvanzado(request);
-        }
-        
-        public SoftInvWAProg3.ReservaWS.reservaDTO[] buscarReservasAvanzado(string reservaId, string usuarioNombre, string materialTitulo, string estado, string fechaDesde, string fechaHasta) {
-            SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest inValue = new SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest();
-            inValue.reservaId = reservaId;
-            inValue.usuarioNombre = usuarioNombre;
-            inValue.materialTitulo = materialTitulo;
-            inValue.estado = estado;
-            inValue.fechaDesde = fechaDesde;
-            inValue.fechaHasta = fechaHasta;
-            SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).buscarReservasAvanzado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse> SoftInvWAProg3.ReservaWS.ReservaWS.buscarReservasAvanzadoAsync(SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest request) {
-            return base.Channel.buscarReservasAvanzadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoResponse> buscarReservasAvanzadoAsync(string reservaId, string usuarioNombre, string materialTitulo, string estado, string fechaDesde, string fechaHasta) {
-            SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest inValue = new SoftInvWAProg3.ReservaWS.buscarReservasAvanzadoRequest();
-            inValue.reservaId = reservaId;
-            inValue.usuarioNombre = usuarioNombre;
-            inValue.materialTitulo = materialTitulo;
-            inValue.estado = estado;
-            inValue.fechaDesde = fechaDesde;
-            inValue.fechaHasta = fechaHasta;
-            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).buscarReservasAvanzadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse SoftInvWAProg3.ReservaWS.ReservaWS.obtenerReservaPorId(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request) {
-            return base.Channel.obtenerReservaPorId(request);
-        }
-        
-        public SoftInvWAProg3.ReservaWS.reservaDTO obtenerReservaPorId(int idReserva) {
-            SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest();
-            inValue.idReserva = idReserva;
-            SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse retVal = ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerReservaPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse> SoftInvWAProg3.ReservaWS.ReservaWS.obtenerReservaPorIdAsync(SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest request) {
-            return base.Channel.obtenerReservaPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.ReservaWS.obtenerReservaPorIdResponse> obtenerReservaPorIdAsync(int idReserva) {
-            SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest inValue = new SoftInvWAProg3.ReservaWS.obtenerReservaPorIdRequest();
-            inValue.idReserva = idReserva;
-            return ((SoftInvWAProg3.ReservaWS.ReservaWS)(this)).obtenerReservaPorIdAsync(inValue);
         }
     }
 }

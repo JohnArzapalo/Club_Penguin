@@ -249,15 +249,15 @@ namespace SoftInvWAProg3.BibliotecaWS {
     public interface BibliotecaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.BibliotecaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterial/Fault/SQ" +
-            "LException", Name="SQLException")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.BibliotecaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorId/Fault/SQLExcept" +
+            "ion", Name="SQLException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse obtenerBibliotecasPorMaterial(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request);
+        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse obtenerBibliotecaPorId(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse> obtenerBibliotecasPorMaterialAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse> obtenerBibliotecaPorIdAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecasRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecasResponse")]
@@ -270,79 +270,15 @@ namespace SoftInvWAProg3.BibliotecaWS {
         System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.listarBibliotecasResponse> listarBibliotecasAsync(SoftInvWAProg3.BibliotecaWS.listarBibliotecasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.BibliotecaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorId/Fault/SQLExcept" +
-            "ion", Name="SQLException")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.BibliotecaWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterial/Fault/SQ" +
+            "LException", Name="SQLException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse obtenerBibliotecaPorId(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request);
+        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse obtenerBibliotecasPorMaterial(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse> obtenerBibliotecaPorIdAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerBibliotecasPorMaterial", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerBibliotecasPorMaterialRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
-        
-        public obtenerBibliotecasPorMaterialRequest() {
-        }
-        
-        public obtenerBibliotecasPorMaterialRequest(int id) {
-            this.id = id;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerBibliotecasPorMaterialResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerBibliotecasPorMaterialResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return;
-        
-        public obtenerBibliotecasPorMaterialResponse() {
-        }
-        
-        public obtenerBibliotecasPorMaterialResponse(SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecas", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarBibliotecasRequest {
-        
-        public listarBibliotecasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecasResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarBibliotecasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return;
-        
-        public listarBibliotecasResponse() {
-        }
-        
-        public listarBibliotecasResponse(SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse> obtenerBibliotecasPorMaterialAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -381,6 +317,70 @@ namespace SoftInvWAProg3.BibliotecaWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecas", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarBibliotecasRequest {
+        
+        public listarBibliotecasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarBibliotecasResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarBibliotecasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return;
+        
+        public listarBibliotecasResponse() {
+        }
+        
+        public listarBibliotecasResponse(SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerBibliotecasPorMaterial", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerBibliotecasPorMaterialRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int id;
+        
+        public obtenerBibliotecasPorMaterialRequest() {
+        }
+        
+        public obtenerBibliotecasPorMaterialRequest(int id) {
+            this.id = id;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerBibliotecasPorMaterialResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerBibliotecasPorMaterialResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return;
+        
+        public obtenerBibliotecasPorMaterialResponse() {
+        }
+        
+        public obtenerBibliotecasPorMaterialResponse(SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface BibliotecaWSChannel : SoftInvWAProg3.BibliotecaWS.BibliotecaWS, System.ServiceModel.IClientChannel {
     }
@@ -409,26 +409,26 @@ namespace SoftInvWAProg3.BibliotecaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecasPorMaterial(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request) {
-            return base.Channel.obtenerBibliotecasPorMaterial(request);
+        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecaPorId(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request) {
+            return base.Channel.obtenerBibliotecaPorId(request);
         }
         
-        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] obtenerBibliotecasPorMaterial(int id) {
-            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest();
-            inValue.id = id;
-            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse retVal = ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecasPorMaterial(inValue);
+        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO obtenerBibliotecaPorId(int bibliotecaId) {
+            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest();
+            inValue.bibliotecaId = bibliotecaId;
+            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse retVal = ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecaPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse> SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecasPorMaterialAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request) {
-            return base.Channel.obtenerBibliotecasPorMaterialAsync(request);
+        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse> SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecaPorIdAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request) {
+            return base.Channel.obtenerBibliotecaPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse> obtenerBibliotecasPorMaterialAsync(int id) {
-            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest();
-            inValue.id = id;
-            return ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecasPorMaterialAsync(inValue);
+        public System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse> obtenerBibliotecaPorIdAsync(int bibliotecaId) {
+            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest();
+            inValue.bibliotecaId = bibliotecaId;
+            return ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecaPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -453,26 +453,26 @@ namespace SoftInvWAProg3.BibliotecaWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecaPorId(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request) {
-            return base.Channel.obtenerBibliotecaPorId(request);
+        SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecasPorMaterial(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request) {
+            return base.Channel.obtenerBibliotecasPorMaterial(request);
         }
         
-        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO obtenerBibliotecaPorId(int bibliotecaId) {
-            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest();
-            inValue.bibliotecaId = bibliotecaId;
-            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse retVal = ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecaPorId(inValue);
+        public SoftInvWAProg3.BibliotecaWS.bibliotecaDTO[] obtenerBibliotecasPorMaterial(int id) {
+            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest();
+            inValue.id = id;
+            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse retVal = ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecasPorMaterial(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse> SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecaPorIdAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest request) {
-            return base.Channel.obtenerBibliotecaPorIdAsync(request);
+        System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse> SoftInvWAProg3.BibliotecaWS.BibliotecaWS.obtenerBibliotecasPorMaterialAsync(SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest request) {
+            return base.Channel.obtenerBibliotecasPorMaterialAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdResponse> obtenerBibliotecaPorIdAsync(int bibliotecaId) {
-            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecaPorIdRequest();
-            inValue.bibliotecaId = bibliotecaId;
-            return ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecaPorIdAsync(inValue);
+        public System.Threading.Tasks.Task<SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialResponse> obtenerBibliotecasPorMaterialAsync(int id) {
+            SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest inValue = new SoftInvWAProg3.BibliotecaWS.obtenerBibliotecasPorMaterialRequest();
+            inValue.id = id;
+            return ((SoftInvWAProg3.BibliotecaWS.BibliotecaWS)(this)).obtenerBibliotecasPorMaterialAsync(inValue);
         }
     }
 }

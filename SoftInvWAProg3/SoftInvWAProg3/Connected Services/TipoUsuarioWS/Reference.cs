@@ -291,6 +291,17 @@ namespace SoftInvWAProg3.TipoUsuarioWS {
     public interface TipoUsuarioWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.TipoUsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorId/Fault/SQLExce" +
+            "ption", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse obtenerTipoUsuarioPorId(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse> obtenerTipoUsuarioPorIdAsync(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuarioResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.TipoUsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuario/Fault/SQLExceptio" +
             "n", Name="SQLException")]
@@ -324,17 +335,6 @@ namespace SoftInvWAProg3.TipoUsuarioWS {
         System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.eliminarTipoUsuarioResponse> eliminarTipoUsuarioAsync(SoftInvWAProg3.TipoUsuarioWS.eliminarTipoUsuarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.TipoUsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorId/Fault/SQLExce" +
-            "ption", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse obtenerTipoUsuarioPorId(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse> obtenerTipoUsuarioPorIdAsync(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.TipoUsuarioWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuario/Fault/SQLExce" +
             "ption", Name="SQLException")]
@@ -344,6 +344,42 @@ namespace SoftInvWAProg3.TipoUsuarioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioResponse")]
         System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.listarTodosTiposUsuarioResponse> listarTodosTiposUsuarioAsync(SoftInvWAProg3.TipoUsuarioWS.listarTodosTiposUsuarioRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoUsuarioPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerTipoUsuarioPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idTipoUsuario;
+        
+        public obtenerTipoUsuarioPorIdRequest() {
+        }
+        
+        public obtenerTipoUsuarioPorIdRequest(int idTipoUsuario) {
+            this.idTipoUsuario = idTipoUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoUsuarioPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerTipoUsuarioPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.TipoUsuarioWS.tipoUsuarioDTO @return;
+        
+        public obtenerTipoUsuarioPorIdResponse() {
+        }
+        
+        public obtenerTipoUsuarioPorIdResponse(SoftInvWAProg3.TipoUsuarioWS.tipoUsuarioDTO @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -457,42 +493,6 @@ namespace SoftInvWAProg3.TipoUsuarioWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoUsuarioPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerTipoUsuarioPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idTipoUsuario;
-        
-        public obtenerTipoUsuarioPorIdRequest() {
-        }
-        
-        public obtenerTipoUsuarioPorIdRequest(int idTipoUsuario) {
-            this.idTipoUsuario = idTipoUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerTipoUsuarioPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerTipoUsuarioPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.TipoUsuarioWS.tipoUsuarioDTO @return;
-        
-        public obtenerTipoUsuarioPorIdResponse() {
-        }
-        
-        public obtenerTipoUsuarioPorIdResponse(SoftInvWAProg3.TipoUsuarioWS.tipoUsuarioDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosTiposUsuario", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarTodosTiposUsuarioRequest {
         
@@ -543,6 +543,29 @@ namespace SoftInvWAProg3.TipoUsuarioWS {
         
         public TipoUsuarioWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS.obtenerTipoUsuarioPorId(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request) {
+            return base.Channel.obtenerTipoUsuarioPorId(request);
+        }
+        
+        public SoftInvWAProg3.TipoUsuarioWS.tipoUsuarioDTO obtenerTipoUsuarioPorId(int idTipoUsuario) {
+            SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest inValue = new SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest();
+            inValue.idTipoUsuario = idTipoUsuario;
+            SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse retVal = ((SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS)(this)).obtenerTipoUsuarioPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse> SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS.obtenerTipoUsuarioPorIdAsync(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request) {
+            return base.Channel.obtenerTipoUsuarioPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse> obtenerTipoUsuarioPorIdAsync(int idTipoUsuario) {
+            SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest inValue = new SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest();
+            inValue.idTipoUsuario = idTipoUsuario;
+            return ((SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS)(this)).obtenerTipoUsuarioPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -612,29 +635,6 @@ namespace SoftInvWAProg3.TipoUsuarioWS {
             SoftInvWAProg3.TipoUsuarioWS.eliminarTipoUsuarioRequest inValue = new SoftInvWAProg3.TipoUsuarioWS.eliminarTipoUsuarioRequest();
             inValue.idTipoUsuario = idTipoUsuario;
             return ((SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS)(this)).eliminarTipoUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS.obtenerTipoUsuarioPorId(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request) {
-            return base.Channel.obtenerTipoUsuarioPorId(request);
-        }
-        
-        public SoftInvWAProg3.TipoUsuarioWS.tipoUsuarioDTO obtenerTipoUsuarioPorId(int idTipoUsuario) {
-            SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest inValue = new SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest();
-            inValue.idTipoUsuario = idTipoUsuario;
-            SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse retVal = ((SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS)(this)).obtenerTipoUsuarioPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse> SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS.obtenerTipoUsuarioPorIdAsync(SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest request) {
-            return base.Channel.obtenerTipoUsuarioPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdResponse> obtenerTipoUsuarioPorIdAsync(int idTipoUsuario) {
-            SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest inValue = new SoftInvWAProg3.TipoUsuarioWS.obtenerTipoUsuarioPorIdRequest();
-            inValue.idTipoUsuario = idTipoUsuario;
-            return ((SoftInvWAProg3.TipoUsuarioWS.TipoUsuarioWS)(this)).obtenerTipoUsuarioPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

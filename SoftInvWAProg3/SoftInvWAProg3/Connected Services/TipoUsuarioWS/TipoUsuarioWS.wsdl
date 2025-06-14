@@ -5,14 +5,20 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/TipoUsuarioWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="obtenerTipoUsuarioPorId">
+    <part name="parameters" element="tns:obtenerTipoUsuarioPorId" />
+  </message>
+  <message name="obtenerTipoUsuarioPorIdResponse">
+    <part name="parameters" element="tns:obtenerTipoUsuarioPorIdResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
   <message name="insertarTipoUsuario">
     <part name="parameters" element="tns:insertarTipoUsuario" />
   </message>
   <message name="insertarTipoUsuarioResponse">
     <part name="parameters" element="tns:insertarTipoUsuarioResponse" />
-  </message>
-  <message name="SQLException">
-    <part name="fault" element="tns:SQLException" />
   </message>
   <message name="modificarTipoUsuario">
     <part name="parameters" element="tns:modificarTipoUsuario" />
@@ -26,12 +32,6 @@
   <message name="eliminarTipoUsuarioResponse">
     <part name="parameters" element="tns:eliminarTipoUsuarioResponse" />
   </message>
-  <message name="obtenerTipoUsuarioPorId">
-    <part name="parameters" element="tns:obtenerTipoUsuarioPorId" />
-  </message>
-  <message name="obtenerTipoUsuarioPorIdResponse">
-    <part name="parameters" element="tns:obtenerTipoUsuarioPorIdResponse" />
-  </message>
   <message name="listarTodosTiposUsuario">
     <part name="parameters" element="tns:listarTodosTiposUsuario" />
   </message>
@@ -39,6 +39,11 @@
     <part name="parameters" element="tns:listarTodosTiposUsuarioResponse" />
   </message>
   <portType name="TipoUsuarioWS">
+    <operation name="obtenerTipoUsuarioPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest" message="tns:obtenerTipoUsuarioPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse" message="tns:obtenerTipoUsuarioPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
     <operation name="insertarTipoUsuario">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuarioRequest" message="tns:insertarTipoUsuario" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuarioResponse" message="tns:insertarTipoUsuarioResponse" />
@@ -54,11 +59,6 @@
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/eliminarTipoUsuarioResponse" message="tns:eliminarTipoUsuarioResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/eliminarTipoUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-    <operation name="obtenerTipoUsuarioPorId">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest" message="tns:obtenerTipoUsuarioPorId" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse" message="tns:obtenerTipoUsuarioPorIdResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
     <operation name="listarTodosTiposUsuario">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioRequest" message="tns:listarTodosTiposUsuario" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioResponse" message="tns:listarTodosTiposUsuarioResponse" />
@@ -67,6 +67,18 @@
   </portType>
   <binding name="TipoUsuarioWSPortBinding" type="tns:TipoUsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerTipoUsuarioPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
     <operation name="insertarTipoUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -92,18 +104,6 @@
       </fault>
     </operation>
     <operation name="eliminarTipoUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="obtenerTipoUsuarioPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

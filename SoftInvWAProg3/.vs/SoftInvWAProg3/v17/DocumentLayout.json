@@ -1,41 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\",
+  "WorkspaceRootPath": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|c:\\users\\johnm\\onedrive\\desktop\\ta prog3\\softinvwaprog3\\softinvwaprog3\\registrar_material.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\registrar_material.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\registrar_material.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\registrar_material.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\reservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\reservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\reservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\reservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|c:\\users\\johnm\\onedrive\\desktop\\final de finales\\softinvwaprog3\\softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\softinvwaprog3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -46,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 220,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,60 +38,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "registrar_material.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\registrar_material.aspx.cs",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\registrar_material.aspx.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAgwAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T13:50:44.846Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "registrar_material.aspx",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\registrar_material.aspx",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\registrar_material.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T13:50:41.765Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "reservas.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\reservas.aspx.cs",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\reservas.aspx.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAWwCYAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T12:48:48.55Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "reservas.aspx",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\reservas.aspx",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\reservas.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T12:48:13.358Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "detalle_reserva.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
               "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -115,11 +50,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "detalle_reserva.aspx",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx",
+              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx",
+              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx",
               "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -127,23 +62,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "prestamos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx.cs",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\prestamos.aspx.cs",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx.cs",
+              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx.cs",
               "RelativeToolTip": "SoftInvWAProg3\\prestamos.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T08:33:26.421Z"
+              "WhenOpened": "2025-06-04T08:33:26.421Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "prestamos.aspx",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx",
+              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\prestamos.aspx",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx",
+              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx",
               "RelativeToolTip": "SoftInvWAProg3\\prestamos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -151,15 +87,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.cs",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\login.aspx.cs",
-              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\TA PROG3\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.cs",
+              "ToolTip": "C:\\Users\\johnm\\OneDrive\\Desktop\\FINAL DE FINALES\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.cs",
               "RelativeToolTip": "SoftInvWAProg3\\login.aspx.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAjwBMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA8wBMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T08:38:11.544Z"
+              "WhenOpened": "2025-06-04T08:38:11.544Z",
+              "EditorCaption": ""
             }
           ]
         }

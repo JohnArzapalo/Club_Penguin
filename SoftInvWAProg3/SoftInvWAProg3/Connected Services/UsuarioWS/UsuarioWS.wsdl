@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/UsuarioWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="validarUsuario">
-    <part name="parameters" element="tns:validarUsuario" />
+  <message name="obtenerUsuarioPorId">
+    <part name="parameters" element="tns:obtenerUsuarioPorId" />
   </message>
-  <message name="validarUsuarioResponse">
-    <part name="parameters" element="tns:validarUsuarioResponse" />
+  <message name="obtenerUsuarioPorIdResponse">
+    <part name="parameters" element="tns:obtenerUsuarioPorIdResponse" />
   </message>
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
@@ -20,42 +20,42 @@
   <message name="insertarUsuarioResponse">
     <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
+  <message name="validarUsuario">
+    <part name="parameters" element="tns:validarUsuario" />
+  </message>
+  <message name="validarUsuarioResponse">
+    <part name="parameters" element="tns:validarUsuarioResponse" />
+  </message>
   <message name="buscarUsuariosAvanzado">
     <part name="parameters" element="tns:buscarUsuariosAvanzado" />
   </message>
   <message name="buscarUsuariosAvanzadoResponse">
     <part name="parameters" element="tns:buscarUsuariosAvanzadoResponse" />
   </message>
-  <message name="obtenerUsuarioPorId">
-    <part name="parameters" element="tns:obtenerUsuarioPorId" />
-  </message>
-  <message name="obtenerUsuarioPorIdResponse">
-    <part name="parameters" element="tns:obtenerUsuarioPorIdResponse" />
-  </message>
   <portType name="UsuarioWS">
-    <operation name="validarUsuario">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioRequest" message="tns:validarUsuario" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioResponse" message="tns:validarUsuarioResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    <operation name="obtenerUsuarioPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse" message="tns:obtenerUsuarioPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
     <operation name="insertarUsuario">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/insertarUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+    <operation name="validarUsuario">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioRequest" message="tns:validarUsuario" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuarioResponse" message="tns:validarUsuarioResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/validarUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
     <operation name="buscarUsuariosAvanzado">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoRequest" message="tns:buscarUsuariosAvanzado" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoResponse" message="tns:buscarUsuariosAvanzadoResponse" />
     </operation>
-    <operation name="obtenerUsuarioPorId">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse" message="tns:obtenerUsuarioPorIdResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="validarUsuario">
+    <operation name="obtenerUsuarioPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -79,16 +79,7 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="buscarUsuariosAvanzado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerUsuarioPorId">
+    <operation name="validarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -99,6 +90,15 @@
       <fault name="SQLException">
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
+    </operation>
+    <operation name="buscarUsuariosAvanzado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
     </operation>
   </binding>
   <service name="UsuarioWS">

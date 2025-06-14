@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/BibliotecaWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="obtenerBibliotecasPorMaterial">
-    <part name="parameters" element="tns:obtenerBibliotecasPorMaterial" />
+  <message name="obtenerBibliotecaPorId">
+    <part name="parameters" element="tns:obtenerBibliotecaPorId" />
   </message>
-  <message name="obtenerBibliotecasPorMaterialResponse">
-    <part name="parameters" element="tns:obtenerBibliotecasPorMaterialResponse" />
+  <message name="obtenerBibliotecaPorIdResponse">
+    <part name="parameters" element="tns:obtenerBibliotecaPorIdResponse" />
   </message>
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
@@ -20,32 +20,32 @@
   <message name="listarBibliotecasResponse">
     <part name="parameters" element="tns:listarBibliotecasResponse" />
   </message>
-  <message name="obtenerBibliotecaPorId">
-    <part name="parameters" element="tns:obtenerBibliotecaPorId" />
+  <message name="obtenerBibliotecasPorMaterial">
+    <part name="parameters" element="tns:obtenerBibliotecasPorMaterial" />
   </message>
-  <message name="obtenerBibliotecaPorIdResponse">
-    <part name="parameters" element="tns:obtenerBibliotecaPorIdResponse" />
+  <message name="obtenerBibliotecasPorMaterialResponse">
+    <part name="parameters" element="tns:obtenerBibliotecasPorMaterialResponse" />
   </message>
   <portType name="BibliotecaWS">
-    <operation name="obtenerBibliotecasPorMaterial">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest" message="tns:obtenerBibliotecasPorMaterial" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse" message="tns:obtenerBibliotecasPorMaterialResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    <operation name="obtenerBibliotecaPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest" message="tns:obtenerBibliotecaPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse" message="tns:obtenerBibliotecaPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
     <operation name="listarBibliotecas">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecasRequest" message="tns:listarBibliotecas" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecasResponse" message="tns:listarBibliotecasResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/listarBibliotecas/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-    <operation name="obtenerBibliotecaPorId">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdRequest" message="tns:obtenerBibliotecaPorId" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorIdResponse" message="tns:obtenerBibliotecaPorIdResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecaPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    <operation name="obtenerBibliotecasPorMaterial">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialRequest" message="tns:obtenerBibliotecasPorMaterial" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterialResponse" message="tns:obtenerBibliotecasPorMaterialResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/BibliotecaWS/obtenerBibliotecasPorMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
   </portType>
   <binding name="BibliotecaWSPortBinding" type="tns:BibliotecaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerBibliotecasPorMaterial">
+    <operation name="obtenerBibliotecaPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -69,7 +69,7 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerBibliotecaPorId">
+    <operation name="obtenerBibliotecasPorMaterial">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -5,20 +5,47 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/ReservaWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
     </xsd:schema>
   </types>
+  <message name="listarReservasVigentesPorUsuario">
+    <part name="parameters" element="tns:listarReservasVigentesPorUsuario" />
+  </message>
+  <message name="listarReservasVigentesPorUsuarioResponse">
+    <part name="parameters" element="tns:listarReservasVigentesPorUsuarioResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
   <message name="calcularFechaVencimientoReserva">
     <part name="parameters" element="tns:calcularFechaVencimientoReserva" />
   </message>
   <message name="calcularFechaVencimientoReservaResponse">
     <part name="parameters" element="tns:calcularFechaVencimientoReservaResponse" />
   </message>
-  <message name="SQLException">
-    <part name="fault" element="tns:SQLException" />
+  <message name="buscarReservasAvanzado">
+    <part name="parameters" element="tns:buscarReservasAvanzado" />
   </message>
-  <message name="listarReservasVigentesPorUsuario">
-    <part name="parameters" element="tns:listarReservasVigentesPorUsuario" />
+  <message name="buscarReservasAvanzadoResponse">
+    <part name="parameters" element="tns:buscarReservasAvanzadoResponse" />
   </message>
-  <message name="listarReservasVigentesPorUsuarioResponse">
-    <part name="parameters" element="tns:listarReservasVigentesPorUsuarioResponse" />
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="listarTodasReservas">
+    <part name="parameters" element="tns:listarTodasReservas" />
+  </message>
+  <message name="listarTodasReservasResponse">
+    <part name="parameters" element="tns:listarTodasReservasResponse" />
+  </message>
+  <message name="obtenerTipoDeMaterialPorId">
+    <part name="parameters" element="tns:obtenerTipoDeMaterialPorId" />
+  </message>
+  <message name="obtenerTipoDeMaterialPorIdResponse">
+    <part name="parameters" element="tns:obtenerTipoDeMaterialPorIdResponse" />
+  </message>
+  <message name="obtenerReservaPorId">
+    <part name="parameters" element="tns:obtenerReservaPorId" />
+  </message>
+  <message name="obtenerReservaPorIdResponse">
+    <part name="parameters" element="tns:obtenerReservaPorIdResponse" />
   </message>
   <message name="insertarReserva">
     <part name="parameters" element="tns:insertarReserva" />
@@ -38,43 +65,36 @@
   <message name="eliminarReservaResponse">
     <part name="parameters" element="tns:eliminarReservaResponse" />
   </message>
-  <message name="listarTodasReservas">
-    <part name="parameters" element="tns:listarTodasReservas" />
-  </message>
-  <message name="listarTodasReservasResponse">
-    <part name="parameters" element="tns:listarTodasReservasResponse" />
-  </message>
-  <message name="obtenerTipoDeMaterialPorId">
-    <part name="parameters" element="tns:obtenerTipoDeMaterialPorId" />
-  </message>
-  <message name="obtenerTipoDeMaterialPorIdResponse">
-    <part name="parameters" element="tns:obtenerTipoDeMaterialPorIdResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-  <message name="buscarReservasAvanzado">
-    <part name="parameters" element="tns:buscarReservasAvanzado" />
-  </message>
-  <message name="buscarReservasAvanzadoResponse">
-    <part name="parameters" element="tns:buscarReservasAvanzadoResponse" />
-  </message>
-  <message name="obtenerReservaPorId">
-    <part name="parameters" element="tns:obtenerReservaPorId" />
-  </message>
-  <message name="obtenerReservaPorIdResponse">
-    <part name="parameters" element="tns:obtenerReservaPorIdResponse" />
-  </message>
   <portType name="ReservaWS">
+    <operation name="listarReservasVigentesPorUsuario">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest" message="tns:listarReservasVigentesPorUsuario" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse" message="tns:listarReservasVigentesPorUsuarioResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
     <operation name="calcularFechaVencimientoReserva">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaRequest" message="tns:calcularFechaVencimientoReserva" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaResponse" message="tns:calcularFechaVencimientoReservaResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReserva/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-    <operation name="listarReservasVigentesPorUsuario">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest" message="tns:listarReservasVigentesPorUsuario" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse" message="tns:listarReservasVigentesPorUsuarioResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    <operation name="buscarReservasAvanzado">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest" message="tns:buscarReservasAvanzado" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse" message="tns:buscarReservasAvanzadoResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzado/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="listarTodasReservas">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasRequest" message="tns:listarTodasReservas" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasResponse" message="tns:listarTodasReservasResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservas/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerTipoDeMaterialPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdRequest" message="tns:obtenerTipoDeMaterialPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse" message="tns:obtenerTipoDeMaterialPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorId/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerReservaPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdRequest" message="tns:obtenerReservaPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdResponse" message="tns:obtenerReservaPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
     <operation name="insertarReserva">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/insertarReservaRequest" message="tns:insertarReserva" />
@@ -91,29 +111,21 @@
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReservaResponse" message="tns:eliminarReservaResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/eliminarReserva/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-    <operation name="listarTodasReservas">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasRequest" message="tns:listarTodasReservas" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservasResponse" message="tns:listarTodasReservasResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/listarTodasReservas/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="obtenerTipoDeMaterialPorId">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdRequest" message="tns:obtenerTipoDeMaterialPorId" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse" message="tns:obtenerTipoDeMaterialPorIdResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorId/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="buscarReservasAvanzado">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest" message="tns:buscarReservasAvanzado" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse" message="tns:buscarReservasAvanzadoResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/buscarReservasAvanzado/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-    <operation name="obtenerReservaPorId">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdRequest" message="tns:obtenerReservaPorId" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorIdResponse" message="tns:obtenerReservaPorIdResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/ReservaWS/obtenerReservaPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
   </portType>
   <binding name="ReservaWSPortBinding" type="tns:ReservaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarReservasVigentesPorUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
     <operation name="calcularFechaVencimientoReserva">
       <soap:operation soapAction="" />
       <input>
@@ -126,7 +138,43 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="listarReservasVigentesPorUsuario">
+    <operation name="buscarReservasAvanzado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodasReservas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerTipoDeMaterialPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerReservaPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -163,54 +211,6 @@
       </fault>
     </operation>
     <operation name="eliminarReserva">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarTodasReservas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="obtenerTipoDeMaterialPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="buscarReservasAvanzado">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-    <operation name="obtenerReservaPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

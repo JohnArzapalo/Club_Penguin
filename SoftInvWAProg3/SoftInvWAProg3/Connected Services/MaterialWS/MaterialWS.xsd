@@ -224,22 +224,22 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="buscarPorAutor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorAutorResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="buscarPorDisponibilidad">
     <xs:sequence>
       <xs:element minOccurs="0" name="autor" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="buscarPorDisponibilidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPorAutor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="autor" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="buscarPorAutorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
     </xs:sequence>

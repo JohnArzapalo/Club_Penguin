@@ -16,6 +16,15 @@ namespace SoftInvWAProg3.SancionWS {
     public interface SancionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse buscarSancionesFlexible(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse> buscarSancionesFlexibleAsync(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/SancionWS/obtenerPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/SancionWS/obtenerPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,15 +41,6 @@ namespace SoftInvWAProg3.SancionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/SancionWS/listarSancionesRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/SancionWS/listarSancionesResponse")]
         System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.listarSancionesResponse> listarSancionesAsync(SoftInvWAProg3.SancionWS.listarSancionesRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse buscarSancionesFlexible(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/SancionWS/buscarSancionesFlexibleResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse> buscarSancionesFlexibleAsync(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request);
     }
     
     /// <remarks/>
@@ -1395,6 +1395,57 @@ namespace SoftInvWAProg3.SancionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarSancionesFlexible", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class buscarSancionesFlexibleRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string sancionId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string circulacionId;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaDesde;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string fechaHasta;
+        
+        public buscarSancionesFlexibleRequest() {
+        }
+        
+        public buscarSancionesFlexibleRequest(string sancionId, string circulacionId, string fechaDesde, string fechaHasta) {
+            this.sancionId = sancionId;
+            this.circulacionId = circulacionId;
+            this.fechaDesde = fechaDesde;
+            this.fechaHasta = fechaHasta;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarSancionesFlexibleResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class buscarSancionesFlexibleResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.SancionWS.sancionDTO[] @return;
+        
+        public buscarSancionesFlexibleResponse() {
+        }
+        
+        public buscarSancionesFlexibleResponse(SoftInvWAProg3.SancionWS.sancionDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
     public partial class obtenerPorIdRequest {
         
@@ -1456,57 +1507,6 @@ namespace SoftInvWAProg3.SancionWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarSancionesFlexible", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class buscarSancionesFlexibleRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string sancionId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string circulacionId;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaDesde;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string fechaHasta;
-        
-        public buscarSancionesFlexibleRequest() {
-        }
-        
-        public buscarSancionesFlexibleRequest(string sancionId, string circulacionId, string fechaDesde, string fechaHasta) {
-            this.sancionId = sancionId;
-            this.circulacionId = circulacionId;
-            this.fechaDesde = fechaDesde;
-            this.fechaHasta = fechaHasta;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarSancionesFlexibleResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class buscarSancionesFlexibleResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.SancionWS.sancionDTO[] @return;
-        
-        public buscarSancionesFlexibleResponse() {
-        }
-        
-        public buscarSancionesFlexibleResponse(SoftInvWAProg3.SancionWS.sancionDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SancionWSChannel : SoftInvWAProg3.SancionWS.SancionWS, System.ServiceModel.IClientChannel {
     }
@@ -1532,6 +1532,35 @@ namespace SoftInvWAProg3.SancionWS {
         
         public SancionWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse SoftInvWAProg3.SancionWS.SancionWS.buscarSancionesFlexible(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request) {
+            return base.Channel.buscarSancionesFlexible(request);
+        }
+        
+        public SoftInvWAProg3.SancionWS.sancionDTO[] buscarSancionesFlexible(string sancionId, string circulacionId, string fechaDesde, string fechaHasta) {
+            SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest inValue = new SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest();
+            inValue.sancionId = sancionId;
+            inValue.circulacionId = circulacionId;
+            inValue.fechaDesde = fechaDesde;
+            inValue.fechaHasta = fechaHasta;
+            SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse retVal = ((SoftInvWAProg3.SancionWS.SancionWS)(this)).buscarSancionesFlexible(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse> SoftInvWAProg3.SancionWS.SancionWS.buscarSancionesFlexibleAsync(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request) {
+            return base.Channel.buscarSancionesFlexibleAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse> buscarSancionesFlexibleAsync(string sancionId, string circulacionId, string fechaDesde, string fechaHasta) {
+            SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest inValue = new SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest();
+            inValue.sancionId = sancionId;
+            inValue.circulacionId = circulacionId;
+            inValue.fechaDesde = fechaDesde;
+            inValue.fechaHasta = fechaHasta;
+            return ((SoftInvWAProg3.SancionWS.SancionWS)(this)).buscarSancionesFlexibleAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1576,35 +1605,6 @@ namespace SoftInvWAProg3.SancionWS {
         public System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.listarSancionesResponse> listarSancionesAsync() {
             SoftInvWAProg3.SancionWS.listarSancionesRequest inValue = new SoftInvWAProg3.SancionWS.listarSancionesRequest();
             return ((SoftInvWAProg3.SancionWS.SancionWS)(this)).listarSancionesAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse SoftInvWAProg3.SancionWS.SancionWS.buscarSancionesFlexible(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request) {
-            return base.Channel.buscarSancionesFlexible(request);
-        }
-        
-        public SoftInvWAProg3.SancionWS.sancionDTO[] buscarSancionesFlexible(string sancionId, string circulacionId, string fechaDesde, string fechaHasta) {
-            SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest inValue = new SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest();
-            inValue.sancionId = sancionId;
-            inValue.circulacionId = circulacionId;
-            inValue.fechaDesde = fechaDesde;
-            inValue.fechaHasta = fechaHasta;
-            SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse retVal = ((SoftInvWAProg3.SancionWS.SancionWS)(this)).buscarSancionesFlexible(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse> SoftInvWAProg3.SancionWS.SancionWS.buscarSancionesFlexibleAsync(SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest request) {
-            return base.Channel.buscarSancionesFlexibleAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.SancionWS.buscarSancionesFlexibleResponse> buscarSancionesFlexibleAsync(string sancionId, string circulacionId, string fechaDesde, string fechaHasta) {
-            SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest inValue = new SoftInvWAProg3.SancionWS.buscarSancionesFlexibleRequest();
-            inValue.sancionId = sancionId;
-            inValue.circulacionId = circulacionId;
-            inValue.fechaDesde = fechaDesde;
-            inValue.fechaHasta = fechaHasta;
-            return ((SoftInvWAProg3.SancionWS.SancionWS)(this)).buscarSancionesFlexibleAsync(inValue);
         }
     }
 }

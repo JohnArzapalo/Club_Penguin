@@ -636,6 +636,16 @@ namespace SoftInvWAProg3.EjemplarWS {
         System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.insertarEjemplarResponse> insertarEjemplarAsync(SoftInvWAProg3.EjemplarWS.insertarEjemplarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.EjemplarWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorId/Fault/SQLException", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdResponse obtenerEjemplarPorId(SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdResponse> obtenerEjemplarPorIdAsync(SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.EjemplarWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplares/Fault/SQLException" +
             "", Name="SQLException")]
@@ -645,16 +655,6 @@ namespace SoftInvWAProg3.EjemplarWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresResponse")]
         System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse> listarTodosEjemplaresAsync(SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.EjemplarWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorId/Fault/SQLException", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdResponse obtenerEjemplarPorId(SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdResponse> obtenerEjemplarPorIdAsync(SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -777,34 +777,6 @@ namespace SoftInvWAProg3.EjemplarWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjemplares", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosEjemplaresRequest {
-        
-        public listarTodosEjemplaresRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjemplaresResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosEjemplaresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.EjemplarWS.ejemplarDTO[] @return;
-        
-        public listarTodosEjemplaresResponse() {
-        }
-        
-        public listarTodosEjemplaresResponse(SoftInvWAProg3.EjemplarWS.ejemplarDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEjemplarPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
     public partial class obtenerEjemplarPorIdRequest {
         
@@ -834,6 +806,34 @@ namespace SoftInvWAProg3.EjemplarWS {
         }
         
         public obtenerEjemplarPorIdResponse(SoftInvWAProg3.EjemplarWS.ejemplarDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjemplares", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosEjemplaresRequest {
+        
+        public listarTodosEjemplaresRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosEjemplaresResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosEjemplaresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.EjemplarWS.ejemplarDTO[] @return;
+        
+        public listarTodosEjemplaresResponse() {
+        }
+        
+        public listarTodosEjemplaresResponse(SoftInvWAProg3.EjemplarWS.ejemplarDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -930,27 +930,6 @@ namespace SoftInvWAProg3.EjemplarWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse SoftInvWAProg3.EjemplarWS.EjemplarWS.listarTodosEjemplares(SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest request) {
-            return base.Channel.listarTodosEjemplares(request);
-        }
-        
-        public SoftInvWAProg3.EjemplarWS.ejemplarDTO[] listarTodosEjemplares() {
-            SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest inValue = new SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest();
-            SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse retVal = ((SoftInvWAProg3.EjemplarWS.EjemplarWS)(this)).listarTodosEjemplares(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse> SoftInvWAProg3.EjemplarWS.EjemplarWS.listarTodosEjemplaresAsync(SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest request) {
-            return base.Channel.listarTodosEjemplaresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse> listarTodosEjemplaresAsync() {
-            SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest inValue = new SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest();
-            return ((SoftInvWAProg3.EjemplarWS.EjemplarWS)(this)).listarTodosEjemplaresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdResponse SoftInvWAProg3.EjemplarWS.EjemplarWS.obtenerEjemplarPorId(SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest request) {
             return base.Channel.obtenerEjemplarPorId(request);
         }
@@ -971,6 +950,27 @@ namespace SoftInvWAProg3.EjemplarWS {
             SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest inValue = new SoftInvWAProg3.EjemplarWS.obtenerEjemplarPorIdRequest();
             inValue.idEjemplar = idEjemplar;
             return ((SoftInvWAProg3.EjemplarWS.EjemplarWS)(this)).obtenerEjemplarPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse SoftInvWAProg3.EjemplarWS.EjemplarWS.listarTodosEjemplares(SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest request) {
+            return base.Channel.listarTodosEjemplares(request);
+        }
+        
+        public SoftInvWAProg3.EjemplarWS.ejemplarDTO[] listarTodosEjemplares() {
+            SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest inValue = new SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest();
+            SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse retVal = ((SoftInvWAProg3.EjemplarWS.EjemplarWS)(this)).listarTodosEjemplares(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse> SoftInvWAProg3.EjemplarWS.EjemplarWS.listarTodosEjemplaresAsync(SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest request) {
+            return base.Channel.listarTodosEjemplaresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresResponse> listarTodosEjemplaresAsync() {
+            SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest inValue = new SoftInvWAProg3.EjemplarWS.listarTodosEjemplaresRequest();
+            return ((SoftInvWAProg3.EjemplarWS.EjemplarWS)(this)).listarTodosEjemplaresAsync(inValue);
         }
     }
 }

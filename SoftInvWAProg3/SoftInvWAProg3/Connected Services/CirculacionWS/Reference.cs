@@ -17,26 +17,42 @@ namespace SoftInvWAProg3.CirculacionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class ParseException : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class SQLException : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private int errorOffsetField;
+        private string sQLStateField;
+        
+        private int errorCodeField;
         
         private string messageField;
         
+        private sqlException nextExceptionField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int errorOffset {
+        public string SQLState {
             get {
-                return this.errorOffsetField;
+                return this.sQLStateField;
             }
             set {
-                this.errorOffsetField = value;
-                this.RaisePropertyChanged("errorOffset");
+                this.sQLStateField = value;
+                this.RaisePropertyChanged("SQLState");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int errorCode {
+            get {
+                return this.errorCodeField;
+            }
+            set {
+                this.errorCodeField = value;
+                this.RaisePropertyChanged("errorCode");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string message {
             get {
                 return this.messageField;
@@ -46,6 +62,103 @@ namespace SoftInvWAProg3.CirculacionWS {
                 this.RaisePropertyChanged("message");
             }
         }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public sqlException nextException {
+            get {
+                return this.nextExceptionField;
+            }
+            set {
+                this.nextExceptionField = value;
+                this.RaisePropertyChanged("nextException");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public partial class sqlException : exception {
+        
+        private sqlException nextExceptionField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public sqlException nextException {
+            get {
+                return this.nextExceptionField;
+            }
+            set {
+                this.nextExceptionField = value;
+                this.RaisePropertyChanged("nextException");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sqlException))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public partial class exception : throwable {
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(exception))]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sqlException))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public partial class throwable : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private stackTraceElement[] stackTraceField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("stackTrace", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public stackTraceElement[] stackTrace {
+            get {
+                return this.stackTraceField;
+            }
+            set {
+                this.stackTraceField = value;
+                this.RaisePropertyChanged("stackTrace");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
+    public partial class stackTraceElement : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1254,42 +1367,26 @@ namespace SoftInvWAProg3.CirculacionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class SQLException : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class ParseException : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string sQLStateField;
-        
-        private int errorCodeField;
+        private int errorOffsetField;
         
         private string messageField;
         
-        private sqlException nextExceptionField;
-        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string SQLState {
+        public int errorOffset {
             get {
-                return this.sQLStateField;
+                return this.errorOffsetField;
             }
             set {
-                this.sQLStateField = value;
-                this.RaisePropertyChanged("SQLState");
+                this.errorOffsetField = value;
+                this.RaisePropertyChanged("errorOffset");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int errorCode {
-            get {
-                return this.errorCodeField;
-            }
-            set {
-                this.errorCodeField = value;
-                this.RaisePropertyChanged("errorCode");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public string message {
             get {
                 return this.messageField;
@@ -1299,103 +1396,6 @@ namespace SoftInvWAProg3.CirculacionWS {
                 this.RaisePropertyChanged("message");
             }
         }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public sqlException nextException {
-            get {
-                return this.nextExceptionField;
-            }
-            set {
-                this.nextExceptionField = value;
-                this.RaisePropertyChanged("nextException");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class sqlException : exception {
-        
-        private sqlException nextExceptionField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public sqlException nextException {
-            get {
-                return this.nextExceptionField;
-            }
-            set {
-                this.nextExceptionField = value;
-                this.RaisePropertyChanged("nextException");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sqlException))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class exception : throwable {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(exception))]
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(sqlException))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class throwable : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private stackTraceElement[] stackTraceField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("stackTrace", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public stackTraceElement[] stackTrace {
-            get {
-                return this.stackTraceField;
-            }
-            set {
-                this.stackTraceField = value;
-                this.RaisePropertyChanged("stackTrace");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ws.softinv.pucp.edu.pe/")]
-    public partial class stackTraceElement : object, System.ComponentModel.INotifyPropertyChanged {
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -1412,6 +1412,17 @@ namespace SoftInvWAProg3.CirculacionWS {
     public interface CirculacionWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuario/Fault/SQLEx" +
+            "ception", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse listarPrestamosPorUsuario(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse> listarPrestamosPorUsuarioAsync(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.ParseException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/Par" +
             "seException", Name="ParseException")]
@@ -1423,6 +1434,17 @@ namespace SoftInvWAProg3.CirculacionWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoResponse")]
         System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.buscarCirculacionesAvanzadoResponse> buscarCirculacionesAvanzadoAsync(SoftInvWAProg3.CirculacionWS.buscarCirculacionesAvanzadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacion/Fault/SQLExceptio" +
+            "n", Name="SQLException")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse eliminarCirculacion(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse> eliminarCirculacionAsync(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarTodasCirculacionesRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarTodasCirculacionesResponse")]
@@ -1447,28 +1469,6 @@ namespace SoftInvWAProg3.CirculacionWS {
         System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.insertarCirculacionResponse> insertarCirculacionAsync(SoftInvWAProg3.CirculacionWS.insertarCirculacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorId/Fault/SQLExce" +
-            "ption", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse obtenerCirculacionPorId(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse> obtenerCirculacionPorIdAsync(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuario/Fault/SQLEx" +
-            "ception", Name="SQLException")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse listarPrestamosPorUsuario(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse> listarPrestamosPorUsuarioAsync(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/modificarCirculacionRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/modificarCirculacionResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/modificarCirculacion/Fault/SQLExcepti" +
             "on", Name="SQLException")]
@@ -1480,15 +1480,51 @@ namespace SoftInvWAProg3.CirculacionWS {
         System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.modificarCirculacionResponse> modificarCirculacionAsync(SoftInvWAProg3.CirculacionWS.modificarCirculacionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacion/Fault/SQLExceptio" +
-            "n", Name="SQLException")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(SoftInvWAProg3.CirculacionWS.SQLException), Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorId/Fault/SQLExce" +
+            "ption", Name="SQLException")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse eliminarCirculacion(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request);
+        SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse obtenerCirculacionPorId(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse")]
-        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse> eliminarCirculacionAsync(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdRequest", ReplyAction="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdResponse")]
+        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse> obtenerCirculacionPorIdAsync(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosPorUsuario", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPrestamosPorUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int usuarioId;
+        
+        public listarPrestamosPorUsuarioRequest() {
+        }
+        
+        public listarPrestamosPorUsuarioRequest(int usuarioId) {
+            this.usuarioId = usuarioId;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosPorUsuarioResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarPrestamosPorUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftInvWAProg3.CirculacionWS.circulacionDTO[] @return;
+        
+        public listarPrestamosPorUsuarioResponse() {
+        }
+        
+        public listarPrestamosPorUsuarioResponse(SoftInvWAProg3.CirculacionWS.circulacionDTO[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -1560,6 +1596,42 @@ namespace SoftInvWAProg3.CirculacionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCirculacion", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCirculacionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCirculacion;
+        
+        public eliminarCirculacionRequest() {
+        }
+        
+        public eliminarCirculacionRequest(int idCirculacion) {
+            this.idCirculacion = idCirculacion;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCirculacionResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCirculacionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCirculacionResponse() {
+        }
+        
+        public eliminarCirculacionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasCirculaciones", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarTodasCirculacionesRequest {
         
@@ -1624,78 +1696,6 @@ namespace SoftInvWAProg3.CirculacionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCirculacionPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerCirculacionPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCirculacion;
-        
-        public obtenerCirculacionPorIdRequest() {
-        }
-        
-        public obtenerCirculacionPorIdRequest(int idCirculacion) {
-            this.idCirculacion = idCirculacion;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCirculacionPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerCirculacionPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.CirculacionWS.circulacionDTO @return;
-        
-        public obtenerCirculacionPorIdResponse() {
-        }
-        
-        public obtenerCirculacionPorIdResponse(SoftInvWAProg3.CirculacionWS.circulacionDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosPorUsuario", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPrestamosPorUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int usuarioId;
-        
-        public listarPrestamosPorUsuarioRequest() {
-        }
-        
-        public listarPrestamosPorUsuarioRequest(int usuarioId) {
-            this.usuarioId = usuarioId;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarPrestamosPorUsuarioResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarPrestamosPorUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftInvWAProg3.CirculacionWS.circulacionDTO[] @return;
-        
-        public listarPrestamosPorUsuarioResponse() {
-        }
-        
-        public listarPrestamosPorUsuarioResponse(SoftInvWAProg3.CirculacionWS.circulacionDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCirculacion", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
     public partial class modificarCirculacionRequest {
         
@@ -1732,17 +1732,17 @@ namespace SoftInvWAProg3.CirculacionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCirculacion", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCirculacionRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCirculacionPorId", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerCirculacionPorIdRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idCirculacion;
         
-        public eliminarCirculacionRequest() {
+        public obtenerCirculacionPorIdRequest() {
         }
         
-        public eliminarCirculacionRequest(int idCirculacion) {
+        public obtenerCirculacionPorIdRequest(int idCirculacion) {
             this.idCirculacion = idCirculacion;
         }
     }
@@ -1750,17 +1750,17 @@ namespace SoftInvWAProg3.CirculacionWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCirculacionResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCirculacionResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCirculacionPorIdResponse", WrapperNamespace="http://ws.softinv.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerCirculacionPorIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ws.softinv.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public SoftInvWAProg3.CirculacionWS.circulacionDTO @return;
         
-        public eliminarCirculacionResponse() {
+        public obtenerCirculacionPorIdResponse() {
         }
         
-        public eliminarCirculacionResponse(int @return) {
+        public obtenerCirculacionPorIdResponse(SoftInvWAProg3.CirculacionWS.circulacionDTO @return) {
             this.@return = @return;
         }
     }
@@ -1790,6 +1790,29 @@ namespace SoftInvWAProg3.CirculacionWS {
         
         public CirculacionWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.listarPrestamosPorUsuario(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request) {
+            return base.Channel.listarPrestamosPorUsuario(request);
+        }
+        
+        public SoftInvWAProg3.CirculacionWS.circulacionDTO[] listarPrestamosPorUsuario(int usuarioId) {
+            SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest inValue = new SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest();
+            inValue.usuarioId = usuarioId;
+            SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse retVal = ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).listarPrestamosPorUsuario(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse> SoftInvWAProg3.CirculacionWS.CirculacionWS.listarPrestamosPorUsuarioAsync(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request) {
+            return base.Channel.listarPrestamosPorUsuarioAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse> listarPrestamosPorUsuarioAsync(int usuarioId) {
+            SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest inValue = new SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest();
+            inValue.usuarioId = usuarioId;
+            return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).listarPrestamosPorUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1825,6 +1848,29 @@ namespace SoftInvWAProg3.CirculacionWS {
             inValue.fechaDesde = fechaDesde;
             inValue.fechaHasta = fechaHasta;
             return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).buscarCirculacionesAvanzadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.eliminarCirculacion(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request) {
+            return base.Channel.eliminarCirculacion(request);
+        }
+        
+        public int eliminarCirculacion(int idCirculacion) {
+            SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest inValue = new SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest();
+            inValue.idCirculacion = idCirculacion;
+            SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse retVal = ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).eliminarCirculacion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse> SoftInvWAProg3.CirculacionWS.CirculacionWS.eliminarCirculacionAsync(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request) {
+            return base.Channel.eliminarCirculacionAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse> eliminarCirculacionAsync(int idCirculacion) {
+            SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest inValue = new SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest();
+            inValue.idCirculacion = idCirculacion;
+            return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).eliminarCirculacionAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1872,52 +1918,6 @@ namespace SoftInvWAProg3.CirculacionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.obtenerCirculacionPorId(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request) {
-            return base.Channel.obtenerCirculacionPorId(request);
-        }
-        
-        public SoftInvWAProg3.CirculacionWS.circulacionDTO obtenerCirculacionPorId(int idCirculacion) {
-            SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest inValue = new SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest();
-            inValue.idCirculacion = idCirculacion;
-            SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse retVal = ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).obtenerCirculacionPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse> SoftInvWAProg3.CirculacionWS.CirculacionWS.obtenerCirculacionPorIdAsync(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request) {
-            return base.Channel.obtenerCirculacionPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse> obtenerCirculacionPorIdAsync(int idCirculacion) {
-            SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest inValue = new SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest();
-            inValue.idCirculacion = idCirculacion;
-            return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).obtenerCirculacionPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.listarPrestamosPorUsuario(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request) {
-            return base.Channel.listarPrestamosPorUsuario(request);
-        }
-        
-        public SoftInvWAProg3.CirculacionWS.circulacionDTO[] listarPrestamosPorUsuario(int usuarioId) {
-            SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest inValue = new SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest();
-            inValue.usuarioId = usuarioId;
-            SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse retVal = ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).listarPrestamosPorUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse> SoftInvWAProg3.CirculacionWS.CirculacionWS.listarPrestamosPorUsuarioAsync(SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest request) {
-            return base.Channel.listarPrestamosPorUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioResponse> listarPrestamosPorUsuarioAsync(int usuarioId) {
-            SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest inValue = new SoftInvWAProg3.CirculacionWS.listarPrestamosPorUsuarioRequest();
-            inValue.usuarioId = usuarioId;
-            return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).listarPrestamosPorUsuarioAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftInvWAProg3.CirculacionWS.modificarCirculacionResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.modificarCirculacion(SoftInvWAProg3.CirculacionWS.modificarCirculacionRequest request) {
             return base.Channel.modificarCirculacion(request);
         }
@@ -1941,26 +1941,26 @@ namespace SoftInvWAProg3.CirculacionWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.eliminarCirculacion(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request) {
-            return base.Channel.eliminarCirculacion(request);
+        SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse SoftInvWAProg3.CirculacionWS.CirculacionWS.obtenerCirculacionPorId(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request) {
+            return base.Channel.obtenerCirculacionPorId(request);
         }
         
-        public int eliminarCirculacion(int idCirculacion) {
-            SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest inValue = new SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest();
+        public SoftInvWAProg3.CirculacionWS.circulacionDTO obtenerCirculacionPorId(int idCirculacion) {
+            SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest inValue = new SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest();
             inValue.idCirculacion = idCirculacion;
-            SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse retVal = ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).eliminarCirculacion(inValue);
+            SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse retVal = ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).obtenerCirculacionPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse> SoftInvWAProg3.CirculacionWS.CirculacionWS.eliminarCirculacionAsync(SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest request) {
-            return base.Channel.eliminarCirculacionAsync(request);
+        System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse> SoftInvWAProg3.CirculacionWS.CirculacionWS.obtenerCirculacionPorIdAsync(SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest request) {
+            return base.Channel.obtenerCirculacionPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.eliminarCirculacionResponse> eliminarCirculacionAsync(int idCirculacion) {
-            SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest inValue = new SoftInvWAProg3.CirculacionWS.eliminarCirculacionRequest();
+        public System.Threading.Tasks.Task<SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdResponse> obtenerCirculacionPorIdAsync(int idCirculacion) {
+            SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest inValue = new SoftInvWAProg3.CirculacionWS.obtenerCirculacionPorIdRequest();
             inValue.idCirculacion = idCirculacion;
-            return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).eliminarCirculacionAsync(inValue);
+            return ((SoftInvWAProg3.CirculacionWS.CirculacionWS)(this)).obtenerCirculacionPorIdAsync(inValue);
         }
     }
 }

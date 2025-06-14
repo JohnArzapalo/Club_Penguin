@@ -105,16 +105,6 @@
   <xs:complexType name="stackTraceElement" final="extension restriction">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="eliminarReserva">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idReserva" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="eliminarReservaResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="obtenerReservaPorId">
     <xs:sequence>
       <xs:element minOccurs="0" name="idReserva" type="xs:int" />
@@ -125,6 +115,16 @@
       <xs:element minOccurs="0" name="return" type="tns:reservaDTO" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="eliminarReserva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idReserva" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarReservaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarReservasVigentesPorUsuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="usuarioId" type="xs:int" />
@@ -133,21 +133,6 @@
   <xs:complexType name="listarReservasVigentesPorUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reservaDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerTipoDeMaterialPorId">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerTipoDeMaterialPorIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Exception">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="buscarReservasAvanzado">
@@ -163,6 +148,21 @@
   <xs:complexType name="buscarReservasAvanzadoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reservaDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTipoDeMaterialPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTipoDeMaterialPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarReserva">

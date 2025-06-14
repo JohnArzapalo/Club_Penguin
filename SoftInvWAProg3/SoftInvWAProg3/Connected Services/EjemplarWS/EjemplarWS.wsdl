@@ -20,17 +20,17 @@
   <message name="insertarEjemplarResponse">
     <part name="parameters" element="tns:insertarEjemplarResponse" />
   </message>
-  <message name="listarTodosEjemplares">
-    <part name="parameters" element="tns:listarTodosEjemplares" />
-  </message>
-  <message name="listarTodosEjemplaresResponse">
-    <part name="parameters" element="tns:listarTodosEjemplaresResponse" />
-  </message>
   <message name="obtenerEjemplarPorId">
     <part name="parameters" element="tns:obtenerEjemplarPorId" />
   </message>
   <message name="obtenerEjemplarPorIdResponse">
     <part name="parameters" element="tns:obtenerEjemplarPorIdResponse" />
+  </message>
+  <message name="listarTodosEjemplares">
+    <part name="parameters" element="tns:listarTodosEjemplares" />
+  </message>
+  <message name="listarTodosEjemplaresResponse">
+    <part name="parameters" element="tns:listarTodosEjemplaresResponse" />
   </message>
   <portType name="EjemplarWS">
     <operation name="obtenerEjemplaresMaterialPorBiblioteca">
@@ -43,15 +43,15 @@
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/insertarEjemplarResponse" message="tns:insertarEjemplarResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/insertarEjemplar/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-    <operation name="listarTodosEjemplares">
-      <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresRequest" message="tns:listarTodosEjemplares" />
-      <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresResponse" message="tns:listarTodosEjemplaresResponse" />
-      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplares/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
     <operation name="obtenerEjemplarPorId">
       <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest" message="tns:obtenerEjemplarPorId" />
       <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse" message="tns:obtenerEjemplarPorIdResponse" />
       <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="listarTodosEjemplares">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresRequest" message="tns:listarTodosEjemplares" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresResponse" message="tns:listarTodosEjemplaresResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplares/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
   </portType>
   <binding name="EjemplarWSPortBinding" type="tns:EjemplarWS">
@@ -80,7 +80,7 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="listarTodosEjemplares">
+    <operation name="obtenerEjemplarPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -92,7 +92,7 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="obtenerEjemplarPorId">
+    <operation name="listarTodosEjemplares">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
