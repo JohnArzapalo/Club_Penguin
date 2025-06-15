@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="0459f3bd-3cb0-4836-a115-9321b81e8af3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/SoftBibWS/servicios.disco" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="servicios1.disco" MetadataType="Disco" ID="dc0c2c04-a7ec-457f-9ead-2c1fcd2e2b6e" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/servicios.disco" />
+    <MetadataFile FileName="DiaAtencionWS1.wsdl" MetadataType="Wsdl" ID="3f5d6d31-cf26-4cd0-99ea-2a11e07c1411" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/DiaAtencionWS?WSDL" />
+    <MetadataFile FileName="TipoUsuarioWS1.xsd" MetadataType="Schema" ID="0deccc78-b8a7-4e05-96a7-68953f62baf6" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/TipoUsuarioWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS1.xsd" MetadataType="Schema" ID="634531bc-7619-48c2-8f12-63a123059902" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="BibliotecaWS1.xsd" MetadataType="Schema" ID="7a9628d8-57e6-4ad6-9446-3faca1f51d61" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/BibliotecaWS?xsd=1" />
+    <MetadataFile FileName="ReservaWS1.wsdl" MetadataType="Wsdl" ID="2f872999-96cb-4b79-9e47-a8f99e2e928d" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/ReservaWS?WSDL" />
+    <MetadataFile FileName="BibliotecaWS1.wsdl" MetadataType="Wsdl" ID="c1a40413-dbd8-41b2-b647-3b3a117297a1" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/BibliotecaWS?WSDL" />
+    <MetadataFile FileName="EjemplarWS1.xsd" MetadataType="Schema" ID="0747cb08-eb6a-42e3-83fe-904f5021af75" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/EjemplarWS?xsd=1" />
+    <MetadataFile FileName="MaterialWS1.wsdl" MetadataType="Wsdl" ID="9e02101a-d896-4d6a-9ccd-b796d0cd61a3" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/MaterialWS?WSDL" />
+    <MetadataFile FileName="TipoUsuarioWS1.wsdl" MetadataType="Wsdl" ID="b7278c04-c9ab-48c6-8379-2921a7500238" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/TipoUsuarioWS?WSDL" />
+    <MetadataFile FileName="MaterialWS1.xsd" MetadataType="Schema" ID="6a475d7e-bef4-4723-a69a-9bbbf5e1b230" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/MaterialWS?xsd=1" />
+    <MetadataFile FileName="SancionWS1.wsdl" MetadataType="Wsdl" ID="fd21fd4d-0683-43a2-9f64-575839c3295c" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/SancionWS?WSDL" />
+    <MetadataFile FileName="ReservaWS1.xsd" MetadataType="Schema" ID="85dac8eb-ba36-4b26-9fed-31e5f50a90f8" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/ReservaWS?xsd=1" />
+    <MetadataFile FileName="DiaAtencionWS1.xsd" MetadataType="Schema" ID="2828c287-a47a-41b9-92fd-bdb5dc6b5cc9" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/DiaAtencionWS?xsd=1" />
+    <MetadataFile FileName="UsuarioWS1.wsdl" MetadataType="Wsdl" ID="76f8b76b-a346-4ab1-8104-e464d898a415" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/UsuarioWS?WSDL" />
+    <MetadataFile FileName="CirculacionWS1.xsd" MetadataType="Schema" ID="8a54ed95-440f-46c1-9a1e-805b6ed466a6" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/CirculacionWS?xsd=1" />
+    <MetadataFile FileName="SancionWS1.xsd" MetadataType="Schema" ID="c9238149-11dd-4298-9fdf-a4bc74632b43" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/SancionWS?xsd=1" />
+    <MetadataFile FileName="EjemplarWS1.wsdl" MetadataType="Wsdl" ID="358654f4-00a0-4c3b-bfdb-7f7d87b7ffb1" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/EjemplarWS?WSDL" />
+    <MetadataFile FileName="CirculacionWS1.wsdl" MetadataType="Wsdl" ID="0a00c04e-4267-4ab2-aa2f-1617c00b2560" SourceId="1" SourceUrl="http://localhost:8080/SoftBibWS/CirculacionWS?WSDL" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

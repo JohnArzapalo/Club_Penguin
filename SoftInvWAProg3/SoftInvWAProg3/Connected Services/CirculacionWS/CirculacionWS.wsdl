@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.softinv.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CirculacionWS" targetNamespace="http://ws.softinv.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/CirculacionWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="listarPrestamosPorUsuario">
+    <part name="parameters" element="tns:listarPrestamosPorUsuario" />
+  </message>
+  <message name="listarPrestamosPorUsuarioResponse">
+    <part name="parameters" element="tns:listarPrestamosPorUsuarioResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="buscarCirculacionesAvanzado">
+    <part name="parameters" element="tns:buscarCirculacionesAvanzado" />
+  </message>
+  <message name="buscarCirculacionesAvanzadoResponse">
+    <part name="parameters" element="tns:buscarCirculacionesAvanzadoResponse" />
+  </message>
+  <message name="ParseException">
+    <part name="fault" element="tns:ParseException" />
+  </message>
+  <message name="eliminarCirculacion">
+    <part name="parameters" element="tns:eliminarCirculacion" />
+  </message>
+  <message name="eliminarCirculacionResponse">
+    <part name="parameters" element="tns:eliminarCirculacionResponse" />
+  </message>
+  <message name="listarTodasCirculaciones">
+    <part name="parameters" element="tns:listarTodasCirculaciones" />
+  </message>
+  <message name="listarTodasCirculacionesResponse">
+    <part name="parameters" element="tns:listarTodasCirculacionesResponse" />
+  </message>
+  <message name="insertarCirculacion">
+    <part name="parameters" element="tns:insertarCirculacion" />
+  </message>
+  <message name="insertarCirculacionResponse">
+    <part name="parameters" element="tns:insertarCirculacionResponse" />
+  </message>
+  <message name="modificarCirculacion">
+    <part name="parameters" element="tns:modificarCirculacion" />
+  </message>
+  <message name="modificarCirculacionResponse">
+    <part name="parameters" element="tns:modificarCirculacionResponse" />
+  </message>
+  <message name="obtenerCirculacionPorId">
+    <part name="parameters" element="tns:obtenerCirculacionPorId" />
+  </message>
+  <message name="obtenerCirculacionPorIdResponse">
+    <part name="parameters" element="tns:obtenerCirculacionPorIdResponse" />
+  </message>
+  <portType name="CirculacionWS">
+    <operation name="listarPrestamosPorUsuario">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest" message="tns:listarPrestamosPorUsuario" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse" message="tns:listarPrestamosPorUsuarioResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarCirculacionesAvanzado">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoRequest" message="tns:buscarCirculacionesAvanzado" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoResponse" message="tns:buscarCirculacionesAvanzadoResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/ParseException" name="ParseException" message="tns:ParseException" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="eliminarCirculacion">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionRequest" message="tns:eliminarCirculacion" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse" message="tns:eliminarCirculacionResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/eliminarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="listarTodasCirculaciones">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarTodasCirculacionesRequest" message="tns:listarTodasCirculaciones" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarTodasCirculacionesResponse" message="tns:listarTodasCirculacionesResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/listarTodasCirculaciones/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="insertarCirculacion">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/insertarCirculacionRequest" message="tns:insertarCirculacion" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/insertarCirculacionResponse" message="tns:insertarCirculacionResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/insertarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="modificarCirculacion">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/modificarCirculacionRequest" message="tns:modificarCirculacion" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/modificarCirculacionResponse" message="tns:modificarCirculacionResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/modificarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerCirculacionPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdRequest" message="tns:obtenerCirculacionPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdResponse" message="tns:obtenerCirculacionPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="CirculacionWSPortBinding" type="tns:CirculacionWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarPrestamosPorUsuario">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarCirculacionesAvanzado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="ParseException">
+        <soap:fault use="literal" name="ParseException" namespace="" />
+      </fault>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarCirculacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodasCirculaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertarCirculacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="modificarCirculacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerCirculacionPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="CirculacionWS">
+    <port name="CirculacionWSPort" binding="tns:CirculacionWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftInvWSProg3/CirculacionWS" />
+    </port>
+  </service>
+</definitions>

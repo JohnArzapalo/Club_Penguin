@@ -1,0 +1,161 @@
+/* Placeholder de inputs normales */
+input::placeholder {
+    color: #6c757d; /* gris Bootstrap */
+    opacity: 1; /* para asegurar que el color no se atenúe */
+}
+
+/* Fecha - input[type=date] placeholder text (algunos navegadores) */
+input[type="date"]::-webkit-datetime-edit {
+    color: #6c757d;
+}
+
+/* Para Firefox */
+input[type="date"] {
+    color: #6c757d;
+}
+
+/* Select - color del texto por defecto (cuando está en "Seleccione Estado") */
+select.form-select {
+    color: #6c757d;
+}
+
+    /* Para que el texto en el select se ponga gris si no se ha elegido valor */
+    select.form-select option[value=""] {
+        color: #6c757d;
+    }
+
+    /* Select con valor vacío debe verse gris */
+    select.form-select:not(:focus):invalid {
+        color: #6c757d;
+    }
+
+    /* Cuando se elige valor válido, el texto se pone negro */
+    select.form-select:valid {
+        color: black;
+    }
+
+
+
+/*          NUEVOS ESTILOS AÑADIDOS             */
+
+/* Estilo para filas clickeables */
+.table-hover tbody tr {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .table-hover tbody tr:hover {
+        background-color: #f5f5f5;
+    }
+
+
+/*----Estilos para detalle de circulacion-----*/
+
+.detail-label {
+    font-weight: 700;
+    color: #000000;
+    display: inline-block;
+    width: 160px;
+}
+
+.detail-value {
+    color: #212529;
+}
+
+/*Estilo para campos de texto*/
+
+.form-group-material {
+    position: relative;
+    width: 100%;
+}
+
+    .form-group-material input {
+        width: 100%;
+        padding: 12px 12px 12px 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        outline: none;
+        background: transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group-material label {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        color: #999;
+        font-size: 14px;
+        pointer-events: none;
+        background: #fff;
+        padding: 0 4px;
+        transition: all 0.2s ease;
+    }
+
+    .form-group-material input:focus {
+        border-color: #0a4fd5;
+        box-shadow: none !important;
+    }
+
+        .form-group-material input:focus + label {
+            top: -8px;
+            font-size: 12px;
+            color: #0a4fd5 !important;
+        }
+
+    .form-group-material input:not(:placeholder-shown) + label {
+        top: -8px;
+        font-size: 12px;
+        color: #999;
+    }
+
+
+/*Estilos para las cajas azules de biblioteca y horario en el detalle*/
+.info-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Para pantallas pequeñas */
+    width: 100%; /* Ocupa todo el ancho de la card */
+    margin-bottom: 1rem;
+}
+
+/* Cajas internas */
+.info-box {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-start;
+    min-width: 150px; /* Ancho mínimo para evitar compresión */
+}
+
+.biblioteca {
+    background-color: #e6f0ff;
+    color: #002f5f;
+    flex-grow: 1; /* Ocupa el espacio disponible */
+}
+
+.horario {
+    background-color: white;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    flex-grow: 2; /* Ocupa el espacio disponible */
+}
+
+/* Sobrescribe estilos de Bootstrap para form-select dentro de form-group-material */
+.form-group-material .form-select {
+    width: 100%;
+    padding: 12px 12px; /* Igual que tus inputs */
+    font-size: 14px;
+    border: 1px solid #ccc !important; /* Borde como en form-group-material */
+    border-radius: 8px !important;
+    outline: none;
+    background-color: white;
+    /* Mantén la flecha de Bootstrap */
+    background-position: right 12px center;
+    background-repeat: no-repeat;
+    background-size: 16px 12px;
+    appearance: none;
+}

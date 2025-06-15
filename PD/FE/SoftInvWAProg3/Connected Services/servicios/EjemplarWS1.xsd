@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pucp.edu.pe" targetNamespace="http://services.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SQLException" type="tns:SQLException" />
+  <xs:element name="insertarEjemplar" type="tns:insertarEjemplar" />
+  <xs:element name="insertarEjemplarResponse" type="tns:insertarEjemplarResponse" />
+  <xs:element name="listarTodosEjemplares" type="tns:listarTodosEjemplares" />
+  <xs:element name="listarTodosEjemplaresResponse" type="tns:listarTodosEjemplaresResponse" />
+  <xs:element name="obtenerEjemplarPorId" type="tns:obtenerEjemplarPorId" />
+  <xs:element name="obtenerEjemplarPorIdResponse" type="tns:obtenerEjemplarPorIdResponse" />
+  <xs:element name="obtenerEjemplaresMaterialPorBiblioteca" type="tns:obtenerEjemplaresMaterialPorBiblioteca" />
+  <xs:element name="obtenerEjemplaresMaterialPorBibliotecaResponse" type="tns:obtenerEjemplaresMaterialPorBibliotecaResponse" />
+  <xs:complexType name="obtenerEjemplaresMaterialPorBiblioteca">
+    <xs:sequence>
+      <xs:element name="materialId" type="xs:int" />
+      <xs:element name="bibliotecaId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplaresMaterialPorBibliotecaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplarDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ejemplarDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="biblioteca" type="tns:bibliotecaDTO" />
+      <xs:element minOccurs="0" name="ejemplarId" type="xs:int" />
+      <xs:element minOccurs="0" name="eliminable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoEjemplar" />
+      <xs:element minOccurs="0" name="locacionEnBiblioteca" type="xs:string" />
+      <xs:element minOccurs="0" name="material" type="tns:materialDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bibliotecaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bibliotecaId" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ubicacion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="materialDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioPublicacion" type="xs:int" />
+      <xs:element minOccurs="0" name="autor" type="xs:string" />
+      <xs:element minOccurs="0" name="idioma" type="xs:string" />
+      <xs:element minOccurs="0" name="materialId" type="xs:int" />
+      <xs:element minOccurs="0" name="numeroPaginas" type="xs:int" />
+      <xs:element minOccurs="0" name="tema" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoMaterial" type="tns:tipoMaterial" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SQLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SQLState" type="xs:string" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sqlException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="exception">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:throwable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="throwable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stackTrace" nillable="true" type="tns:stackTraceElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stackTraceElement" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarEjemplar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bibliotecaId" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+      <xs:element minOccurs="0" name="autor" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="anioStr" type="xs:string" />
+      <xs:element minOccurs="0" name="idioma" type="xs:string" />
+      <xs:element minOccurs="0" name="tema" type="xs:string" />
+      <xs:element minOccurs="0" name="locacion" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarEjemplarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplarPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEjemplar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEjemplarPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ejemplarDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjemplares">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosEjemplaresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ejemplarDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="estadoEjemplar">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DISPONIBLE" />
+      <xs:enumeration value="PRESTADO" />
+      <xs:enumeration value="EN_REPARACION" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoMaterial">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LIBRO" />
+      <xs:enumeration value="ARTICULO" />
+      <xs:enumeration value="TESIS" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

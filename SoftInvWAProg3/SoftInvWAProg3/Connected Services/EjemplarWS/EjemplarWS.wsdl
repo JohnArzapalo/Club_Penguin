@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.softinv.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="EjemplarWS" targetNamespace="http://ws.softinv.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftInvWSProg3/EjemplarWS?xsd=1" namespace="http://ws.softinv.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerEjemplaresMaterialPorBiblioteca">
+    <part name="parameters" element="tns:obtenerEjemplaresMaterialPorBiblioteca" />
+  </message>
+  <message name="obtenerEjemplaresMaterialPorBibliotecaResponse">
+    <part name="parameters" element="tns:obtenerEjemplaresMaterialPorBibliotecaResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="insertarEjemplar">
+    <part name="parameters" element="tns:insertarEjemplar" />
+  </message>
+  <message name="insertarEjemplarResponse">
+    <part name="parameters" element="tns:insertarEjemplarResponse" />
+  </message>
+  <message name="obtenerEjemplarPorId">
+    <part name="parameters" element="tns:obtenerEjemplarPorId" />
+  </message>
+  <message name="obtenerEjemplarPorIdResponse">
+    <part name="parameters" element="tns:obtenerEjemplarPorIdResponse" />
+  </message>
+  <message name="listarTodosEjemplares">
+    <part name="parameters" element="tns:listarTodosEjemplares" />
+  </message>
+  <message name="listarTodosEjemplaresResponse">
+    <part name="parameters" element="tns:listarTodosEjemplaresResponse" />
+  </message>
+  <portType name="EjemplarWS">
+    <operation name="obtenerEjemplaresMaterialPorBiblioteca">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplaresMaterialPorBibliotecaRequest" message="tns:obtenerEjemplaresMaterialPorBiblioteca" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplaresMaterialPorBibliotecaResponse" message="tns:obtenerEjemplaresMaterialPorBibliotecaResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplaresMaterialPorBiblioteca/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="insertarEjemplar">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/insertarEjemplarRequest" message="tns:insertarEjemplar" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/insertarEjemplarResponse" message="tns:insertarEjemplarResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/insertarEjemplar/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerEjemplarPorId">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest" message="tns:obtenerEjemplarPorId" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse" message="tns:obtenerEjemplarPorIdResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="listarTodosEjemplares">
+      <input wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresRequest" message="tns:listarTodosEjemplares" />
+      <output wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresResponse" message="tns:listarTodosEjemplaresResponse" />
+      <fault wsam:Action="http://ws.softinv.pucp.edu.pe/EjemplarWS/listarTodosEjemplares/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="EjemplarWSPortBinding" type="tns:EjemplarWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerEjemplaresMaterialPorBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertarEjemplar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerEjemplarPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodosEjemplares">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="EjemplarWS">
+    <port name="EjemplarWSPort" binding="tns:EjemplarWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftInvWSProg3/EjemplarWS" />
+    </port>
+  </service>
+</definitions>

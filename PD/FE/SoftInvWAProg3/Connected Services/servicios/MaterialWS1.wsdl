@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MaterialWS" targetNamespace="http://services.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/MaterialWS?xsd=1" namespace="http://services.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="buscarPorTema">
+    <part name="parameters" element="tns:buscarPorTema" />
+  </message>
+  <message name="buscarPorTemaResponse">
+    <part name="parameters" element="tns:buscarPorTemaResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="obtenerCopias">
+    <part name="parameters" element="tns:obtenerCopias" />
+  </message>
+  <message name="obtenerCopiasResponse">
+    <part name="parameters" element="tns:obtenerCopiasResponse" />
+  </message>
+  <message name="modificarMaterial">
+    <part name="parameters" element="tns:modificarMaterial" />
+  </message>
+  <message name="modificarMaterialResponse">
+    <part name="parameters" element="tns:modificarMaterialResponse" />
+  </message>
+  <message name="buscarPorTitulo">
+    <part name="parameters" element="tns:buscarPorTitulo" />
+  </message>
+  <message name="buscarPorTituloResponse">
+    <part name="parameters" element="tns:buscarPorTituloResponse" />
+  </message>
+  <message name="buscarPorIdioma">
+    <part name="parameters" element="tns:buscarPorIdioma" />
+  </message>
+  <message name="buscarPorIdiomaResponse">
+    <part name="parameters" element="tns:buscarPorIdiomaResponse" />
+  </message>
+  <message name="eliminarMaterial">
+    <part name="parameters" element="tns:eliminarMaterial" />
+  </message>
+  <message name="eliminarMaterialResponse">
+    <part name="parameters" element="tns:eliminarMaterialResponse" />
+  </message>
+  <message name="buscarPorAutor">
+    <part name="parameters" element="tns:buscarPorAutor" />
+  </message>
+  <message name="buscarPorAutorResponse">
+    <part name="parameters" element="tns:buscarPorAutorResponse" />
+  </message>
+  <message name="insertarMaterial">
+    <part name="parameters" element="tns:insertarMaterial" />
+  </message>
+  <message name="insertarMaterialResponse">
+    <part name="parameters" element="tns:insertarMaterialResponse" />
+  </message>
+  <message name="buscarPorAnio">
+    <part name="parameters" element="tns:buscarPorAnio" />
+  </message>
+  <message name="buscarPorAnioResponse">
+    <part name="parameters" element="tns:buscarPorAnioResponse" />
+  </message>
+  <message name="materialBusquedaAvanzada">
+    <part name="parameters" element="tns:materialBusquedaAvanzada" />
+  </message>
+  <message name="materialBusquedaAvanzadaResponse">
+    <part name="parameters" element="tns:materialBusquedaAvanzadaResponse" />
+  </message>
+  <message name="obtenerEjemplaresReservadosYDisponibles">
+    <part name="parameters" element="tns:obtenerEjemplaresReservadosYDisponibles" />
+  </message>
+  <message name="obtenerEjemplaresReservadosYDisponiblesResponse">
+    <part name="parameters" element="tns:obtenerEjemplaresReservadosYDisponiblesResponse" />
+  </message>
+  <message name="listarTodosMateriales">
+    <part name="parameters" element="tns:listarTodosMateriales" />
+  </message>
+  <message name="listarTodosMaterialesResponse">
+    <part name="parameters" element="tns:listarTodosMaterialesResponse" />
+  </message>
+  <message name="obtenerMaterialPorId">
+    <part name="parameters" element="tns:obtenerMaterialPorId" />
+  </message>
+  <message name="obtenerMaterialPorIdResponse">
+    <part name="parameters" element="tns:obtenerMaterialPorIdResponse" />
+  </message>
+  <message name="buscarPorBiblioteca">
+    <part name="parameters" element="tns:buscarPorBiblioteca" />
+  </message>
+  <message name="buscarPorBibliotecaResponse">
+    <part name="parameters" element="tns:buscarPorBibliotecaResponse" />
+  </message>
+  <message name="buscarPorDisponibilidad">
+    <part name="parameters" element="tns:buscarPorDisponibilidad" />
+  </message>
+  <message name="buscarPorDisponibilidadResponse">
+    <part name="parameters" element="tns:buscarPorDisponibilidadResponse" />
+  </message>
+  <message name="buscarPorTipoMaterial">
+    <part name="parameters" element="tns:buscarPorTipoMaterial" />
+  </message>
+  <message name="buscarPorTipoMaterialResponse">
+    <part name="parameters" element="tns:buscarPorTipoMaterialResponse" />
+  </message>
+  <portType name="MaterialWS">
+    <operation name="buscarPorTema">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTemaRequest" message="tns:buscarPorTema" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTemaResponse" message="tns:buscarPorTemaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTema/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerCopias">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerCopiasRequest" message="tns:obtenerCopias" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerCopiasResponse" message="tns:obtenerCopiasResponse" />
+    </operation>
+    <operation name="modificarMaterial">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/modificarMaterialRequest" message="tns:modificarMaterial" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/modificarMaterialResponse" message="tns:modificarMaterialResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/modificarMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorTitulo">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTituloRequest" message="tns:buscarPorTitulo" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTituloResponse" message="tns:buscarPorTituloResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTitulo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorIdioma">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorIdiomaRequest" message="tns:buscarPorIdioma" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorIdiomaResponse" message="tns:buscarPorIdiomaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorIdioma/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="eliminarMaterial">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorAutor">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAutorRequest" message="tns:buscarPorAutor" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAutorResponse" message="tns:buscarPorAutorResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAutor/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="insertarMaterial">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/insertarMaterialRequest" message="tns:insertarMaterial" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/insertarMaterialResponse" message="tns:insertarMaterialResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/insertarMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorAnio">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnioRequest" message="tns:buscarPorAnio" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnioResponse" message="tns:buscarPorAnioResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnio/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="materialBusquedaAvanzada">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzadaRequest" message="tns:materialBusquedaAvanzada" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzadaResponse" message="tns:materialBusquedaAvanzadaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzada/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerEjemplaresReservadosYDisponibles">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerEjemplaresReservadosYDisponiblesRequest" message="tns:obtenerEjemplaresReservadosYDisponibles" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerEjemplaresReservadosYDisponiblesResponse" message="tns:obtenerEjemplaresReservadosYDisponiblesResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerEjemplaresReservadosYDisponibles/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="listarTodosMateriales">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/listarTodosMaterialesRequest" message="tns:listarTodosMateriales" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/listarTodosMaterialesResponse" message="tns:listarTodosMaterialesResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/listarTodosMateriales/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerMaterialPorId">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorIdRequest" message="tns:obtenerMaterialPorId" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorIdResponse" message="tns:obtenerMaterialPorIdResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorBiblioteca">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBibliotecaRequest" message="tns:buscarPorBiblioteca" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBibliotecaResponse" message="tns:buscarPorBibliotecaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBiblioteca/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorDisponibilidad">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidadRequest" message="tns:buscarPorDisponibilidad" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidadResponse" message="tns:buscarPorDisponibilidadResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorTipoMaterial">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTipoMaterialRequest" message="tns:buscarPorTipoMaterial" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTipoMaterialResponse" message="tns:buscarPorTipoMaterialResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTipoMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+  </portType>
+  <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="buscarPorTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerCopias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorTitulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorIdioma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorAutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorAnio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="materialBusquedaAvanzada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerEjemplaresReservadosYDisponibles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodosMateriales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerMaterialPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorBiblioteca">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorDisponibilidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorTipoMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="MaterialWS">
+    <port name="MaterialWSPort" binding="tns:MaterialWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftBibWS/MaterialWS" />
+    </port>
+  </service>
+</definitions>

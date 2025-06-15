@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.softinv.pucp.edu.pe/" targetNamespace="http://ws.softinv.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="SQLException" type="tns:SQLException" />
+  <xs:element name="eliminarTipoUsuario" type="tns:eliminarTipoUsuario" />
+  <xs:element name="eliminarTipoUsuarioResponse" type="tns:eliminarTipoUsuarioResponse" />
+  <xs:element name="insertarTipoUsuario" type="tns:insertarTipoUsuario" />
+  <xs:element name="insertarTipoUsuarioResponse" type="tns:insertarTipoUsuarioResponse" />
+  <xs:element name="listarTodosTiposUsuario" type="tns:listarTodosTiposUsuario" />
+  <xs:element name="listarTodosTiposUsuarioResponse" type="tns:listarTodosTiposUsuarioResponse" />
+  <xs:element name="modificarTipoUsuario" type="tns:modificarTipoUsuario" />
+  <xs:element name="modificarTipoUsuarioResponse" type="tns:modificarTipoUsuarioResponse" />
+  <xs:element name="obtenerTipoUsuarioPorId" type="tns:obtenerTipoUsuarioPorId" />
+  <xs:element name="obtenerTipoUsuarioPorIdResponse" type="tns:obtenerTipoUsuarioPorIdResponse" />
+  <xs:complexType name="listarTodosTiposUsuario">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosTiposUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoUsuarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="numeroMaxDias" type="xs:int" />
+      <xs:element minOccurs="0" name="numeroMaxItems" type="xs:int" />
+      <xs:element minOccurs="0" name="tipoUsuarioId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SQLException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SQLState" type="xs:string" />
+      <xs:element name="errorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+      <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sqlException">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="nextException" type="tns:sqlException" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="exception">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:throwable">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="throwable">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="stackTrace" nillable="true" type="tns:stackTraceElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stackTraceElement" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="obtenerTipoUsuarioPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTipoUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTipoUsuarioPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:tipoUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTipoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTipoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="tipoUsuario" type="tns:tipoUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTipoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idTipoUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarTipoUsuarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
