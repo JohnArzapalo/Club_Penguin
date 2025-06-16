@@ -20,7 +20,19 @@ namespace SoftInvWAProg3
                 reservaCliente = new ReservaWSClient();
                 materialCliente = new MaterialWSClient();
 
-                string idReservaStr = Request.QueryString["reservaId"]; 
+                // Mostrar "Volver" según el rol del usuario
+                string rol = Session["rol"] as string;
+                if (!string.IsNullOrEmpty(rol) && rol.Equals("Bibliotecario", StringComparison.OrdinalIgnoreCase))
+                {
+                    pnlVolverBibliotecario.Visible = true;
+                }
+                else
+                {
+                    pnlVolverUsuario.Visible = true;
+                }
+
+                // Validar y procesar el ID de reserva
+                string idReservaStr = Request.QueryString["reservaId"];
                 if (!string.IsNullOrEmpty(idReservaStr) && int.TryParse(idReservaStr, out int idReservaInt))
                 {
                     CargarDetalleDeReserva(idReservaInt);
@@ -29,7 +41,7 @@ namespace SoftInvWAProg3
                 {
                     ScriptManager.RegisterStartupScript(this, GetType(), "showError",
                         "alert('ID de reserva inválido o no proporcionado.');", true);
-                    Response.Redirect("reservas.aspx?error=id_invalido_reserva");
+                    Response.Redirect("~/reservas.aspx?error=id_invalido_reserva");
                 }
             }
         }

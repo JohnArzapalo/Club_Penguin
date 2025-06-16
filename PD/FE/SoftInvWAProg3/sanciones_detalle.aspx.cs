@@ -27,76 +27,46 @@ namespace SoftInvWAProg3
             this.SancionId = null;
             this.CirculacionId = null;
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            //if (!IsPostBack)
-            //{
-            //    string mode = Request.QueryString["mode"];
-
-            //    if (mode == "create")
-            //    {
-            //        // Modo creación de nueva sanción
-            //        string circulacionIdParam = Request.QueryString["circulacionId"];
-            //        if (!string.IsNullOrEmpty(circulacionIdParam) && int.TryParse(circulacionIdParam, 
-            //            out int circulacionId))
-            //        {
-            //            cargarVistaPrevia(circulacionId);
-            //            sancionAIns.circulacion.circulacionId = circulacionId;//
-            //        }
-
-            //        //else
-            //        //{
-            //        //    Response.Redirect("sanciones.aspx?error=invalid_circulacion_id");
-            //        //}
-            //    }
-            //    else
-            //    {
-            //        // Modo visualización normal (existente)
-            //        string idparam = Request.QueryString["id"];
-            //        if (!string.IsNullOrEmpty(idparam) && int.TryParse(idparam, out int id))
-            //        {
-            //            this.SancionId = id;
-            //            cargarEntidadExistente();
-            //        }
-            //        //else
-            //        //{
-            //        //    Response.Redirect("sanciones.aspx");
-            //        //}
-            //    }
-            //}
-
-
-            ///NUEVA FORMA
+            //Mostrar "Volver" según el rol
+            string rol = Session["rol"] as string;
+            bool esBibliotecario = !string.IsNullOrEmpty(rol) && rol.Equals("Bibliotecario", StringComparison.OrdinalIgnoreCase);
+            pnlVolverBibliotecario.Visible = esBibliotecario;
+            pnlVolverUsuario.Visible = !esBibliotecario;
+            pnlUsuario.Visible = esBibliotecario;
+            
+            //NUEVA FORMA
             string mode = Request.QueryString["mode"];
+
+            pnlObservacionesLectura.Visible = (mode != "create");
+            pnlObservacionesEditor.Visible = (mode == "create");
+
             if (mode == "create")
             {
-                // Modo creación de nueva sanción
+                //Modo creación de nueva sanción
                 string circulacionIdParam = Request.QueryString["circulacionId"];
-                if (!string.IsNullOrEmpty(circulacionIdParam) && int.TryParse(circulacionIdParam,
-                    out int circulacionId))
+                if (!string.IsNullOrEmpty(circulacionIdParam) && int.TryParse(circulacionIdParam, out int circulacionId))
                 {
-                    // Se asigna en cada carga (incluyendo postbacks), fundamental para que funcione el boton de registrar sancion
                     CirculacionId = circulacionId;
                     sancionAIns = this.SancionWSClient.vistaPreviaNuevaSancion(circulacionId);
                 }
+
                 if (!IsPostBack && this.CirculacionId.HasValue)
                 {
-                    cargarVistaPrevia((int)CirculacionId); // Solo carga datos la primera vez
+                    cargarVistaPrevia((int)CirculacionId);
                 }
-
             }
             else
             {
-                // Modo visualización normal (existente)
-                txtObservaciones.Enabled = false;
+                //Modo visualización normal (existente)
                 string idparam = Request.QueryString["id"];
                 if (!string.IsNullOrEmpty(idparam) && int.TryParse(idparam, out int id) && !IsPostBack)
                 {
                     this.SancionId = id;
                     cargarEntidadExistente();
                 }
-
             }
         }
 
@@ -113,12 +83,19 @@ namespace SoftInvWAProg3
             {
                 ltSancionId.Text = sancion.sancionId.ToString();
                 ltCirculacion.Text = sancion.circulacion.circulacionId.ToString();
-                ltFechaRegistro.Text = sancion.fechaRegistro.ToString();
-                ltFechaTermino.Text = sancion.fechaTermino.ToString();
+                ltFechaRegistro.Text = sancion.fechaRegistro.ToString("dd/MM/yyyy");
+                ltFechaTermino.Text = sancion.fechaTermino.ToString("dd/MM/yyyy");
 
-                ltDevolucion.Text = sancion.circulacion.estadoPrestamo.ToString();
+                ltDevolucion.Text = SoftInvWAProg3.prestamos.ObtenerTextoEstadoPrestamo(sancion.circulacion.estadoPrestamo.ToString());
                 ltDiasSancion.Text = sancion.diasSancion.ToString();
-                txtObservaciones.Text = sancion.observacion;
+                ltObservaciones.Text = sancion.observacion;
+
+                if (sancion.circulacion.usuario != null)
+                {
+                    string nombres = sancion.circulacion.usuario.nombres;
+                    string apellido = sancion.circulacion.usuario.primerApellido;
+                    ltUsuario.Text = $"{sancion.circulacion.usuario.usuarioId} - {nombres} {apellido}";
+                }
             }
         }
 
@@ -128,11 +105,18 @@ namespace SoftInvWAProg3
         {
             btnRegistrarSancion.Visible = true;
             ltCirculacion.Text = sancionAIns.circulacion.circulacionId.ToString();
-            ltFechaRegistro.Text = sancionAIns.fechaRegistro.ToString();
-            ltFechaTermino.Text = sancionAIns.fechaTermino.ToString();
-            ltDevolucion.Text = sancionAIns.circulacion.estadoPrestamo.ToString();
+            ltFechaRegistro.Text = sancionAIns.fechaRegistro.ToString("dd/MM/yyyy");
+            ltFechaTermino.Text = sancionAIns.fechaTermino.ToString("dd/MM/yyyy");
+            ltDevolucion.Text = SoftInvWAProg3.prestamos.ObtenerTextoEstadoPrestamo(sancionAIns.circulacion.estadoPrestamo.ToString());
             ltDiasSancion.Text = sancionAIns.diasSancion.ToString();
+            txtObservaciones.Text = sancionAIns.observacion;
 
+            if (sancionAIns.circulacion.usuario != null)
+            {
+                string nombres = sancionAIns.circulacion.usuario.nombres;
+                string apellido = sancionAIns.circulacion.usuario.primerApellido;
+                ltUsuario.Text = $"{sancionAIns.circulacion.usuario.usuarioId} - {nombres} {apellido}";
+            }
         }
 
         protected void btnRegistrarSancion_Click(object sender, EventArgs e)

@@ -6,6 +6,7 @@ import pe.edu.pucp.softinv.model.usuario.UsuarioDTO;
 
 import java.sql.SQLException;
 import java.util.List;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import pe.edu.pucp.softinv.business.BibliotecaBO;
 import pe.edu.pucp.softinv.business.TipoUsuarioBO;
 import pe.edu.pucp.softinv.model.biblioteca.BibliotecaDTO;
@@ -16,7 +17,26 @@ import pe.edu.pucp.softinv.model.usuario.TipoUsuarioDTO;
 
 public class PasswordMigrationTool {
 
-    public static void main(String[] args) {
+//    private final UsuarioDAO usuarioDAO;
+//    private final BCryptPasswordEncoder passwordEncoder;
+//    
+//    public PasswordMigrationTool() {
+//        this.usuarioDAO = new UsuarioDAOImpl();
+//        this.passwordEncoder = new BCryptPasswordEncoder();
+//    }
+//    
+//    public void Encriptacion(){
+//        String plainPassword = "ariana123"; 
+//        String hashedPassword = passwordEncoder.encode(plainPassword);
+//        System.out.println(hashedPassword);
+//    }
+//    
+//    public static void main(String[] args) {
+//        PasswordMigrationTool tool = new PasswordMigrationTool();
+//        tool.Encriptacion();
+//    }
+
+//    public static void main(String[] args) {
 //        UsuarioBO usuarioBO = new UsuarioBO();
 //        try {
 //            TipoUsuarioBO tpbo=new TipoUsuarioBO();
@@ -73,5 +93,5 @@ public class PasswordMigrationTool {
 //            e.printStackTrace();
 //        }        
 //        
-    }
+//    }
 }

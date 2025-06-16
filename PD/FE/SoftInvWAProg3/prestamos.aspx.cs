@@ -1,7 +1,6 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-
+using System.Web.UI.WebControls;
 using SoftInvWAProg3.servicios;
 
 namespace SoftInvWAProg3
@@ -12,126 +11,98 @@ namespace SoftInvWAProg3
         private BibliotecaWSClient bibliotecaCliente = new BibliotecaWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (!IsPostBack)
             {
-
-                rptReservas.DataSource = ObtenerReservasUsuario();
+                List<dynamic> reservas = ObtenerReservasUsuario();
+                rptReservas.DataSource = reservas;
                 rptReservas.DataBind();
+                pnlSinReservas.Visible = (reservas.Count == 0);
 
-                rptPrestamos.DataSource = ObtenerPrestamosUsuario();
+                List<dynamic> prestamos = ObtenerPrestamosUsuario();
+                rptPrestamos.DataSource = prestamos;
                 rptPrestamos.DataBind();
+                pnlSinPrestamos.Visible = (prestamos.Count == 0);
             }
         }
 
         protected List<dynamic> ObtenerReservasUsuario()
         {
-            return new List<dynamic>
-            {
-                new {
-                    ReservaId = 202505121,
-                    Titulo = "Introducción a la Programación",
-                    Biblioteca = "Biblioteca Central",
-                    FechaVencimiento = "13/05/2025",
-                    Tipo = "LIBRO",
-                    EstadoReserva = "VIGENTE"
-                }
-            };
-        }
-
-        /*protected List<dynamic> ObtenerReservasUsuario()
-        {
             int usuarioId = Convert.ToInt32(Session["id"]);
 
-            ReservaWS.ReservaWSClient cliente = new ReservaWS.ReservaWSClient();
-            ReservaWS.reservaDTO[] reservas = cliente.listarReservasVigentesPorUsuario(usuarioId);
+            ReservaWSClient cliente = new ReservaWSClient();
+            reservaDTO[] reservas = cliente.listarReservasVigentesPorUsuario(usuarioId);
 
             List<dynamic> resultados = new List<dynamic>();
 
-            foreach (ReservaWS.reservaDTO r in reservas)
+            if (reservas != null)
             {
-                MaterialWS.materialDTO material = materialCliente.obtenerMaterialPorId(r.material.materialId);
-                
-                resultados.Add(new
+                foreach (reservaDTO r in reservas)
                 {
-                    ReservaId = r.reservaId,
-                    Titulo = material.titulo,
-                    Biblioteca = "Biblioteca de Ciencias Sociales",
-                    FechaVencimiento = r.fechaVencimiento.ToString("dd/MM/yyyy"),
-                    Tipo = material.tipoMaterial,
-                    EstadoReserva = r.estadoReserva
-                });
+                    materialDTO material = materialCliente.obtenerMaterialPorId(r.material.materialId);
+
+                    resultados.Add(new
+                    {
+                        ReservaId = r.reservaId,
+                        Titulo = material.titulo,
+                        Biblioteca = "Biblioteca de Ciencias Sociales",
+                        FechaVencimiento = r.fechaVencimiento.ToString("dd/MM/yyyy"),
+                        Tipo = material.tipoMaterial,
+                        EstadoReserva = r.estadoReserva
+                    });
+                }
             }
 
             return resultados;
-        }*/
+        }
 
         protected List<dynamic> ObtenerPrestamosUsuario()
         {
-            return new List<dynamic>
-            {
-                new {
-                    PrestamoId = 202505121,
-                    Titulo = "Programación en Java",
-                    Biblioteca = "Biblioteca de Ciencias",
-                    FechaDevolucion = "20/05/2025",
-                    Tipo = "LIBRO",
-                    EstadoPrestamo = "VIGENTE"
-                },
-                new {
-                    PrestamoId = 202505012,
-                    Titulo = "Tendencias actuales...",
-                    Biblioteca = "Biblioteca Central",
-                    FechaDevolucion = "08/05/2025",
-                    Tipo = "ARTICULO",
-                    EstadoPrestamo = "DEVUELTO_A_TIEMPO"
-                },
-                new {
-                    PrestamoId = 202504043,
-                    Titulo = "Metodologías activas...",
-                    Biblioteca = "Biblioteca Central",
-                    FechaDevolucion = "12/04/2025",
-                    Tipo = "TESIS",
-                    EstadoPrestamo = "DEVUELTO_CON_RETRASO"
-                },
-                new {
-                    PrestamoId = 202506021,
-                    Titulo = "La ira de Melgar...",
-                    Biblioteca = "Biblioteca del Complejo de Innovación Académica",
-                    FechaDevolucion = "12/04/2025",
-                    Tipo = "TESIS",
-                    EstadoPrestamo = "NO_DEVUELTO"
-                }
-            };
-        }
-
-        /*protected List<dynamic> ObtenerPrestamosUsuario()
-        {
             int usuarioId = Convert.ToInt32(Session["id"]);
 
-            CirculacionWS.CirculacionWSClient cliente = new CirculacionWS.CirculacionWSClient();
-            CirculacionWS.circulacionDTO[] prestamos = cliente.listarPrestamosPorUsuario(usuarioId);
+            CirculacionWSClient cliente = new CirculacionWSClient();
+            circulacionDTO[] prestamos = cliente.listarPrestamosPorUsuario(usuarioId);
 
             List<dynamic> resultados = new List<dynamic>();
 
-            foreach (CirculacionWS.circulacionDTO p in prestamos)
+            if (prestamos != null)
             {
-                MaterialWS.materialDTO material = materialCliente.obtenerMaterialPorId(p.ejemplar.material.materialId);
-                BibliotecaWS.bibliotecaDTO biblioteca = bibliotecaCliente.obtenerBibliotecaPorId(p.ejemplar.biblioteca.bibliotecaId);
-
-                resultados.Add(new
+                foreach (circulacionDTO p in prestamos)
                 {
-                    PrestamoId = p.circulacionId,
-                    Titulo = material.titulo,
-                    Biblioteca = biblioteca.nombre,
-                    FechaDevolucion = p.fechaDevolucion.ToString("dd/MM/yyyy"),
-                    Tipo = material.tipoMaterial,
-                    EstadoPrestamo = p.estadoPrestamo
-                });
+                    materialDTO material = materialCliente.obtenerMaterialPorId(p.ejemplar.material.materialId);
+                    bibliotecaDTO biblioteca = bibliotecaCliente.obtenerBibliotecaPorId(p.ejemplar.biblioteca.bibliotecaId);
+
+                    resultados.Add(new
+                    {
+                        PrestamoId = p.circulacionId,
+                        Titulo = material.titulo,
+                        Biblioteca = biblioteca.nombre,
+                        FechaDevolucion = p.fechaDevolucion.ToString("dd/MM/yyyy"),
+                        Tipo = material.tipoMaterial,
+                        EstadoPrestamo = p.estadoPrestamo
+                    });
+                }
             }
 
             return resultados;
-        }*/
+        }
+
+        protected void rptReservas_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "VerDetalleReserva")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+                Response.Redirect("~/detalle_reserva.aspx?reservaId=" + id);
+            }
+        }
+
+        protected void rptPrestamos_ItemCommand(object source, RepeaterCommandEventArgs e)
+        {
+            if (e.CommandName == "VerDetallePrestamo")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+                Response.Redirect("~/detalle_circulacion.aspx?id=" + id);
+            }
+        }
 
         public static string ObtenerClaseEstado(string estado)
         {

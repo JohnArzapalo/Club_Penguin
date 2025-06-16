@@ -17,6 +17,21 @@
     font-weight: 700;
 }
 
+.link-card-hover {
+    transition: all 0.3s ease;
+    display: block;
+}
+
+    .link-card-hover .card {
+        border: 1px solid #ddd !important;
+        transition: all 0.3s ease;
+    }
+
+    .link-card-hover:hover .card {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+        cursor: pointer;
+    }
 
 .icono {
     width: 48px;
@@ -79,4 +94,11 @@
 .estado.rojo {
     color: red;
     font-weight: bold;
+}
+
+.mensaje-vacio {
+    font-style: italic;
+    color: #555;
+    padding-left: 0.5rem;
+    margin-bottom: 1.5rem;
 }

@@ -70,241 +70,41 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="circulaciones.aspx" />
-    <None Include="Connected Services\servicios\BibliotecaWS1.wsdl" />
-    <None Include="Connected Services\servicios\BibliotecaWS1.xsd">
+    <None Include="Connected Services\servicios\BibliotecaWS.wsdl" />
+    <None Include="Connected Services\servicios\BibliotecaWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\servicios\CirculacionWS1.wsdl" />
-    <None Include="Connected Services\servicios\CirculacionWS1.xsd">
+    <None Include="Connected Services\servicios\CirculacionWS.wsdl" />
+    <None Include="Connected Services\servicios\CirculacionWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\servicios\DiaAtencionWS.wsdl" />
+    <None Include="Connected Services\servicios\DiaAtencionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\servicios\EjemplarWS.wsdl" />
+    <None Include="Connected Services\servicios\EjemplarWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\servicios\MaterialWS.wsdl" />
+    <None Include="Connected Services\servicios\MaterialWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\servicios\ReservaWS.wsdl" />
+    <None Include="Connected Services\servicios\ReservaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\servicios\SancionWS.wsdl" />
+    <None Include="Connected Services\servicios\SancionWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\servicios\servicios.disco" />
     <None Include="Connected Services\servicios\configuration91.svcinfo" />
     <None Include="Connected Services\servicios\configuration.svcinfo" />
-    <None Include="Connected Services\servicios\DiaAtencionWS1.wsdl" />
-    <None Include="Connected Services\servicios\DiaAtencionWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\servicios\EjemplarWS1.wsdl" />
-    <None Include="Connected Services\servicios\EjemplarWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\servicios\MaterialWS1.wsdl" />
-    <None Include="Connected Services\servicios\MaterialWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\servicios\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\servicios\ReservaWS1.wsdl" />
-    <None Include="Connected Services\servicios\ReservaWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\servicios\SancionWS1.wsdl" />
-    <None Include="Connected Services\servicios\SancionWS1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\servicios\servicios1.disco" />
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarCirculacionesAvanzadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorAnioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorAutorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorBibliotecaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorDisponibilidadResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorIdiomaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorTemaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorTipoMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorTituloResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarReservasAvanzadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarSancionesFlexibleResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarUsuariosAvanzadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.calcularFechaVencimientoReservaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.circulacionDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.diaAtencionDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarCirculacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarReservaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarTipoUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarCirculacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarEjemplarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarReservaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarTipoUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarBibliotecasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarDiasAtencionPorBibliotecaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarPrestamosPorUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarReservasVigentesPorUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarSancionesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodasCirculacionesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodasReservasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosDiasAtencionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosEjemplaresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosMaterialesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosTiposUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.materialBusquedaAvanzadaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarCirculacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarReservaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarTipoUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerBibliotecaPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerBibliotecasPorMaterialResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerCirculacionPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerCopiasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerDiaAtencionPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerEjemplaresMaterialPorBibliotecaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerEjemplaresReservadosYDisponiblesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerEjemplarPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerMaterialPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerReservaPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerTipoDeMaterialPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerTipoUsuarioPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerUsuarioPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.sancionDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.validarUsuarioResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarSancionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerPorCirculacionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerSancionAsociadaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.vistaPreviaNuevaSancionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.bibliotecaDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.ejemplarDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.materialDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.reservaDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.tipoUsuarioDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.usuarioDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="crear_cuenta.aspx" />
     <Content Include="Content\estilos_circulaciones.css" />
     <Content Include="Content\estilos_cuenta.css" />
@@ -381,12 +181,213 @@
     <Content Include="Content\Fonts\webfonts\fa-solid-900.woff2" />
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.ttf" />
     <Content Include="Content\Fonts\webfonts\fa-v4compatibility.woff2" />
-    <None Include="Connected Services\servicios\TipoUsuarioWS1.wsdl" />
-    <None Include="Connected Services\servicios\TipoUsuarioWS1.xsd">
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.bibliotecaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarCirculacionesAvanzadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorAnioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorAutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorDisponibilidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorIdiomaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorTipoMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarPorTituloResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarReservasAvanzadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarSancionesFlexibleResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.buscarUsuariosAvanzadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.calcularFechaVencimientoReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.circulacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.diaAtencionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.ejemplarDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarCirculacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.eliminarTipoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarCirculacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarEjemplarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarSancionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarTipoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.insertarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarBibliotecasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarDiasAtencionPorBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarPrestamosPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarReservasVigentesPorUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarSancionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodasCirculacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodasReservasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosDiasAtencionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosEjemplaresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosMaterialesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.listarTodosTiposUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.materialBusquedaAvanzadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.materialDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarCirculacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarReservaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.modificarTipoUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerBibliotecaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerBibliotecasPorMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerCirculacionPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerCopiasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerDiaAtencionPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerEjemplaresMaterialPorBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerEjemplaresReservadosYDisponiblesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerEjemplarPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerMaterialPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerPorCirculacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerReservaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerSancionAsociadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerTipoDeMaterialPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerTipoUsuarioPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerUsuarioPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.reservaDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.sancionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.tipoUsuarioDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.usuarioDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.validarUsuarioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.vistaPreviaNuevaSancionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\servicios\TipoUsuarioWS.wsdl" />
+    <None Include="Connected Services\servicios\TipoUsuarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\servicios\UsuarioWS1.wsdl" />
-    <None Include="Connected Services\servicios\UsuarioWS1.xsd">
+    <None Include="Connected Services\servicios\UsuarioWS.wsdl" />
+    <None Include="Connected Services\servicios\UsuarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />

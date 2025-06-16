@@ -1,130 +1,58 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\",
+  "WorkspaceRootPath": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\letic\\downloads\\proyacademico\\larachambeandopt2\\softinvwaprog3 (3)\\softinvwaprog3\\softinvwaprog3\\detalle_circulacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\detalle_circulacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\detalle_circulacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_circulacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\sanciones_detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\sanciones_detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\materiales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\materiales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\sanciones_detalle.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\sanciones_detalle.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\cuenta.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\cuenta.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\sanciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\sanciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\circulaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\circulaciones.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\content\\estilos_circulaciones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\content\\estilos_circulaciones.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\sanciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\sanciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\circulaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\circulaciones.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\reservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\reservas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\reservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\reservas.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\materiales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\softinvwaprog3\\materiales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\materiales.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\materiales.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\materiales.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\detalle_circulacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\detalle_circulacion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\crear_cuenta.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\crear_cuenta.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\detalle_circulacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\detalle_circulacion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\usuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\usuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\content\\estilos_prestamos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\content\\estilos_prestamos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\registrar_material.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\registrar_material.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\sanciones_detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\sanciones_detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\softinvwaprog3\\sanciones_detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\sanciones_detalle.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_reserva.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\softinv.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\softinv.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|c:\\users\\ariana\\onedrive\\escritorio\\ta-prog3\\club_penguin\\pd\\fe\\softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftBibWA.csproj|solutionrelative:softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\detalle_material.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_material.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\softinv.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\softinv.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\registrar_material.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\registrar_material.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\prestamos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\prestamos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\crear_cuenta.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\crear_cuenta.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\cuenta.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\cuenta.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\detalle_material.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_material.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\detalle_reserva.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\login.aspx.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\softinvwaprog3\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B9941429-7B5B-4AC6-BA3C-A45D183E0498}|SoftInvWAProg3\\SoftInvWAProg3.csproj|solutionrelative:softinvwaprog3\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -134,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 220,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,204 +70,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "detalle_circulacion.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_circulacion.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_circulacion.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_circulacion.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\detalle_circulacion.aspx.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAEwHcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-15T16:53:02.522Z",
+              "DocumentIndex": 2,
+              "Title": "materiales.aspx",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\materiales.aspx",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\materiales.aspx",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\materiales.aspx",
+              "RelativeToolTip": "SoftInvWAProg3\\materiales.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-16T08:01:21.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "detalle_circulacion.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_circulacion.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_circulacion.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_circulacion.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\detalle_circulacion.aspx",
+              "Title": "prestamos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\prestamos.aspx.cs",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\prestamos.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\prestamos.aspx.cs",
+              "RelativeToolTip": "SoftInvWAProg3\\prestamos.aspx.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAqwFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:12:03.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "prestamos.aspx",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\prestamos.aspx",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\prestamos.aspx",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\prestamos.aspx",
+              "RelativeToolTip": "SoftInvWAProg3\\prestamos.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-15T16:52:51.094Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "cuenta.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\cuenta.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\cuenta.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\cuenta.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\cuenta.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:25:12.026Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "estilos_circulaciones.css",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\Content\\estilos_circulaciones.css",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\Content\\estilos_circulaciones.css",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\Content\\estilos_circulaciones.css",
-              "RelativeToolTip": "SoftInvWAProg3\\Content\\estilos_circulaciones.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-15T16:09:55.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "sanciones.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\sanciones.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\sanciones.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:26:30.625Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "sanciones.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\sanciones.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\sanciones.aspx.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAnwEQAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:26:32.215Z"
+              "WhenOpened": "2025-06-16T07:30:10.765Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "sanciones_detalle.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones_detalle.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\sanciones_detalle.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones_detalle.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\sanciones_detalle.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:26:36.37Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "sanciones_detalle.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones_detalle.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\sanciones_detalle.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\sanciones_detalle.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\sanciones_detalle.aspx.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAIAwwI4AAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:26:38.237Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "circulaciones.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\circulaciones.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\circulaciones.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\circulaciones.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\circulaciones.aspx.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAnwFQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:25:28.974Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "circulaciones.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\circulaciones.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\circulaciones.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\circulaciones.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\circulaciones.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-15T16:05:49.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "reservas.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\reservas.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\reservas.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:26:22.803Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SoftInv.Master.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\SoftInv.Master.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\SoftInv.Master.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\SoftInv.Master.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\SoftInv.Master.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:26:47.402Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "usuarios.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\usuarios.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\usuarios.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\usuarios.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\usuarios.aspx.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAIwFMAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:31:47.495Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "detalle_material.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_material.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_material.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_material.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\detalle_material.aspx.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAmwEwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:25:02.246Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "detalle_reserva.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAAAowLAAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T08:39:15.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "reservas.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\reservas.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\reservas.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\reservas.aspx.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAuwKoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:26:24.678Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "materiales.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\materiales.aspx",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\materiales.aspx",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\materiales.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\materiales.aspx",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\materiales.aspx",
               "RelativeToolTip": "SoftInvWAProg3\\materiales.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -347,171 +121,139 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "materiales.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\materiales.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\materiales.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\materiales.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\materiales.aspx.cs",
-              "ViewState": "AgIAAFYBAAAAAAAAAAAYwHMBAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "detalle_circulacion.aspx",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_circulacion.aspx",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_circulacion.aspx",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_circulacion.aspx",
+              "RelativeToolTip": "SoftInvWAProg3\\detalle_circulacion.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-16T05:39:37.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "detalle_circulacion.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_circulacion.aspx.cs",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_circulacion.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_circulacion.aspx.cs",
+              "RelativeToolTip": "SoftInvWAProg3\\detalle_circulacion.aspx.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAowF0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:25:40.008Z"
+              "WhenOpened": "2025-06-16T05:40:01.392Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "crear_cuenta.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\crear_cuenta.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\crear_cuenta.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\crear_cuenta.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\crear_cuenta.aspx.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwBYAAABLAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "estilos_prestamos.css",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\Content\\estilos_prestamos.css",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\Content\\estilos_prestamos.css",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\Content\\estilos_prestamos.css",
+              "RelativeToolTip": "SoftInvWAProg3\\Content\\estilos_prestamos.css",
+              "ViewState": "AgIAAFgAAAAA4YMPPngVwGIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-16T07:33:13.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "sanciones_detalle.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "RelativeToolTip": "SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAYwHYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:25:22.196Z"
+              "WhenOpened": "2025-06-16T06:22:23.121Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "registrar_material.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\registrar_material.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\registrar_material.aspx.cs",
-              "ViewState": "AgIAAJ4AAAAAAAAAAAAwwK0AAAA3AAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "sanciones_detalle.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "RelativeToolTip": "SoftInvWAProg3\\sanciones_detalle.aspx.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAIAwwI4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:26:13.165Z"
+              "WhenOpened": "2025-06-04T20:26:38.237Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SoftInv.Master",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\SoftInv.Master",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\SoftInv.Master",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\SoftInv.Master",
-              "RelativeToolTip": "SoftInvWAProg3\\SoftInv.Master",
+              "DocumentIndex": 9,
+              "Title": "detalle_reserva.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAowLAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T06:18:41.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "detalle_reserva.aspx",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_reserva.aspx",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_reserva.aspx",
+              "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:26:45.8Z"
+              "WhenOpened": "2025-06-16T06:18:38.478Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "registrar_material.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\registrar_material.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\registrar_material.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\registrar_material.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:26:10.615Z"
+              "DocumentIndex": 10,
+              "Title": "detalle_reserva.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx.cs",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAowLAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-04T08:39:15.806Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "crear_cuenta.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\crear_cuenta.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\crear_cuenta.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\crear_cuenta.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\crear_cuenta.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:25:19.826Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "cuenta.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\cuenta.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\cuenta.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\cuenta.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\cuenta.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:25:09.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "detalle_material.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_material.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_material.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_material.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\detalle_material.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T20:25:00.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "prestamos.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\prestamos.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\prestamos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T08:33:22.571Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 12,
               "Title": "prestamos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\prestamos.aspx.cs",
               "RelativeDocumentMoniker": "SoftInvWAProg3\\prestamos.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\prestamos.aspx.cs",
+              "ToolTip": "C:\\Users\\Ariana\\OneDrive\\Escritorio\\TA-PROG3\\Club_Penguin\\PD\\FE\\SoftInvWAProg3\\prestamos.aspx.cs",
               "RelativeToolTip": "SoftInvWAProg3\\prestamos.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-04T08:33:26.421Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 180,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ecb7191a-597b-41f5-9843-03a4cf275dde}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "login.aspx.designer.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.designer.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\login.aspx.designer.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.designer.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\login.aspx.designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T20:24:48.297Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "login.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\login.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T18:38:41.952Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "detalle_reserva.aspx",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\detalle_reserva.aspx",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\detalle_reserva.aspx",
-              "RelativeToolTip": "SoftInvWAProg3\\detalle_reserva.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-04T08:08:55.704Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "login.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.cs",
-              "RelativeDocumentMoniker": "SoftInvWAProg3\\login.aspx.cs",
-              "ToolTip": "C:\\Users\\letic\\Downloads\\proyAcademico\\LaraChambeandoPt2\\SoftInvWAProg3 (3)\\SoftInvWAProg3\\SoftInvWAProg3\\login.aspx.cs",
-              "RelativeToolTip": "SoftInvWAProg3\\login.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-04T08:38:11.544Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{28836128-fc2c-11d2-a433-00c04f72d18a}"
             }
           ]
         }

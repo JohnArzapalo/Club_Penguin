@@ -6,9 +6,19 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="container py-4">
-        <a href="reservas.aspx" class="text-decoration-none mb-3 d-inline-block">
-          <i class="bi bi-arrow-left"></i> Volver a Reservas
-        </a>
+        <!-- Para bibliotecarios -->
+        <asp:Panel ID="pnlVolverBibliotecario" runat="server" Visible="false">
+            <a href="reservas.aspx" class="text-decoration-none mb-3 d-inline-block">
+                <i class="bi bi-arrow-left"></i> Volver a Reservas
+            </a>
+        </asp:Panel>
+
+        <!-- Para usuarios normales -->
+        <asp:Panel ID="pnlVolverUsuario" runat="server" Visible="false">
+            <a href="prestamos.aspx" class="text-decoration-none mb-3 d-inline-block">
+                <i class="bi bi-arrow-left"></i> Volver a Reservas y Préstamos
+            </a>
+        </asp:Panel>
 
         <div class="card shadow-sm p-4 mb-4">
             <div class="d-flex justify-content-between align-items-center mb-3">

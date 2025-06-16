@@ -6,9 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using SoftInvWAProg3.servicios;
-//using SoftInvWAProg3.ReservaWS;
-//using SoftInvWAProg3.SancionWS;
-//using SoftInvWAProg3.SancionWS;
 
 namespace SoftInvWAProg3
 {
@@ -31,27 +28,52 @@ namespace SoftInvWAProg3
             string idparam = Request.QueryString["id"];
             if (!string.IsNullOrEmpty(idparam) && int.TryParse(idparam, out int id))
             {
-                this.CirculacionId = id; // Se asigna en cada carga (incluyendo postbacks), fundamental para que funcione el boton de visualizar sancion
+                this.CirculacionId = id;
             }
+
+            // Detectar rol del usuario
+            string rol = Session["rol"] as string;
+            bool esBibliotecario = !string.IsNullOrEmpty(rol) && rol.Equals("Bibliotecario", StringComparison.OrdinalIgnoreCase);
+
+            // Mostrar "Volver" según el rol
+            pnlVolverBibliotecario.Visible = esBibliotecario;
+            pnlVolverUsuario.Visible = !esBibliotecario;
+
+            // Mostrar secciones según rol
+            pnlUsuario.Visible = esBibliotecario;
+            pnlEditorBibliotecario.Visible = esBibliotecario;
+            pnlSoloLecturaUsuario.Visible = !esBibliotecario;
 
             if (!IsPostBack && this.CirculacionId.HasValue)
             {
-                cargarEntidad(); // Solo carga datos la primera vez
+                cargarEntidad(esBibliotecario);
             }
         }
 
-        private void cargarEntidad()
+        private void cargarEntidad(bool esBibliotecario)
         {
             circulacionDTO circulacion = this.wsCliente.obtenerCirculacionPorId((int)this.CirculacionId);
             if (circulacion != null)
             {
                 ltPrestamoID.Text = circulacion.circulacionId.ToString();
-                ltReserva.Text = circulacion.reserva.reservaId.ToString();
+
+                if (circulacion.reserva != null)
+                {
+                    pnlReserva.Visible = true;
+                    ltReserva.Text = circulacion.reserva.reservaId.ToString();
+                }
+                else
+                {
+                    pnlReserva.Visible = false;
+                }
+
                 string nomUsuario = "";
                 if (circulacion.usuario != null) nomUsuario = circulacion.usuario.nombres + " " + circulacion.usuario.primerApellido;
 
                 // Lógica de habilitación/deshabilitación
                 estadoPrestamo aux = circulacion.estadoPrestamo;
+                ltEstadoTexto.Text = SoftInvWAProg3.prestamos.ObtenerTextoEstadoPrestamo(aux.ToString());
+
                 bool esVigente = (aux == estadoPrestamo.VIGENTE);
                 bool esNoDevuelto = (aux == estadoPrestamo.NO_DEVUELTO);
                 bool esVigenteONoDev = (esVigente || esNoDevuelto);
@@ -86,6 +108,26 @@ namespace SoftInvWAProg3
                 ddlEstados.SelectedValue = circulacion.estadoPrestamo.ToString();
                 if (esVigenteONoDev) txtFechaDev.Text = "";
                 else txtFechaDev.Text = circulacion.fechaDevolucion.ToString("yyyy-MM-dd");
+
+
+                if (!esBibliotecario)
+                {
+                    if (!esVigenteONoDev && circulacion.fechaDevolucion != DateTime.MinValue)
+                    {
+                        ltFechaDevolucion.Text = circulacion.fechaDevolucion.ToString("dd/MM/yyyy");
+                        pnlFechaDevolucion.Visible = true;
+                    }
+                    else
+                    {
+                        pnlFechaDevolucion.Visible = false;
+                    }
+                }
+
+                if (!esBibliotecario)
+                {
+                    btnRegistrarSancion.Visible = false;
+                    btnActualizarEstado.Visible = false;
+                }
             }
         }
 

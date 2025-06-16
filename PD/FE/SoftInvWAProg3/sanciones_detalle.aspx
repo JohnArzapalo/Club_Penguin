@@ -9,9 +9,20 @@
         <div class="row">
             <div class="col-12 col-md-10 col-lg-8 mx-auto">
 
-                <a href="sanciones.aspx" class="text-decoration-none mb-3 d-inline-block">
-                  <i class="bi bi-arrow-left"></i> Volver a Sanciones
-                </a>
+                <!-- Solo bibliotecarios -->
+                <asp:Panel ID="pnlVolverBibliotecario" runat="server" Visible="false">
+                    <a href="sanciones.aspx" class="text-decoration-none mb-3 d-inline-block">
+                        <i class="bi bi-arrow-left"></i> Volver a Sanciones
+                    </a>
+                </asp:Panel>
+
+                <!-- Otros usuarios -->
+                <asp:Panel ID="pnlVolverUsuario" runat="server" Visible="false">
+                    <a href="prestamos.aspx" class="text-decoration-none mb-3 d-inline-block">
+                        <i class="bi bi-arrow-left"></i> Volver a Reservas y Préstamos
+                    </a>
+                </asp:Panel>
+
 
                 <div class="card p-4 mb-4">
 
@@ -25,6 +36,14 @@
                         <span class="detail-label">Circulación</span>
                         <span class="detail-value"><asp:Literal ID="ltCirculacion" runat="server" /></span>
                     </div>
+
+                    <!-- Solo para bibliotecarios -->
+                    <asp:Panel ID="pnlUsuario" runat="server" Visible="false">
+                        <div class="mb-1">
+                            <span class="detail-label">Usuario</span>
+                            <span class="detail-value"><asp:Literal ID="ltUsuario" runat="server" /></span>
+                        </div>
+                    </asp:Panel>
 
                     <div class="mb-1">
                         <span class="detail-label">Fecha de registro</span>
@@ -46,10 +65,27 @@
                         <span class="detail-value"><asp:Literal ID="ltDiasSancion" runat="server" /></span>
                     </div>
 
-                    <div class="form-group-observaciones">
-                        <asp:TextBox ID="txtObservaciones" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="3" placeholder=" "></asp:TextBox>
-                        <label for="txtObservaciones">Observaciones</label>
-                    </div>
+                    <!-- Observaciones solo en modo lectura -->
+                    <asp:Panel ID="pnlObservacionesLectura" runat="server" Visible="false">
+                        <div class="mb-1 row">
+                            <div class="col-auto detail-label fw-bold">
+                                Observaciones
+                            </div>
+                            <div class="col detail-value">
+                                <asp:Literal ID="ltObservaciones" runat="server" />
+                            </div>
+                        </div>
+
+                    </asp:Panel>
+
+                    <!-- Observaciones en modo create -->
+                    <asp:Panel ID="pnlObservacionesEditor" runat="server" Visible="false">
+                        <div class="form-group-observaciones">
+                            <asp:TextBox ID="txtObservaciones" runat="server" CssClass="form-control"
+                                         TextMode="MultiLine" Rows="3" placeholder=" "></asp:TextBox>
+                            <label for="txtObservaciones">Observaciones</label>
+                        </div>
+                    </asp:Panel>
 
                     <div class="d-flex justify-content-end gap-2">
                         <asp:LinkButton ID="btnRegistrarSancion" runat="server" 
