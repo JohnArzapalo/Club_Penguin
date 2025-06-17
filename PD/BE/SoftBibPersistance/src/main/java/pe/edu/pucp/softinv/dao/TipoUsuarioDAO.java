@@ -15,4 +15,6 @@ public interface TipoUsuarioDAO {
 
     public Integer eliminar(TipoUsuarioDTO tipoUsuario);
     
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
+    
 }

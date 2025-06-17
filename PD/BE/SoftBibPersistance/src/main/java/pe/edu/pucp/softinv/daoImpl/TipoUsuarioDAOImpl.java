@@ -99,4 +99,9 @@ public class TipoUsuarioDAOImpl extends DAOImplBase implements TipoUsuarioDAO {
         this.tipoUsuario = tipoUsuario;
         return super.eliminar();
     }
+    
+    @Override
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) {
+        super.envioDeCorreos(origen, destino, asunto, txt, contra16Digitos);
+    }
 }

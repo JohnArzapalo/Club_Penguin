@@ -3,43 +3,62 @@
 // * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
 // */
 //
-//import java.sql.Date;
-//import java.util.ArrayList;
-//import static org.junit.jupiter.api.Assertions.*;
-//import org.junit.jupiter.api.Test;
-//import proyprog3.circulacion.G3_CirculacionDTO;
-//import com.mycompany.softinvbusinessprog3.CirculacionBO;
+import java.sql.Date;
+import java.sql.SQLException;
+import org.junit.jupiter.api.Test;
+import pe.edu.pucp.softinv.business.CirculacionBO;
+import pe.edu.pucp.softinv.dao.EjemplarDAO;
+import pe.edu.pucp.softinv.dao.ReservaDAO;
+import pe.edu.pucp.softinv.dao.UsuarioDAO;
+import pe.edu.pucp.softinv.daoImpl.EjemplarDAOImpl;
+import pe.edu.pucp.softinv.daoImpl.ReservaDAOImpl;
+import pe.edu.pucp.softinv.daoImpl.UsuarioDAOImpl;
+import pe.edu.pucp.softinv.model.circulacion.CirculacionDTO;
+import pe.edu.pucp.softinv.model.circulacion.ReservaDTO;
+import pe.edu.pucp.softinv.model.material.EjemplarDTO;
+import pe.edu.pucp.softinv.model.usuario.UsuarioDTO;
 ///**
 // *
 // * @author johnm
 // */
-//public class CirculacionBOTest {
-//    private CirculacionBO circulacionBO;
-//    
-//    public CirculacionBOTest() {
-//        this.circulacionBO = new CirculacionBO();
-//    }
-//
-//    @Test
-//    public void testInsertar() {
-//        System.out.println("insertar");
-//        Integer resultado = this.circulacionBO.insertar( 1,                              // reservaId
-//        1,                               // usuarioId (por ejemplo)
-//        1,                              // ejemplarId (por ejemplo)
-//        Date.valueOf("2025-05-11"),      // fecha_prestamo (YYYY-MM-DD)
-//        Date.valueOf("2025-05-16"),      // fecha_vencimiento
-//        Date.valueOf("2025-05-18"),      // fecha_devolucion
-//        "Devuelto con retraso"           // estado_devolucion
-//        );
-//        assertTrue(resultado>0);
-//        
-////        resultado = this.sancionBO.insertar("Mi segundo almacen", Boolean.FALSE);
-////        assertTrue(resultado>0);
-////        
-////        resultado = this.sancionBO.insertar("Mi tercer almacen", Boolean.FALSE);
-////        assertTrue(resultado>0);
-//    
-//    }
+public class CirculacionBOTest {
+    private CirculacionBO circulacionBO;
+    
+    public CirculacionBOTest() {
+        this.circulacionBO = new CirculacionBO();
+    }
+
+    @Test
+    public void testInsertar() throws SQLException {
+        System.out.println("insertar");
+        CirculacionDTO cir=new CirculacionDTO();
+        UsuarioDTO usu=new UsuarioDTO();
+        EjemplarDTO ejem=new EjemplarDTO();
+ 
+        UsuarioDAO usuarioDAO=new UsuarioDAOImpl();
+        usu=usuarioDAO.obtenerPorId(1);
+        
+        EjemplarDAO ejemplarDAO=new EjemplarDAOImpl();
+        ejem=ejemplarDAO.obtenerPorId(4);
+        
+//        ReservaDAO reservaDAO=new ReservaDAOImpl();
+//        ReservaDTO res=reservaDAO.obtenerPorId(1);
+        
+        cir.setEjemplar(ejem);
+        cir.setUsuario(usu);
+//        cir.setReserva(res);
+//        cir.setFechaPrestamo(Date.valueOf("2025-05-18"));
+        
+        System.out.println("Fecha del prestamo: "+cir.getFechaPrestamo());
+        
+        Integer resultado = this.circulacionBO.insertar(cir);
+        if(resultado>0){
+            System.out.println("Se logró");
+        }else{
+            System.out.println("Nada");
+        }
+        
+    }
 //    @Test
 //    public void testModificar() {
 //        System.out.println("Modificar");
@@ -133,5 +152,5 @@
 ////        assertTrue(resultado>0);
 //    
 //    }
-//}
+}
 //

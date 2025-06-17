@@ -238,22 +238,40 @@ namespace SoftInvWAProg3
             switch (tipo)
             {
                 case "LIBRO":
-                    isbnLibro = Request.Form["txtISBN"];
-                    editorialLibro = Request.Form["txtEditorial"];
-                    edicionLibro = Request.Form["txtEdicion"];
+                    isbnLibro = BuscarValorEnForm("txtISBN");
+                    editorialLibro = BuscarValorEnForm("txtEditorial");
+                    edicionLibro = BuscarValorEnForm("txtEdicion");
+                    // DEPURACIÓN
+                    System.Diagnostics.Debug.WriteLine("=== LIBRO ===");
+                    System.Diagnostics.Debug.WriteLine($"ISBN: {isbnLibro}");
+                    System.Diagnostics.Debug.WriteLine($"Editorial: {editorialLibro}");
+                    System.Diagnostics.Debug.WriteLine($"Edición: {edicionLibro}");
                     break;
                 case "ARTICULO":
-                    issnArticulo = Request.Form["txtISSN"];
-                    revistaArticulo = Request.Form["txtRevista"];
-                    editorialArticulo = Request.Form["txtEditorial"];
-                    volumenArticulo = Request.Form["txtVolumen"];
-                    numeroArticulo = Request.Form["txtNumero"];
+                    issnArticulo = BuscarValorEnForm("txtISSN");
+                    revistaArticulo = BuscarValorEnForm("txtRevista");
+                    editorialArticulo = BuscarValorEnForm("txtEditorial");
+                    volumenArticulo = BuscarValorEnForm("txtVolumen");
+                    numeroArticulo = BuscarValorEnForm("txtNumero");
+                    // DEPURACIÓN
+                    System.Diagnostics.Debug.WriteLine("=== ARTICULO ===");
+                    System.Diagnostics.Debug.WriteLine($"ISSN: {issnArticulo}");
+                    System.Diagnostics.Debug.WriteLine($"Revista: {revistaArticulo}");
+                    System.Diagnostics.Debug.WriteLine($"Editorial: {editorialArticulo}");
+                    System.Diagnostics.Debug.WriteLine($"Volumen: {volumenArticulo}");
+                    System.Diagnostics.Debug.WriteLine($"Número: {numeroArticulo}");
                     break;
                 case "TESIS":
-                    institucionTesis = Request.Form["txtInstitucion"];
-                    asesorTesis = Request.Form["txtAsesor"];
-                    especialidadTesis = Request.Form["txtEspecialidad"];
-                    gradoTesis = Request.Form["txtGrado"];
+                    institucionTesis = BuscarValorEnForm("txtInstitucion");
+                    asesorTesis = BuscarValorEnForm("txtAsesor");
+                    especialidadTesis = BuscarValorEnForm("txtEspecialidad");
+                    gradoTesis = BuscarValorEnForm("txtGrado");
+                    // DEPURACIÓN
+                    System.Diagnostics.Debug.WriteLine("=== TESIS ===");
+                    System.Diagnostics.Debug.WriteLine($"Institución: {institucionTesis}");
+                    System.Diagnostics.Debug.WriteLine($"Asesor: {asesorTesis}");
+                    System.Diagnostics.Debug.WriteLine($"Especialidad: {especialidadTesis}");
+                    System.Diagnostics.Debug.WriteLine($"Grado: {gradoTesis}");
                     break;
             }
 
@@ -359,6 +377,56 @@ namespace SoftInvWAProg3
             // Confirmación
             Session["mensajeRegistro"] = "Material registrado con éxito.";
             System.Diagnostics.Debug.WriteLine("Redirigiendo a materiales.aspx");
+
+            if (Session["correo"] != null)
+            {
+                string correo = Session["correo"].ToString();
+                System.Diagnostics.Debug.WriteLine($"Correo del usuario: {correo}");
+                string asunto = "Material registrado exitosamente";
+
+                string mensaje = $" Registro de material realizado exitosamente:\n\n" +
+                                 $"- Tipo: {char.ToUpper(tipo[0]) + tipo.Substring(1).ToLower()}\n" +
+                                 $"- Título: {titulo}\n" +
+                                 $"- Autor(es): {autor}\n" +
+                                 $"- Año: {anioStr}\n" +
+                                 $"- Número de páginas: {numeroPaginasStr}\n" +
+                                 $"- Tema: {tema}\n" +
+                                 $"- Idioma: {idioma}\n";
+
+                switch (tipo)
+                {
+                    case "LIBRO":
+                        mensaje += $" Información del libro:\n" +
+                                   $"- ISBN: {isbnLibro}\n" +
+                                   $"- Editorial: {editorialLibro}\n" +
+                                   $"- Edición: {edicionLibro}\n";
+                        break;
+
+                    case "ARTICULO":
+                        mensaje += $" Información del artículo:\n" +
+                                   $"- ISSN: {issnArticulo}\n" +
+                                   $"- Revista: {revistaArticulo}\n" +
+                                   $"- Editorial: {editorialArticulo}\n" +
+                                   $"- Volumen: {volumenArticulo}\n" +
+                                   $"- Número: {numeroArticulo}\n";
+                        break;
+
+                    case "TESIS":
+                        mensaje += $" Información de la tesis:\n" +
+                                   $"- Institución: {institucionTesis}\n" +
+                                   $"- Asesor: {asesorTesis}\n" +
+                                   $"- Especialidad: {especialidadTesis}\n" +
+                                   $"- Grado académico: {gradoTesis}\n";
+                        break;
+                }
+
+                mensaje += $"\n Se han registrado {contadorEjemplares} ejemplar(es) asociado(s) correctamente.";
+
+                materialCliente.envioCorreos(correo, asunto, mensaje);
+
+
+
+            }
             Response.Redirect("materiales.aspx");
         }
         private List<ejemplarDTO> LeerEjemplaresDesdeRequest()
@@ -392,7 +460,23 @@ namespace SoftInvWAProg3
 
             return lista;
         }
+        // Agrega este método auxiliar a tu clase:
+        private string BuscarValorEnForm(string nombreControl)
+        {
+            // Buscar en Request.Form cualquier clave que termine con el nombre del control
+            var clave = Request.Form.AllKeys
+                .FirstOrDefault(key => key.EndsWith(nombreControl));
 
+            if (clave != null)
+            {
+                string valor = Request.Form[clave];
+                System.Diagnostics.Debug.WriteLine($"Encontrado {nombreControl}: clave='{clave}', valor='{valor}'");
+                return valor ?? string.Empty;
+            }
+
+            System.Diagnostics.Debug.WriteLine($"No se encontró el control: {nombreControl}");
+            return string.Empty;
+        }
         protected void btnMasEjemplar_Click(object sender, EventArgs e)
         {
             List<ejemplarDTO> existentes = LeerEjemplaresDesdeRequest();

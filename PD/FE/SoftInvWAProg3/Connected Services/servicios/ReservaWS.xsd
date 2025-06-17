@@ -135,6 +135,24 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reservaDTO" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< Updated upstream
+=======
+  <xs:complexType name="obtenerTipoDeMaterialPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMaterial" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerTipoDeMaterialPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+>>>>>>> Stashed changes
   <xs:complexType name="buscarReservasAvanzado">
     <xs:sequence>
       <xs:element minOccurs="0" name="reservaId" type="xs:string" />
@@ -150,6 +168,7 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:reservaDTO" />
     </xs:sequence>
   </xs:complexType>
+<<<<<<< Updated upstream
   <xs:complexType name="Exception">
     <xs:sequence>
       <xs:element minOccurs="0" name="message" type="xs:string" />
@@ -165,6 +184,8 @@
       <xs:element minOccurs="0" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+=======
+>>>>>>> Stashed changes
   <xs:complexType name="modificarReserva">
     <xs:sequence>
       <xs:element minOccurs="0" name="reserva" type="tns:reservaDTO" />

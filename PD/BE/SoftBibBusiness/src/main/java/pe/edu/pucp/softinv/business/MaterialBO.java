@@ -13,6 +13,7 @@ import pe.edu.pucp.softinv.daoImpl.MaterialDAOImpl;
 
 import java.sql.SQLException;
 import java.time.Year;
+import java.util.ArrayList;
 import java.util.List;
 
 public class MaterialBO {
@@ -74,21 +75,21 @@ public class MaterialBO {
             if (m.getMaterialId()== null || m.getMaterialId() <= 0)
                 throw new IllegalArgumentException("ID de material inválido.");
         }
-        if (m.getTitulo() == null || m.getTitulo().isBlank())
+        if (m.getTitulo() == null)
             throw new IllegalArgumentException("El título es obligatorio.");
 
-        if (m.getAutor() == null || m.getAutor().isBlank())
+        if (m.getAutor() == null)
             throw new IllegalArgumentException("El autor es obligatorio.");
 
-        if (m.getAnioPublicacion() == null || m.getAnioPublicacion() > 2025)
+        if (m.getAnioPublicacion() == null )
             throw new IllegalArgumentException("Año de publicación inválido.");
 
         if (m.getTipoMaterial() == null)
             throw new IllegalArgumentException("Debe indicarse el tipo de material.");
 
-        if (m.getIdioma() == null || m.getIdioma().isBlank())
+        if (m.getIdioma() == null)
             throw new IllegalArgumentException("El idioma es obligatorio.");
-        if (m.getTema()== null || m.getTema().isBlank())
+        if (m.getTema()== null )
             throw new IllegalArgumentException("El tema es obligatorio.");
         
         switch (m.getTipoMaterial().getNombreMostrar()) {
@@ -140,31 +141,30 @@ public class MaterialBO {
             throw new IllegalArgumentException("El grado es obligatorio.");
     }
     
-    public MaterialDTO busquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
-        String anioPublicacion, String tipoMaterialTexto,String disponibilidadTexto) throws SQLException {
-        int anioPublicacionInt = Integer.parseInt(anioPublicacion);
-        TipoMaterial tipoDato =TipoMaterial.valueOf(tipoMaterialTexto);
-        material.setAnioPublicacion(anioPublicacionInt);
-        material.setTipoMaterial(tipoDato);
-        validarBusquedaAvanzada(material, biblioteca, ejemplar, anioPublicacion, tipoMaterialTexto, disponibilidadTexto);
+    public List<MaterialDTO> busquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
+        String anioPublicacionDesde, String anioPublicacionHasta, String tipoMaterialTexto,String disponibilidadTexto) throws SQLException {
+
+        validarBusquedaAvanzada(material, biblioteca, ejemplar, anioPublicacionDesde, anioPublicacionHasta, tipoMaterialTexto, disponibilidadTexto);
         
-        return materialDAO.busquedaAvanzada(material, biblioteca, ejemplar, anioPublicacion, tipoMaterialTexto, disponibilidadTexto);
+        return materialDAO.busquedaAvanzada(material, biblioteca, ejemplar, anioPublicacionDesde, anioPublicacionHasta, tipoMaterialTexto, disponibilidadTexto);
     }
     
     private void validarBusquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
-        String anioPublicacion, String tipoMaterialTexto,String disponibilidadTexto) {
+        String anioPublicacionDesde, String anioPublicacionHasta, String tipoMaterialTexto,String disponibilidadTexto) {
+        int anioPublicacionInt = 2000;
+        TipoMaterial tipoDato =TipoMaterial.valueOf("LIBRO");
+        material.setAnioPublicacion(anioPublicacionInt);
+        material.setTipoMaterial(tipoDato);
         validar(material, false);
-        if (biblioteca.getNombre()== null || biblioteca.getNombre().isBlank())
+        if (biblioteca.getNombre()== null)
             throw new IllegalArgumentException("El nombre de biblioteca es obligatorio.");
-         
-        EstadoEjemplar tipoDato =EstadoEjemplar.valueOf(disponibilidadTexto);
-        ejemplar.setEstado(tipoDato);
-        
-        if (ejemplar.getEstado()== null )
+        if (disponibilidadTexto== null )
             throw new IllegalArgumentException("El estado del ejemplar es obligatorio.");
-        if (anioPublicacion== null || anioPublicacion.isBlank())
-            throw new IllegalArgumentException("El año de publicacion es obligatorio.");
-        if (tipoMaterialTexto== null || tipoMaterialTexto.isBlank())
+        if (anioPublicacionDesde== null)
+            throw new IllegalArgumentException("El año de publicacion desde es obligatorio.");
+        if (anioPublicacionHasta== null)
+            throw new IllegalArgumentException("El año de publicacion hasta es obligatorio.");
+        if (tipoMaterialTexto== null )
             throw new IllegalArgumentException("El tipo material es obligatorio.");
      }
      
@@ -236,13 +236,15 @@ public class MaterialBO {
     } 
     
     
-    public List<MaterialDTO> buscarPorAnio(String anio) throws SQLException {
-        validarAnio(anio);
-        return materialDAO.buscarPorAnio(anio);
+    public List<MaterialDTO> buscarPorAnio(String anioDesde,  String anioHasta) throws SQLException {
+        validarAnio(anioDesde, anioHasta);
+        return materialDAO.buscarPorAnio(anioDesde, anioHasta);
     }        
-    private void validarAnio(String anio){
-        if (anio== null || anio.isBlank())
-            throw new IllegalArgumentException("El año es obligatorio.");
+    private void validarAnio(String anioDesde, String anioHasta){
+        if (anioDesde== null || anioDesde.isBlank())
+            throw new IllegalArgumentException("El año desde es obligatorio.");
+        if (anioHasta== null || anioHasta.isBlank())
+            throw new IllegalArgumentException("El año hasta es obligatorio.");
     }
     
     public List<MaterialDTO> buscarPorAutor(String autor) throws SQLException {
@@ -251,6 +253,150 @@ public class MaterialBO {
     }    
     private void validarAutor(String autor){
         if (autor== null || autor.isBlank())
+            throw new IllegalArgumentException("El autor es obligatorio.");
+    }
+    
+    
+    
+    
+    
+    
+    public boolean comprobarPorTipoMaterial(String tipoMaterial, String idMaterial) throws SQLException {
+        validarComprobarTipoMaterial(tipoMaterial, idMaterial);
+        return materialDAO.comprobarPorTipoMaterial(tipoMaterial, idMaterial);
+    }        
+    
+    private void validarComprobarTipoMaterial(String tipoMaterial, String idMaterial){
+        if (tipoMaterial== null || tipoMaterial.isBlank())
+            throw new IllegalArgumentException("El tipo de material es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+    
+    public boolean comprobarPorTema(String tema, String idMaterial) throws SQLException {
+        validarComprobarTema(tema, idMaterial);
+        return materialDAO.comprobarPorTema(tema, idMaterial);
+    }        
+    
+    private void validarComprobarTema(String tema, String idMaterial){
+        if (tema== null || tema.isBlank())
+            throw new IllegalArgumentException("El tema es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+    
+    
+    public boolean comprobarPorIdioma(String idioma, String idMaterial) throws SQLException {
+        validarComprobarIdioma(idioma, idMaterial);
+        return materialDAO.comprobarPorIdioma(idioma, idMaterial);
+    }        
+    
+    private void validarComprobarIdioma(String idioma, String idMaterial){
+        if (idioma== null || idioma.isBlank())
+            throw new IllegalArgumentException("El idioma es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }    
+    
+    public boolean comprobarPorDisponibilidad(String disponibildad, String idMaterial) throws SQLException {
+        validarComprobarDisponibilidad(disponibildad, idMaterial);
+        return materialDAO.comprobarPorDisponibilidad(disponibildad, idMaterial);
+    }        
+    
+    private void validarComprobarDisponibilidad(String disponibildad, String idMaterial){
+        if (disponibildad== null || disponibildad.isBlank())
+            throw new IllegalArgumentException("La disponibilidad es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+
+
+    public boolean comprobarPorBiblioteca(String biblioteca, String idMaterial) throws SQLException {
+        validarComprobarBiblioteca(biblioteca, idMaterial);
+        return materialDAO.comprobarPorBiblioteca(biblioteca, idMaterial);
+    }        
+    
+    private void validarComprobarBiblioteca(String biblioteca, String idMaterial){
+        if (biblioteca== null || biblioteca.isBlank())
+            throw new IllegalArgumentException("La biblioteca es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    } 
+    
+    
+    public boolean comprobarPorAnio(String anioDesde, String anioHasta, String idMaterial) throws SQLException {
+        validarComprobarAnio(anioDesde, anioHasta, idMaterial);
+        return materialDAO.comprobarPorAnio(anioDesde, anioHasta, idMaterial);
+    }        
+    private void validarComprobarAnio(String anioDesde, String anioHasta, String idMaterial){
+        if (anioDesde== null || anioDesde.isBlank())
+            throw new IllegalArgumentException("El año desde es obligatorio.");
+        if (anioHasta== null || anioHasta.isBlank())
+            throw new IllegalArgumentException("El año hasta es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+    
+    public boolean comprobarPorAutor(String autor, String idMaterial) throws SQLException {
+        validarComprobarAutor(autor, idMaterial);
+        return materialDAO.comprobarPorAutor(autor, idMaterial);
+    }    
+    private void validarComprobarAutor(String autor, String idMaterial){
+        if (autor== null || autor.isBlank())
+            throw new IllegalArgumentException("El autor es obligatorio.");
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+    
+    public List<String> obtenerIdiomasAvanzada() throws SQLException {
+        return materialDAO.obtenerIdiomasAvanzada();
+    }
+    public String obtenerIdiomas(String idMaterial) throws SQLException {
+        validarObtenerIdiomas(idMaterial);
+        return materialDAO.obtenerIdiomas(idMaterial);
+    }
+    
+    private void validarObtenerIdiomas(String idMaterial){
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+    
+    public String obtenerTemas(String idMaterial) throws SQLException {
+        validarObtenerTemas(idMaterial);
+        return materialDAO.obtenerTemas(idMaterial);
+    }
+    private void validarObtenerTemas(String idMaterial){
+        if (idMaterial== null || idMaterial.isBlank())
+            throw new IllegalArgumentException("El id del Material es obligatorio.");
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    public void envioDeCorreos(String destino, String asunto, String txt){
+        validarCorreos(destino, asunto, txt);
+        materialDAO.envioCorreos(destino, asunto, txt);
+    }
+    private void validarCorreos(String destino, String asunto, String txt){
+        if (destino== null || destino.isBlank())
+            throw new IllegalArgumentException("El autor es obligatorio.");
+        if (asunto== null || asunto.isBlank())
+            throw new IllegalArgumentException("El autor es obligatorio.");
+        if (txt== null || txt.isBlank())
             throw new IllegalArgumentException("El autor es obligatorio.");
     }
 }

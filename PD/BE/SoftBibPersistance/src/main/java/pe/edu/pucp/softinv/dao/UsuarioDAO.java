@@ -26,4 +26,5 @@ public interface UsuarioDAO {
         String nombres, String primerApellido, String estado
     );
     
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
 }

@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: pe.edu.pucp.softinv.dao.UsuarioDAOTest
 -------------------------------------------------------------------------------
+<<<<<<< Updated upstream
 Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.849 s -- in pe.edu.pucp.softinv.dao.UsuarioDAOTest
+=======
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.352 s -- in pe.edu.pucp.softinv.dao.UsuarioDAOTest
+>>>>>>> Stashed changes

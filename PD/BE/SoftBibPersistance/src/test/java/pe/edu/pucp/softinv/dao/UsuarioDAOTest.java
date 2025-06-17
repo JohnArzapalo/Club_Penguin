@@ -48,5 +48,24 @@ public class UsuarioDAOTest {
             fail("Error inesperado durante la prueba: " + e.getMessage());
         }
     }
+    
+//    @Test
+//    public void envioCorreo() {
+//        try {
+//            String origen= "sistema.de.bibliotecas.prog3@gmail.com";
+//            String destino= "a20202098@pucp.edu.pe";
+//            String asunto=" Test correo";
+//            String txt= "Prueba";
+//            String contra16Digitos= "xmlm dvks ugkb cggq";
+//            usuarioDAO.envioCorreos(origen, destino, asunto, txt, contra16Digitos);
+//        } catch (Exception e) {
+//            fail("Error inesperado durante la prueba: " + e.getMessage());
+//        }
+//    }
+
 }
+
+
+
+
 

@@ -5,20 +5,55 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/EjemplarWS?xsd=1" namespace="http://services.pucp.edu.pe" />
     </xsd:schema>
   </types>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS1.wsdl
+========
+  <message name="listarTodosEjemplares">
+    <part name="parameters" element="tns:listarTodosEjemplares" />
+  </message>
+  <message name="listarTodosEjemplaresResponse">
+    <part name="parameters" element="tns:listarTodosEjemplaresResponse" />
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS.wsdl
+>>>>>>> Stashed changes
   <message name="obtenerEjemplarPorId">
     <part name="parameters" element="tns:obtenerEjemplarPorId" />
   </message>
   <message name="obtenerEjemplarPorIdResponse">
     <part name="parameters" element="tns:obtenerEjemplarPorIdResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS1.wsdl
+>>>>>>> Stashed changes
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
   </message>
   <message name="listarTodosEjemplares">
     <part name="parameters" element="tns:listarTodosEjemplares" />
+<<<<<<< Updated upstream
   </message>
   <message name="listarTodosEjemplaresResponse">
     <part name="parameters" element="tns:listarTodosEjemplaresResponse" />
+=======
+========
+  <message name="insertarEjemplar">
+    <part name="parameters" element="tns:insertarEjemplar" />
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS.wsdl
+  </message>
+  <message name="insertarEjemplarResponse">
+    <part name="parameters" element="tns:insertarEjemplarResponse" />
+  </message>
+  <message name="obtenerEjemplaresMaterialPorBiblioteca">
+    <part name="parameters" element="tns:obtenerEjemplaresMaterialPorBiblioteca" />
+  </message>
+  <message name="obtenerEjemplaresMaterialPorBibliotecaResponse">
+    <part name="parameters" element="tns:obtenerEjemplaresMaterialPorBibliotecaResponse" />
+>>>>>>> Stashed changes
   </message>
   <message name="insertarEjemplar">
     <part name="parameters" element="tns:insertarEjemplar" />
@@ -33,16 +68,36 @@
     <part name="parameters" element="tns:obtenerEjemplaresMaterialPorBibliotecaResponse" />
   </message>
   <portType name="EjemplarWS">
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS1.wsdl
+>>>>>>> Stashed changes
     <operation name="obtenerEjemplarPorId">
       <input wsam:Action="http://services.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest" message="tns:obtenerEjemplarPorId" />
       <output wsam:Action="http://services.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse" message="tns:obtenerEjemplarPorIdResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+========
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS.wsdl
+>>>>>>> Stashed changes
     <operation name="listarTodosEjemplares">
       <input wsam:Action="http://services.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresRequest" message="tns:listarTodosEjemplares" />
       <output wsam:Action="http://services.pucp.edu.pe/EjemplarWS/listarTodosEjemplaresResponse" message="tns:listarTodosEjemplaresResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/EjemplarWS/listarTodosEjemplares/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS1.wsdl
+========
+    <operation name="obtenerEjemplarPorId">
+      <input wsam:Action="http://services.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdRequest" message="tns:obtenerEjemplarPorId" />
+      <output wsam:Action="http://services.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorIdResponse" message="tns:obtenerEjemplarPorIdResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/EjemplarWS/obtenerEjemplarPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS.wsdl
+>>>>>>> Stashed changes
     <operation name="insertarEjemplar">
       <input wsam:Action="http://services.pucp.edu.pe/EjemplarWS/insertarEjemplarRequest" message="tns:insertarEjemplar" />
       <output wsam:Action="http://services.pucp.edu.pe/EjemplarWS/insertarEjemplarResponse" message="tns:insertarEjemplarResponse" />
@@ -56,7 +111,15 @@
   </portType>
   <binding name="EjemplarWSPortBinding" type="tns:EjemplarWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+<<<<<<< Updated upstream
     <operation name="obtenerEjemplarPorId">
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS1.wsdl
+    <operation name="obtenerEjemplarPorId">
+========
+    <operation name="listarTodosEjemplares">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS.wsdl
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -68,7 +131,15 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
+<<<<<<< Updated upstream
     <operation name="listarTodosEjemplares">
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS1.wsdl
+    <operation name="listarTodosEjemplares">
+========
+    <operation name="obtenerEjemplarPorId">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/EjemplarWS.wsdl
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

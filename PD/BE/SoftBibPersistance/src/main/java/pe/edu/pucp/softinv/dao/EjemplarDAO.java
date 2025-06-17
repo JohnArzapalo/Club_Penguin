@@ -23,5 +23,6 @@ public interface EjemplarDAO {
     
     // public ArrayList<EjemplarDTO> listarPorBiblioteca(Integer bibliotecaId);
     
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
 }
 

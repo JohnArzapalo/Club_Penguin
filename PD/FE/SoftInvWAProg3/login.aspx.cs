@@ -24,7 +24,8 @@ namespace SoftInvWAProg3
                 Session["usuario"] = usuario;
                 Session["id"] = (int?)usuario.usuarioId;
                 Session["rol"] = usuario.tipoUsuario.nombre;
-                
+                Session["correo"] = correo;
+                    
                 Response.Redirect("materiales.aspx");
             }
             else

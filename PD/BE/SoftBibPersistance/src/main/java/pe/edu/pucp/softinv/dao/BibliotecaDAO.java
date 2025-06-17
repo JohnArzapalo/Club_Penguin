@@ -19,4 +19,5 @@ public interface BibliotecaDAO {
     
     public List<BibliotecaDTO> obtenerBibliotecasPorMaterial(int materialId) throws SQLException;
     
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
 }

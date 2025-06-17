@@ -7,13 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SoftInvWAProg3
-{
-
-
-    public partial class registrar_material
-    {
-
+namespace SoftInvWAProg3 {
+    
+    
+    public partial class registrar_material {
+        
         /// <summary>
         /// Control ddlTipoMaterial.
         /// </summary>
@@ -22,7 +20,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlTipoMaterial;
-
+        
         /// <summary>
         /// Control txtTitulo.
         /// </summary>
@@ -31,7 +29,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTitulo;
-
+        
         /// <summary>
         /// Control txtAutores.
         /// </summary>
@@ -40,7 +38,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAutores;
-
+        
         /// <summary>
         /// Control txtAnio.
         /// </summary>
@@ -49,7 +47,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAnio;
-
+        
         /// <summary>
         /// Control txtPaginas.
         /// </summary>
@@ -58,7 +56,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPaginas;
-
+        
         /// <summary>
         /// Control txtTema.
         /// </summary>
@@ -67,7 +65,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtTema;
-
+        
         /// <summary>
         /// Control txtIdioma.
         /// </summary>
@@ -76,7 +74,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIdioma;
-
+        
         /// <summary>
         /// Control phCamposTipo.
         /// </summary>
@@ -85,7 +83,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phCamposTipo;
-
+        
         /// <summary>
         /// Control btnMenosEjemplar.
         /// </summary>
@@ -94,7 +92,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMenosEjemplar;
-
+        
         /// <summary>
         /// Control lblCantidadEjemplares.
         /// </summary>
@@ -103,7 +101,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCantidadEjemplares;
-
+        
         /// <summary>
         /// Control btnMasEjemplar.
         /// </summary>
@@ -112,7 +110,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnMasEjemplar;
-
+        
         /// <summary>
         /// Control phEjemplares.
         /// </summary>
@@ -121,7 +119,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.PlaceHolder phEjemplares;
-
+        
         /// <summary>
         /// Control btnCancelar.
         /// </summary>
@@ -130,7 +128,7 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCancelar;
-
+        
         /// <summary>
         /// Control btnRegistrar.
         /// </summary>

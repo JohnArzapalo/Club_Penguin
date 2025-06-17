@@ -299,194 +299,582 @@ public class MaterialDAOImpl extends DAOImplBase implements MaterialDAO {
     }
     
     @Override
-    public int busqueda(MaterialDTO material, String anioPublicacion, String tipoMaterialTexto) {
+    public int busqueda(MaterialDTO material, String anioPublicacion, String tipoMaterialTexto) throws SQLException{
         int anioPublicacionInt = Integer.parseInt(anioPublicacion);
         TipoMaterial tipoDato =TipoMaterial.valueOf(tipoMaterialTexto);
         material.setAnioPublicacion(anioPublicacionInt);
         material.setTipoMaterial(tipoDato);
-        
-        List<MaterialDTO> datos=listarTodos();
-        for (int i = 0; i < datos.size(); i++) {
-            MaterialDTO comprobar = datos.get(i);
-            if(
-            material.getTitulo().equals(comprobar.getTitulo()) &&
-            material.getAutor().equals(comprobar.getAutor()) &&
-            material.getTipoMaterial().getNombreMostrar().equals(comprobar.getTipoMaterial().getNombreMostrar()) &&
-            material.getAnioPublicacion().intValue() == comprobar.getAnioPublicacion().intValue() &&
-            material.getIdioma().equals(comprobar.getIdioma()) &&
-            material.getTema().equals(comprobar.getTema())
-                                    ){
-                return comprobar.getMaterialId();
-            }    
-        }
-        return 0;
-    }
-    
-    @Override
-    public MaterialDTO busquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
-            String anioPublicacion, String tipoMaterialTexto,String disponibilidadTexto) {
+        int materialIdEncontrado = 0;
+        String sql = """
+                SELECT MATERIAL_ID
+                FROM G3_MATERIALES
+                WHERE TITULO = ?
+                  AND AUTOR = ?
+                  AND IDIOMA = ?
+                  AND TEMA = ?
+                  AND ANIO_PUBLI = ?
+                  AND TIPO_MATERIAL = ?
+                LIMIT 1
+            """;
 
-        int idDato=busqueda(material, anioPublicacion, tipoMaterialTexto);
-        if(idDato==0) return null;
-        int idBiblioteca = 0;
-        MaterialDTO dato=obtenerPorId(idDato);
-        if (biblioteca.getNombre()== null || biblioteca.getNombre().isBlank())
-            throw new IllegalArgumentException("El nombre de biblioteca es obligatorio.");
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, material.getTitulo());
+            this.statement.setString(2, material.getAutor());
+            this.statement.setString(3, material.getIdioma());
+            this.statement.setString(4, material.getTema());
+            this.statement.setInt(5, Integer.parseInt(anioPublicacion));
+            this.statement.setString(6, tipoMaterialTexto); // Debe coincidir con el ENUM de la BD
 
-        List<BibliotecaDTO> bibliotecasDatos=this.biblioteca.listarTodos();
-        for (int i = 0; i < bibliotecasDatos.size(); i++) {
-            BibliotecaDTO comprobarBiblioteca = bibliotecasDatos.get(i);
-            if(comprobarBiblioteca.getNombre().equals(biblioteca.getNombre())){
-                idBiblioteca=comprobarBiblioteca.getBibliotecaId();
-                break;
-            }
-        }
-        
-        EstadoEjemplar tipoDato = EstadoEjemplar.valueOf(disponibilidadTexto);
-        ejemplar.setEstado(tipoDato);
-        
-        if (ejemplar.getEstado()== null )
-            throw new IllegalArgumentException("El estado del ejemplar es obligatorio.");
-        
-        List<EjemplarDTO> ejemplarDatos=this.ejemplar.listarTodos();
-        for (int i = 0; i < ejemplarDatos.size(); i++) {
-            EjemplarDTO comprobarEjemplar = ejemplarDatos.get(i);
-            if(comprobarEjemplar.getBiblioteca().getBibliotecaId()==idBiblioteca && comprobarEjemplar.getMaterial().getMaterialId()==idDato){
-                if(ejemplar.getEstado().getNombreMostrar().equals(comprobarEjemplar.getEstado().getNombreMostrar())){
-                    return dato;
-                }
-            }
-        }
-        return null;
-    }
-    
-    @Override
-    public ArrayList<MaterialDTO> buscarPorAutor(String autor) {
-        ArrayList<MaterialDTO>datos=listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            MaterialDTO comprobarMaterial = datos.get(i);
-            if(comprobarMaterial.getAutor().equals(autor) ){
-                resultado.add(comprobarMaterial);
-            }
-        }
-        return resultado;
-    }
-    
-    @Override
-    public ArrayList<MaterialDTO> buscarPorAnio(String anio) {
-        int anioPublicacionInt = Integer.parseInt(anio);
-        ArrayList<MaterialDTO>datos=listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            MaterialDTO comprobarMaterial = datos.get(i);
-            if(comprobarMaterial.getAnioPublicacion()==anioPublicacionInt){
-                resultado.add(comprobarMaterial);
-            }
-        }
-        return resultado;
-    }
+            this.resultSet = this.statement.executeQuery();
 
-    
-    @Override
-    public ArrayList<MaterialDTO> buscarPorTipoMaterial(String tipoMaterial) {
-        TipoMaterial tipoDato =TipoMaterial.valueOf(tipoMaterial);
-        ArrayList<MaterialDTO>datos=listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            MaterialDTO comprobarMaterial = datos.get(i);
-            if(comprobarMaterial.getTipoMaterial()==tipoDato){
-                resultado.add(comprobarMaterial);
+            if (this.resultSet.next()) {
+                materialIdEncontrado = this.resultSet.getInt("MATERIAL_ID");
             }
+        } catch (SQLException | NumberFormatException ex) {
+            System.err.println("Error al buscar material exacto: " + ex.getMessage());
+        } finally {
+            this.cerrarConexion();
         }
-        return resultado;
-    }
-    
+
+    return materialIdEncontrado;
+}
     @Override
-    public ArrayList<MaterialDTO> buscarPorTema(String tema) {
-        ArrayList<MaterialDTO>datos=listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            MaterialDTO comprobarMaterial = datos.get(i);
-            if(comprobarMaterial.getTema().equals(tema)){
-                resultado.add(comprobarMaterial);
+ public ArrayList<MaterialDTO> busquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
+            String anioPublicacionDesde, String anioPublicacionHasta,String tipoMaterialTexto,String disponibilidadTexto)  throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+    
+         String sql = "SELECT * " +
+                 "FROM G3_MATERIALES m " +
+                 "LEFT JOIN G3_EJEMPLARES e ON m.MATERIAL_ID = e.MATERIAL_ID " +
+                 "LEFT JOIN G3_BIBLIOTECAS b ON e.BIBLIOTECA_ID = b.BIBLIOTECA_ID " +
+                 "WHERE 1=1 ";
+
+        List<Object> parametros = new ArrayList<>();
+
+        if (material.getTitulo() != null && !material.getTitulo().isEmpty()) {
+            sql += "AND m.TITULO LIKE ? ";
+            parametros.add("%" + material.getTitulo() + "%");
+        }
+        if (material.getAutor() != null && !material.getAutor().isEmpty()) {
+            sql += "AND m.AUTOR LIKE ? ";
+            parametros.add("%" + material.getAutor() + "%");
+        }
+        if (material.getTema() != null && !material.getTema().isEmpty()) {
+            sql += "AND m.TEMA LIKE ? ";
+            parametros.add("%" + material.getTema() + "%");
+        }
+        if (anioPublicacionDesde != null && !anioPublicacionDesde.isEmpty()) {
+            sql += "AND m.ANIO_PUBLI >= ? ";
+            parametros.add(anioPublicacionDesde); // ← ya es String
+        }
+
+        if (anioPublicacionHasta != null && !anioPublicacionHasta.isEmpty()) {
+            sql += "AND m.ANIO_PUBLI <= ? ";
+            parametros.add(anioPublicacionHasta);
+        }
+
+        if (tipoMaterialTexto != null && !tipoMaterialTexto.isEmpty()) {
+            sql += "AND m.TIPO_MATERIAL = ? ";
+            parametros.add(tipoMaterialTexto); // debe devolver String
+        }
+
+        if (biblioteca.getNombre() != null && !biblioteca.getNombre().isEmpty()) {
+             sql += "AND b.NOMBRE = ? ";
+            parametros.add(biblioteca.getNombre());
+        }
+        if (material.getIdioma() != null && !material.getIdioma().isEmpty()) {
+            sql += "AND m.IDIOMA = ? ";
+            parametros.add(material.getIdioma());
+        }
+        if (disponibilidadTexto != null && !disponibilidadTexto.isEmpty()) {
+            sql += "AND e.ESTADO = ? ";
+            parametros.add(disponibilidadTexto); // también debe devolver String
+        }
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+
+            for (int i = 0; i < parametros.size(); i++) {
+                this.statement.setString(i + 1, parametros.get(i).toString());
             }
-        }
-        return resultado;
-    }
-    
-    @Override
-    public ArrayList<MaterialDTO> buscarPorIdioma(String idioma) {
-        ArrayList<MaterialDTO>datos=listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            MaterialDTO comprobarMaterial = datos.get(i);
-            if(comprobarMaterial.getIdioma().equals(idioma)){
-                resultado.add(comprobarMaterial);
-            }
-        }
-        return resultado;
-    }
-    
-    @Override
-    public ArrayList<MaterialDTO> buscarPorDisponibilidad(String disponibildad) {
-        EstadoEjemplar tipoDato =EstadoEjemplar.valueOf(disponibildad);
-        
-        ArrayList<EjemplarDTO>datos=this.ejemplar.listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            EjemplarDTO comprobarEjemplar = datos.get(i);
-            MaterialDTO datoIngresar;
-            if(comprobarEjemplar.getEstado()==tipoDato){
-                datoIngresar=obtenerPorId(comprobarEjemplar.getMaterial().getMaterialId());
-                if(resultado.isEmpty()){
-                    resultado.add(datoIngresar);
-                    continue;
-                }
-                for (int j = 0; j < resultado.size(); j++) {
-                    
-                    MaterialDTO comprobarMaterial = resultado.get(j);
-                    if(comprobarMaterial.getMaterialId().equals(datoIngresar.getMaterialId())){
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+
+                // Verificación manual - NO necesita equals() ni hashCode()
+                boolean existe = false;
+                for (MaterialDTO m : resultados) {
+                    if (m.getMaterialId().equals(this.material.getMaterialId())) {
+                        existe = true;
                         break;
                     }
-                    resultado.add(datoIngresar);
+                }
+
+                if (!existe) {
+                    resultados.add(this.material);
                 }
             }
+        } catch (SQLException ex) {
+            System.err.println("Error al realizar búsqueda avanzada: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
         }
-        return resultado;
-    }    
+
+        return resultados;
+}
+
+    @Override
+    public ArrayList<MaterialDTO> buscarPorAutor(String autor)  throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+        String sql = "SELECT * FROM G3_MATERIALES WHERE AUTOR LIKE ?";
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + autor + "%");
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
     
     @Override
-    public ArrayList<MaterialDTO> buscarPorBiblioteca(String biblioteca) {
-        Integer idBiblioteca=0;
-        List<BibliotecaDTO>datosBiblioteca=this.biblioteca.listarTodos();
-        for (int i = 0; i < datosBiblioteca.size(); i++) {
-            BibliotecaDTO comprobarBiblioteca = datosBiblioteca.get(i);
-            if(comprobarBiblioteca.getNombre().equals(biblioteca)){
-                idBiblioteca=comprobarBiblioteca.getBibliotecaId();
-                break;
-            }
+    public boolean comprobarPorAutor(String autor, String idMaterial) throws SQLException {
+
+        String sql = "SELECT 1 FROM G3_MATERIALES WHERE AUTOR LIKE ? AND MATERIAL_ID = ?";
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + autor + "%");
+             this.statement.setString(2, idMaterial); // Agregado el segundo parámetro que faltaba
+             this.resultSet = this.statement.executeQuery();
+
+            return this.resultSet.next();
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
         }
-        List<EjemplarDTO>datos=this.ejemplar.listarTodos();
-        ArrayList<MaterialDTO> resultado = new ArrayList<>();
-        for (int i = 0; i < datos.size(); i++) {
-            EjemplarDTO comprobarEjemplar = datos.get(i);
-            MaterialDTO datoIngresar;
-            if(comprobarEjemplar.getBiblioteca().getBibliotecaId().equals(idBiblioteca)){
-                datoIngresar=obtenerPorId(comprobarEjemplar.getMaterial().getMaterialId());
-                if(resultado.isEmpty()){
-                    resultado.add(datoIngresar);
-                    continue;
-                }
-                for (int j = 0; j < resultado.size(); j++) {
-                    MaterialDTO comprobarMaterial = resultado.get(j);
-                    if(comprobarMaterial.getMaterialId().equals(datoIngresar.getMaterialId())){
-                        break;
-                    }
-                    resultado.add(datoIngresar);
+    }
+    
+    @Override
+    public ArrayList<MaterialDTO> buscarPorAnio(String anioDesde, String anioHasta) throws SQLException {
+         int desde = Integer.parseInt(anioDesde);
+        int hasta = Integer.parseInt(anioHasta);
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+        String sql = "SELECT * FROM G3_MATERIALES WHERE ANIO_PUBLI BETWEEN ? AND ?";
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setInt(1, desde);
+            this.statement.setInt(2, hasta);
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
+    
+        @Override
+    public boolean comprobarPorAnio(String anioDesde, String anioHasta, String idMaterial) throws SQLException {
+        int desde = Integer.parseInt(anioDesde);
+        int hasta = Integer.parseInt(anioHasta);
+        int materialId = Integer.parseInt(idMaterial);
+        String sql = "SELECT 1 FROM G3_MATERIALES WHERE ANIO_PUBLI BETWEEN ? AND ? AND MATERIAL_ID = ?";
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql); // Cambiado de prepareCall a prepareStatement
+            this.statement.setInt(1, desde);
+            this.statement.setInt(2, hasta);
+            this.statement.setInt(3, materialId);
+            this.resultSet = this.statement.executeQuery();
+
+            // Retorna true si encuentra al menos un registro
+            return this.resultSet.next();
+
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por tipo de material: " + ex.getMessage());
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+
+    
+    @Override
+    public ArrayList<MaterialDTO> buscarPorTipoMaterial(String tipoMaterial) throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+        String sql = "SELECT * FROM G3_MATERIALES WHERE TIPO_MATERIAL LIKE ?";
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + tipoMaterial + "%");
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
+    
+    
+        @Override
+    public boolean comprobarPorTipoMaterial(String tipoMaterial, String idMaterial) throws SQLException {
+        String sql = "SELECT 1 FROM G3_MATERIALES WHERE TIPO_MATERIAL LIKE ? AND MATERIAL_ID = ?";
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql); // Cambiado de prepareCall a prepareStatement
+            this.statement.setString(1, "%" + tipoMaterial + "%");
+            this.statement.setString(2, idMaterial); // Agregado el segundo parámetro que faltaba
+            this.resultSet = this.statement.executeQuery();
+
+            // Retorna true si encuentra al menos un registro
+            return this.resultSet.next();
+
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por tipo de material: " + ex.getMessage());
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+    
+    @Override
+    public ArrayList<MaterialDTO> buscarPorTema(String tema) throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+        String sql = "SELECT * FROM G3_MATERIALES WHERE TEMA LIKE ?";
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + tema + "%");
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
+    
+    
+    @Override
+    public boolean comprobarPorTema(String tema, String idMaterial) throws SQLException {
+        String sql = "SELECT 1 FROM G3_MATERIALES WHERE TEMA LIKE ? AND MATERIAL_ID = ?";
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql); // Usando prepareCall como solicitaste
+            this.statement.setString(1, "%" + tema + "%");
+            this.statement.setString(2, idMaterial); // Agregado el segundo parámetro que faltaba
+            this.resultSet = this.statement.executeQuery();
+
+            // Retorna true si encuentra al menos un registro
+            return this.resultSet.next();
+
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por tema: " + ex.getMessage());
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+    
+    @Override
+    public ArrayList<MaterialDTO> buscarPorIdioma(String idioma)  throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+        String sql = "SELECT * FROM G3_MATERIALES WHERE IDIOMA LIKE ?";
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + idioma + "%");
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
+    
+    @Override
+    public boolean comprobarPorIdioma(String idioma, String idMaterial) throws SQLException {
+        String sql = "SELECT 1 FROM G3_MATERIALES WHERE IDIOMA LIKE ? AND MATERIAL_ID = ?";
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql); // Usando prepareCall como solicitaste
+            this.statement.setString(1, "%" + idioma + "%");
+            this.statement.setString(2, idMaterial); // Agregado el segundo parámetro que faltaba
+            this.resultSet = this.statement.executeQuery();
+
+            // Retorna true si encuentra al menos un registro
+            return this.resultSet.next();
+
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por idioma: " + ex.getMessage());
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+    
+    @Override
+    public ArrayList<MaterialDTO> buscarPorDisponibilidad(String disponibildad) throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+         String sql = """
+        SELECT DISTINCT m.*
+        FROM G3_MATERIALES m
+        INNER JOIN G3_EJEMPLARES e ON m.MATERIAL_ID = e.MATERIAL_ID
+        WHERE e.ESTADO = ?
+    """;
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, disponibildad);
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
+
+
+    @Override
+    public boolean comprobarPorDisponibilidad(String disponibilidad, String idMaterial) throws SQLException {
+        String sql = """
+            SELECT 1 
+            FROM G3_MATERIALES m
+            INNER JOIN G3_EJEMPLARES e ON m.MATERIAL_ID = e.MATERIAL_ID
+            WHERE e.ESTADO LIKE ? AND m.MATERIAL_ID = ?
+        """;
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + disponibilidad + "%");
+            this.statement.setString(2, idMaterial);
+            this.resultSet = this.statement.executeQuery();
+
+            // Retorna true si encuentra al menos un registro
+            return this.resultSet.next();
+
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por disponibilidad: " + ex.getMessage());
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+    
+    @Override
+    public ArrayList<MaterialDTO> buscarPorBiblioteca(String biblioteca) throws SQLException{
+        ArrayList<MaterialDTO> resultados = new ArrayList<>();
+        String sql = """
+        SELECT DISTINCT m.*
+        FROM G3_MATERIALES m
+        INNER JOIN G3_EJEMPLARES e ON m.MATERIAL_ID = e.MATERIAL_ID
+        INNER JOIN G3_BIBLIOTECAS b ON e.BIBLIOTECA_ID = b.BIBLIOTECA_ID
+        WHERE b.NOMBRE LIKE ?
+        """;
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + biblioteca + "%");
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                this.instanciarObjetoDelResultSet();
+                resultados.add(this.material);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por título: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return resultados;
+    }
+    
+    
+    @Override
+    public boolean comprobarPorBiblioteca(String biblioteca, String idMaterial) throws SQLException {
+        String sql = """
+            SELECT 1 
+            FROM G3_MATERIALES m
+            INNER JOIN G3_EJEMPLARES e ON m.MATERIAL_ID = e.MATERIAL_ID
+            INNER JOIN G3_BIBLIOTECAS b ON e.BIBLIOTECA_ID = b.BIBLIOTECA_ID
+            WHERE b.NOMBRE LIKE ? AND m.MATERIAL_ID = ?
+            """;
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, "%" + biblioteca + "%");
+            this.statement.setString(2, idMaterial);
+            this.resultSet = this.statement.executeQuery();
+
+            // Retorna true si encuentra al menos un registro
+            return this.resultSet.next();
+
+        } catch (SQLException ex) {
+            System.err.println("Error al buscar materiales por biblioteca: " + ex.getMessage());
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+    }
+    @Override
+    public List<String> obtenerIdiomasAvanzada() throws SQLException{
+        List<String> idiomas = new ArrayList<>();
+        String sql = """
+            SELECT DISTINCT m.IDIOMA
+            FROM G3_MATERIALES m
+            WHERE m.IDIOMA IS NOT NULL
+            ORDER BY m.IDIOMA
+        """;
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.resultSet = this.statement.executeQuery();
+
+            while (this.resultSet.next()) {
+                String idioma = this.resultSet.getString("IDIOMA");
+                if (idioma != null && !idioma.isEmpty()) {
+                    idiomas.add(idioma);
                 }
             }
+        } catch (SQLException ex) {
+            System.err.println("Error al obtener idioma por idMaterial: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
         }
-        return resultado;
+
+        return idiomas;
+    }
+    @Override
+    public String obtenerIdiomas(String idMaterial) throws SQLException {
+        String idioma = null;
+        String sql = """
+            SELECT DISTINCT m.IDIOMA
+            FROM G3_MATERIALES m
+            WHERE m.MATERIAL_ID = ?
+        """;
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, idMaterial);
+            this.resultSet = this.statement.executeQuery();
+
+            if (this.resultSet.next()) {
+                idioma = this.resultSet.getString("IDIOMA");
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al obtener idioma por idMaterial: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return idioma;
+    }
+
+    
+    @Override
+    public String obtenerTemas(String idMaterial) throws SQLException {
+        String tema = null;
+        String sql = """
+            SELECT DISTINCT m.TEMA
+            FROM G3_MATERIALES m
+            WHERE m.MATERIAL_ID = ? AND m.TEMA IS NOT NULL
+        """;
+
+        try {
+            this.abrirConexion();
+            this.statement = this.conexion.prepareCall(sql);
+            this.statement.setString(1, idMaterial);
+            this.resultSet = this.statement.executeQuery();
+
+            if (this.resultSet.next()) {
+                tema = this.resultSet.getString("TEMA");
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al obtener tema por idMaterial: " + ex);
+            throw ex;
+        } finally {
+            this.cerrarConexion();
+        }
+
+        return tema;
+    }
+
+
+    @Override
+    public void envioCorreos(String destino, String asunto, String txt) {
+        String origen= "sistema.de.bibliotecas.prog3@gmail.com";
+        String contra16Digitos= "xmlm dvks ugkb cggq";
+        super.envioDeCorreos(origen, destino, asunto, txt, contra16Digitos);
     }
 }

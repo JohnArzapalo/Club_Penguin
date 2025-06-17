@@ -26,23 +26,44 @@ public interface MaterialDAO {
     
     public int[] obtenerEjemplaresReservadosYDisponibles(int materialId, int bibliotecaId) throws SQLException;
     
-    public int busqueda(MaterialDTO material, String anioPublicacion, String tipoMaterialTexto);
+    public int busqueda(MaterialDTO material, String anioPublicacion, String tipoMaterialTexto) throws SQLException;
     
-    public MaterialDTO busquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
-            String anioPublicacion, String tipoMaterialTexto,String disponibilidadTexto) ;
+    public ArrayList<MaterialDTO> busquedaAvanzada(MaterialDTO material, BibliotecaDTO biblioteca, EjemplarDTO ejemplar,
+            String anioPublicacionDesde, String anioPublicacionHasta,String tipoMaterialTexto,String disponibilidadTexto)  throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorAutor(String autor) ;
+    public ArrayList<MaterialDTO> buscarPorAutor(String autor)  throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorAnio(String anio) ;
+    public ArrayList<MaterialDTO> buscarPorAnio(String anioDesde, String anioHasta) throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorTipoMaterial(String tipoMaterial);
+    public ArrayList<MaterialDTO> buscarPorTipoMaterial(String tipoMaterial) throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorTema(String tema) ;
+    public ArrayList<MaterialDTO> buscarPorTema(String tema) throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorIdioma(String idioma);
+    public ArrayList<MaterialDTO> buscarPorIdioma(String idioma) throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorDisponibilidad(String disponibildad);
+    public ArrayList<MaterialDTO> buscarPorDisponibilidad(String disponibildad) throws SQLException;
     
-    public ArrayList<MaterialDTO> buscarPorBiblioteca(String biblioteca);
+    public ArrayList<MaterialDTO> buscarPorBiblioteca(String biblioteca) throws SQLException;
     
+    public boolean comprobarPorAutor(String autor, String idMaterial) throws SQLException ;
+    
+    public boolean comprobarPorTipoMaterial(String tipoMaterial, String idMaterial) throws SQLException ;
+    
+    public boolean comprobarPorTema(String tema, String idMaterial) throws SQLException ;
+    
+    public boolean comprobarPorIdioma(String idioma, String idMaterial) throws SQLException ;
+    
+    public boolean comprobarPorDisponibilidad(String disponibilidad, String idMaterial) throws SQLException ;
+    
+    public boolean comprobarPorBiblioteca(String biblioteca, String idMaterial) throws SQLException ;
+    
+    public boolean comprobarPorAnio(String anioDesde, String anioHasta,String idMaterial) throws SQLException ;
+    
+    public String obtenerIdiomas(String idMaterial) throws SQLException;
+    
+    public List<String> obtenerIdiomasAvanzada() throws SQLException;
+    
+    public String obtenerTemas(String idMaterial) throws SQLException;
+    
+    public void envioCorreos(String destino, String asunto, String txt) ;
 }

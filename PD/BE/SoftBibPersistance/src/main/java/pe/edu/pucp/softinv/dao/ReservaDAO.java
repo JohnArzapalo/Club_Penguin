@@ -24,4 +24,5 @@ public interface ReservaDAO {
     
     public ArrayList<ReservaDTO> listarPorBusquedaAvanzada(String reservaId, String usuarioNombre, String materialTitulo, String estado, Date fechaDesde, Date fechaHasta);
     
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
 }

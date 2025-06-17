@@ -5,27 +5,87 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/MaterialWS?xsd=1" namespace="http://services.pucp.edu.pe" />
     </xsd:schema>
   </types>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
   <message name="listarTodosMateriales">
     <part name="parameters" element="tns:listarTodosMateriales" />
   </message>
   <message name="listarTodosMaterialesResponse">
     <part name="parameters" element="tns:listarTodosMaterialesResponse" />
+<<<<<<< Updated upstream
+=======
+========
+  <message name="materialBusqueda">
+    <part name="parameters" element="tns:materialBusqueda" />
+  </message>
+  <message name="materialBusquedaResponse">
+    <part name="parameters" element="tns:materialBusquedaResponse" />
+>>>>>>> Stashed changes
   </message>
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
   </message>
+<<<<<<< Updated upstream
+=======
+  <message name="obtenerIdiomasAvanzada">
+    <part name="parameters" element="tns:obtenerIdiomasAvanzada" />
+  </message>
+  <message name="obtenerIdiomasAvanzadaResponse">
+    <part name="parameters" element="tns:obtenerIdiomasAvanzadaResponse" />
+  </message>
+  <message name="comprobarPorDisponibilidad">
+    <part name="parameters" element="tns:comprobarPorDisponibilidad" />
+  </message>
+  <message name="comprobarPorDisponibilidadResponse">
+    <part name="parameters" element="tns:comprobarPorDisponibilidadResponse" />
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+  </message>
+  <message name="SQLException">
+    <part name="fault" element="tns:SQLException" />
+  </message>
+  <message name="comprobarPorTipoMaterial">
+    <part name="parameters" element="tns:comprobarPorTipoMaterial" />
+  </message>
+  <message name="comprobarPorTipoMaterialResponse">
+    <part name="parameters" element="tns:comprobarPorTipoMaterialResponse" />
+  </message>
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+========
+  <message name="buscarPorDisponibilidad">
+    <part name="parameters" element="tns:buscarPorDisponibilidad" />
+  </message>
+  <message name="buscarPorDisponibilidadResponse">
+    <part name="parameters" element="tns:buscarPorDisponibilidadResponse" />
+  </message>
+  <message name="comprobarPorBiblioteca">
+    <part name="parameters" element="tns:comprobarPorBiblioteca" />
+  </message>
+  <message name="comprobarPorBibliotecaResponse">
+    <part name="parameters" element="tns:comprobarPorBibliotecaResponse" />
+  </message>
+>>>>>>> Stashed changes
   <message name="buscarPorBiblioteca">
     <part name="parameters" element="tns:buscarPorBiblioteca" />
   </message>
   <message name="buscarPorBibliotecaResponse">
     <part name="parameters" element="tns:buscarPorBibliotecaResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
   <message name="buscarPorTipoMaterial">
     <part name="parameters" element="tns:buscarPorTipoMaterial" />
   </message>
   <message name="buscarPorTipoMaterialResponse">
     <part name="parameters" element="tns:buscarPorTipoMaterialResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
   <message name="buscarPorDisponibilidad">
     <part name="parameters" element="tns:buscarPorDisponibilidad" />
   </message>
@@ -37,6 +97,16 @@
   </message>
   <message name="obtenerMaterialPorIdResponse">
     <part name="parameters" element="tns:obtenerMaterialPorIdResponse" />
+<<<<<<< Updated upstream
+=======
+========
+  <message name="listarTodosMateriales">
+    <part name="parameters" element="tns:listarTodosMateriales" />
+  </message>
+  <message name="listarTodosMaterialesResponse">
+    <part name="parameters" element="tns:listarTodosMaterialesResponse" />
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
   </message>
   <message name="modificarMaterial">
     <part name="parameters" element="tns:modificarMaterial" />
@@ -44,6 +114,10 @@
   <message name="modificarMaterialResponse">
     <part name="parameters" element="tns:modificarMaterialResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
   <message name="eliminarMaterial">
     <part name="parameters" element="tns:eliminarMaterial" />
   </message>
@@ -55,6 +129,40 @@
   </message>
   <message name="buscarPorTituloResponse">
     <part name="parameters" element="tns:buscarPorTituloResponse" />
+<<<<<<< Updated upstream
+=======
+========
+  <message name="buscarPorAnio">
+    <part name="parameters" element="tns:buscarPorAnio" />
+  </message>
+  <message name="buscarPorAnioResponse">
+    <part name="parameters" element="tns:buscarPorAnioResponse" />
+  </message>
+  <message name="envioCorreos">
+    <part name="parameters" element="tns:envioCorreos" />
+  </message>
+  <message name="envioCorreosResponse">
+    <part name="parameters" element="tns:envioCorreosResponse" />
+  </message>
+  <message name="comprobarPorAutor">
+    <part name="parameters" element="tns:comprobarPorAutor" />
+  </message>
+  <message name="comprobarPorAutorResponse">
+    <part name="parameters" element="tns:comprobarPorAutorResponse" />
+  </message>
+  <message name="comprobarPorIdioma">
+    <part name="parameters" element="tns:comprobarPorIdioma" />
+  </message>
+  <message name="comprobarPorIdiomaResponse">
+    <part name="parameters" element="tns:comprobarPorIdiomaResponse" />
+  </message>
+  <message name="comprobarPorAnio">
+    <part name="parameters" element="tns:comprobarPorAnio" />
+  </message>
+  <message name="comprobarPorAnioResponse">
+    <part name="parameters" element="tns:comprobarPorAnioResponse" />
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
   </message>
   <message name="insertarMaterial">
     <part name="parameters" element="tns:insertarMaterial" />
@@ -62,18 +170,57 @@
   <message name="insertarMaterialResponse">
     <part name="parameters" element="tns:insertarMaterialResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+========
+  <message name="materialBusquedaAvanzada">
+    <part name="parameters" element="tns:materialBusquedaAvanzada" />
+  </message>
+  <message name="materialBusquedaAvanzadaResponse">
+    <part name="parameters" element="tns:materialBusquedaAvanzadaResponse" />
+  </message>
+  <message name="obtenerTemas">
+    <part name="parameters" element="tns:obtenerTemas" />
+  </message>
+  <message name="obtenerTemasResponse">
+    <part name="parameters" element="tns:obtenerTemasResponse" />
+  </message>
+  <message name="obtenerIdiomas">
+    <part name="parameters" element="tns:obtenerIdiomas" />
+  </message>
+  <message name="obtenerIdiomasResponse">
+    <part name="parameters" element="tns:obtenerIdiomasResponse" />
+  </message>
+  <message name="buscarPorTitulo">
+    <part name="parameters" element="tns:buscarPorTitulo" />
+  </message>
+  <message name="buscarPorTituloResponse">
+    <part name="parameters" element="tns:buscarPorTituloResponse" />
+  </message>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
   <message name="obtenerCopias">
     <part name="parameters" element="tns:obtenerCopias" />
   </message>
   <message name="obtenerCopiasResponse">
     <part name="parameters" element="tns:obtenerCopiasResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
   <message name="buscarPorAnio">
     <part name="parameters" element="tns:buscarPorAnio" />
   </message>
   <message name="buscarPorAnioResponse">
     <part name="parameters" element="tns:buscarPorAnioResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+========
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
   <message name="buscarPorTema">
     <part name="parameters" element="tns:buscarPorTema" />
   </message>
@@ -92,12 +239,34 @@
   <message name="buscarPorIdiomaResponse">
     <part name="parameters" element="tns:buscarPorIdiomaResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+========
+  <message name="comprobarPorTema">
+    <part name="parameters" element="tns:comprobarPorTema" />
+  </message>
+  <message name="comprobarPorTemaResponse">
+    <part name="parameters" element="tns:comprobarPorTemaResponse" />
+  </message>
+  <message name="eliminarMaterial">
+    <part name="parameters" element="tns:eliminarMaterial" />
+  </message>
+  <message name="eliminarMaterialResponse">
+    <part name="parameters" element="tns:eliminarMaterialResponse" />
+  </message>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
   <message name="obtenerEjemplaresReservadosYDisponibles">
     <part name="parameters" element="tns:obtenerEjemplaresReservadosYDisponibles" />
   </message>
   <message name="obtenerEjemplaresReservadosYDisponiblesResponse">
     <part name="parameters" element="tns:obtenerEjemplaresReservadosYDisponiblesResponse" />
   </message>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
   <message name="materialBusquedaAvanzada">
     <part name="parameters" element="tns:materialBusquedaAvanzada" />
   </message>
@@ -115,11 +284,61 @@
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBibliotecaResponse" message="tns:buscarPorBibliotecaResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBiblioteca/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+========
+  <portType name="MaterialWS">
+    <operation name="materialBusqueda">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaRequest" message="tns:materialBusqueda" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaResponse" message="tns:materialBusquedaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusqueda/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerIdiomasAvanzada">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerIdiomasAvanzadaRequest" message="tns:obtenerIdiomasAvanzada" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerIdiomasAvanzadaResponse" message="tns:obtenerIdiomasAvanzadaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerIdiomasAvanzada/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="comprobarPorDisponibilidad">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorDisponibilidadRequest" message="tns:comprobarPorDisponibilidad" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorDisponibilidadResponse" message="tns:comprobarPorDisponibilidadResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorDisponibilidad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerMaterialPorId">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorIdRequest" message="tns:obtenerMaterialPorId" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorIdResponse" message="tns:obtenerMaterialPorIdResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="comprobarPorTipoMaterial">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorTipoMaterialRequest" message="tns:comprobarPorTipoMaterial" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorTipoMaterialResponse" message="tns:comprobarPorTipoMaterialResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorTipoMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorDisponibilidad">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidadRequest" message="tns:buscarPorDisponibilidad" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidadResponse" message="tns:buscarPorDisponibilidadResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidad/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="comprobarPorBiblioteca">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorBibliotecaRequest" message="tns:comprobarPorBiblioteca" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorBibliotecaResponse" message="tns:comprobarPorBibliotecaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorBiblioteca/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorBiblioteca">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBibliotecaRequest" message="tns:buscarPorBiblioteca" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBibliotecaResponse" message="tns:buscarPorBibliotecaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorBiblioteca/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
     <operation name="buscarPorTipoMaterial">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTipoMaterialRequest" message="tns:buscarPorTipoMaterial" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTipoMaterialResponse" message="tns:buscarPorTipoMaterialResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTipoMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
     <operation name="buscarPorDisponibilidad">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidadRequest" message="tns:buscarPorDisponibilidad" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorDisponibilidadResponse" message="tns:buscarPorDisponibilidadResponse" />
@@ -129,12 +348,25 @@
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorIdRequest" message="tns:obtenerMaterialPorId" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorIdResponse" message="tns:obtenerMaterialPorIdResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerMaterialPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+<<<<<<< Updated upstream
+=======
+========
+    <operation name="listarTodosMateriales">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/listarTodosMaterialesRequest" message="tns:listarTodosMateriales" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/listarTodosMaterialesResponse" message="tns:listarTodosMaterialesResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/listarTodosMateriales/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
     </operation>
     <operation name="modificarMaterial">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/modificarMaterialRequest" message="tns:modificarMaterial" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/modificarMaterialResponse" message="tns:modificarMaterialResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/modificarMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
     <operation name="eliminarMaterial">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
@@ -144,21 +376,85 @@
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTituloRequest" message="tns:buscarPorTitulo" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTituloResponse" message="tns:buscarPorTituloResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTitulo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+<<<<<<< Updated upstream
+=======
+========
+    <operation name="buscarPorAnio">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnioRequest" message="tns:buscarPorAnio" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnioResponse" message="tns:buscarPorAnioResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnio/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="envioCorreos">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/envioCorreosRequest" message="tns:envioCorreos" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/envioCorreosResponse" message="tns:envioCorreosResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/envioCorreos/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="comprobarPorAutor">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorAutorRequest" message="tns:comprobarPorAutor" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorAutorResponse" message="tns:comprobarPorAutorResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorAutor/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="comprobarPorIdioma">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorIdiomaRequest" message="tns:comprobarPorIdioma" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorIdiomaResponse" message="tns:comprobarPorIdiomaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorIdioma/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="comprobarPorAnio">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorAnioRequest" message="tns:comprobarPorAnio" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorAnioResponse" message="tns:comprobarPorAnioResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorAnio/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
     </operation>
     <operation name="insertarMaterial">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/insertarMaterialRequest" message="tns:insertarMaterial" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/insertarMaterialResponse" message="tns:insertarMaterialResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/insertarMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+========
+    <operation name="materialBusquedaAvanzada">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzadaRequest" message="tns:materialBusquedaAvanzada" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzadaResponse" message="tns:materialBusquedaAvanzadaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzada/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerTemas">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerTemasRequest" message="tns:obtenerTemas" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerTemasResponse" message="tns:obtenerTemasResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerTemas/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="obtenerIdiomas">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerIdiomasRequest" message="tns:obtenerIdiomas" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerIdiomasResponse" message="tns:obtenerIdiomasResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerIdiomas/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="buscarPorTitulo">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTituloRequest" message="tns:buscarPorTitulo" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTituloResponse" message="tns:buscarPorTituloResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTitulo/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
     <operation name="obtenerCopias">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerCopiasRequest" message="tns:obtenerCopias" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerCopiasResponse" message="tns:obtenerCopiasResponse" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
     <operation name="buscarPorAnio">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnioRequest" message="tns:buscarPorAnio" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnioResponse" message="tns:buscarPorAnioResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorAnio/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+========
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
     <operation name="buscarPorTema">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTemaRequest" message="tns:buscarPorTema" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorTemaResponse" message="tns:buscarPorTemaResponse" />
@@ -174,11 +470,31 @@
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorIdiomaResponse" message="tns:buscarPorIdiomaResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/buscarPorIdioma/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+========
+    <operation name="comprobarPorTema">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorTemaRequest" message="tns:comprobarPorTema" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorTemaResponse" message="tns:comprobarPorTemaResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/comprobarPorTema/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+    <operation name="eliminarMaterial">
+      <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterialRequest" message="tns:eliminarMaterial" />
+      <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterialResponse" message="tns:eliminarMaterialResponse" />
+      <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/eliminarMaterial/Fault/SQLException" name="SQLException" message="tns:SQLException" />
+    </operation>
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
     <operation name="obtenerEjemplaresReservadosYDisponibles">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerEjemplaresReservadosYDisponiblesRequest" message="tns:obtenerEjemplaresReservadosYDisponibles" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerEjemplaresReservadosYDisponiblesResponse" message="tns:obtenerEjemplaresReservadosYDisponiblesResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/MaterialWS/obtenerEjemplaresReservadosYDisponibles/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
     <operation name="materialBusquedaAvanzada">
       <input wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzadaRequest" message="tns:materialBusquedaAvanzada" />
       <output wsam:Action="http://services.pucp.edu.pe/MaterialWS/materialBusquedaAvanzadaResponse" message="tns:materialBusquedaAvanzadaResponse" />
@@ -188,6 +504,14 @@
   <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <operation name="listarTodosMateriales">
+<<<<<<< Updated upstream
+=======
+========
+  </portType>
+  <binding name="MaterialWSPortBinding" type="tns:MaterialWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="materialBusqueda">
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -199,7 +523,52 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
+<<<<<<< Updated upstream
     <operation name="buscarPorBiblioteca">
+=======
+    <operation name="obtenerIdiomasAvanzada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="comprobarPorDisponibilidad">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+    <operation name="buscarPorBiblioteca">
+========
+    <operation name="obtenerMaterialPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="comprobarPorTipoMaterial">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -235,7 +604,15 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
+<<<<<<< Updated upstream
     <operation name="obtenerMaterialPorId">
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+    <operation name="obtenerMaterialPorId">
+========
+    <operation name="comprobarPorBiblioteca">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -247,7 +624,15 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
+<<<<<<< Updated upstream
     <operation name="modificarMaterial">
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+    <operation name="modificarMaterial">
+========
+    <operation name="buscarPorBiblioteca">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -259,6 +644,10 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
+<<<<<<< Updated upstream
+=======
+<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.wsdl
+>>>>>>> Stashed changes
     <operation name="eliminarMaterial">
       <soap:operation soapAction="" />
       <input>
@@ -365,6 +754,237 @@
       </fault>
     </operation>
     <operation name="materialBusquedaAvanzada">
+<<<<<<< Updated upstream
+=======
+========
+    <operation name="buscarPorTipoMaterial">
+>>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.wsdl
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="listarTodosMateriales">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="modificarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorAnio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="envioCorreos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="comprobarPorAutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="comprobarPorIdioma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="comprobarPorAnio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="insertarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="materialBusquedaAvanzada">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerTemas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerIdiomas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorTitulo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerCopias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="buscarPorTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorAutor">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="buscarPorIdioma">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="comprobarPorTema">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="eliminarMaterial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="SQLException">
+        <soap:fault use="literal" name="SQLException" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerEjemplaresReservadosYDisponibles">
+>>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

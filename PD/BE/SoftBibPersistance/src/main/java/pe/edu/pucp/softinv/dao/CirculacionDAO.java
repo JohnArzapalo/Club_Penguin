@@ -23,4 +23,6 @@ public interface CirculacionDAO {
     public ArrayList<CirculacionDTO> listarPorBusquedaAvanzada(String idCirculacion, String idReserva,
         String idUsuario, String idEjemplar, String estado, Date fechaDesde, Date fechaHasta);
     
+    
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
 }

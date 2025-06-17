@@ -15,6 +15,7 @@ import java.util.Calendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import pe.edu.pucp.softinv.model.circulacion.EstadoPrestamo;
 import static pe.edu.pucp.softinv.model.circulacion.EstadoPrestamo.DEVUELTO_A_TIEMPO;
 import static pe.edu.pucp.softinv.model.circulacion.EstadoPrestamo.DEVUELTO_CON_RETRASO;
 import static pe.edu.pucp.softinv.model.circulacion.EstadoPrestamo.DEVUELTO_DANADO_O_PERDIDO;
@@ -74,14 +75,17 @@ public class CirculacionBO {
         return circulacionDAO.listarPorBusquedaAvanzada(idCirculacion, idReserva, idUsuario, idEjemplar, estado, fechaDesde, fechaHasta);
     }
     
+    //CAMBIOS EN ESTA FUNCION 16/06/
     private void validar(CirculacionDTO c, boolean esModificacion) throws SQLException{
         if (esModificacion) {
             if (c.getCirculacionId()== null || c.getCirculacionId() <= 0)
                 throw new IllegalArgumentException("ID de circulación inválido.");
+        }else{
+            c.setEstadoPrestamo(EstadoPrestamo.VIGENTE);
         }
-        
-        if (c.getReserva() == null || c.getReserva().getReservaId() == null)
-            throw new IllegalArgumentException("Debe asignarse una reserva.");
+        //nuevo cambio
+//        if (c.getReserva() == null || c.getReserva().getReservaId() == null)
+//            throw new IllegalArgumentException("Debe asignarse una reserva.");
 
         if (c.getUsuario() == null || c.getUsuario().getUsuarioId() == null)
             throw new IllegalArgumentException("Debe asignarse un usuario.");
@@ -90,12 +94,23 @@ public class CirculacionBO {
             throw new IllegalArgumentException("Debe asignarse un ejemplar.");
         
         // Calcular fecha de vencimiento
-        if (c.getFechaVencimiento() == null) {
-            c.setFechaVencimiento(calcularFechaVencimiento(c.getFechaPrestamo(), c.getUsuario(), c.getEjemplar()));
-        }
-        
+//        if (c.getFechaVencimiento() == null) {
+//            c.setFechaVencimiento(calcularFechaVencimiento(c.getFechaPrestamo(), c.getUsuario(), c.getEjemplar()));
+//        }
         if (c.getEstadoPrestamo() == null)
             throw new IllegalArgumentException("Debe indicarse el estado del préstamo.");
+        
+        Calendar calendario = Calendar.getInstance();
+        c.setFechaPrestamo(new java.sql.Date(calendario.getTimeInMillis()));
+        
+//        c.setFechaPrestamo(java.sql.Date.valueOf("2025-06-08"));
+        //calculando fecha de vencimiento (provisional porque no hay dias en la bd xdddddddddddddd :,u)
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(c.getFechaPrestamo());
+        int maxDias = c.getUsuario().getTipoUsuario().getNumeroMaxDias();
+        calendar.add(Calendar.DAY_OF_YEAR, maxDias); // Suma los días
+        c.setFechaVencimiento(calendar.getTime());
+        //---------------------------------------------------------------------------------------------------
         
         // Asignar automáticamente la fecha de devolución
         switch (c.getEstadoPrestamo()) {

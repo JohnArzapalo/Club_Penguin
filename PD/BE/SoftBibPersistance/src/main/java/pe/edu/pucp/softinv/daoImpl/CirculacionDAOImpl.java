@@ -39,12 +39,27 @@ public class CirculacionDAOImpl extends DAOImplBase implements CirculacionDAO {
 
     @Override
     protected void incluirValorDeParametrosParaInsercion() throws SQLException {
-        this.statement.setInt(1, this.circulacion.getReserva().getReservaId());
+        
+        //cuando la reserva es nula, simplemente no la insertas
+        if(this.circulacion.getReserva()!=null){
+            this.statement.setInt(1, this.circulacion.getReserva().getReservaId());
+        }else{
+            this.statement.setNull(1, java.sql.Types.INTEGER);
+        }
+        
+//        this.statement.setInt(1, this.circulacion.getReserva().getReservaId());
         this.statement.setInt(2, this.circulacion.getUsuario().getUsuarioId());
         this.statement.setInt(3, this.circulacion.getEjemplar().getEjemplarId());
         this.statement.setDate(4, new Date(this.circulacion.getFechaPrestamo().getTime()));
         this.statement.setDate(5, new Date(this.circulacion.getFechaVencimiento().getTime()));
-        this.statement.setDate(6, new Date(this.circulacion.getFechaDevolucion().getTime()));
+        //cuidado con esto tambien
+        if(this.circulacion.getFechaDevolucion()!=null){
+            this.statement.setDate(6, new Date(this.circulacion.getFechaDevolucion().getTime()));
+        }else{
+            this.statement.setDate(6,null);
+        }
+        
+//        this.statement.setDate(6, new Date(this.circulacion.getFechaDevolucion().getTime()));
         this.statement.setString(7, this.circulacion.getEstadoPrestamo().name());
     }
 
@@ -71,6 +86,7 @@ public class CirculacionDAOImpl extends DAOImplBase implements CirculacionDAO {
         this.circulacion.setCirculacionId(this.resultSet.getInt("CIRCULACION_ID"));
         //hubo un cambio acá, ahora carga todos sus objetos completos:
         int idreserva=this.resultSet.getInt("RESERVA_ID");
+        
         ReservaDAO reservaDAO = new ReservaDAOImpl();
         ReservaDTO reserva = reservaDAO.obtenerPorId(idreserva);
         this.circulacion.setReserva(reserva);
@@ -221,5 +237,10 @@ public class CirculacionDAOImpl extends DAOImplBase implements CirculacionDAO {
         }
         return lista;
     
+    }
+    
+    @Override
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) {
+        super.envioDeCorreos(origen, destino, asunto, txt, contra16Digitos);
     }
 }

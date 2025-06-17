@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\biblioteca\BibliotecaDTO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\biblioteca\DiaAtencionDTO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\circulacion\CirculacionDTO.java
@@ -20,3 +21,27 @@ C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\TipoDocumento.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\TipoUsuarioDTO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\UsuarioDTO.java
+=======
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\biblioteca\BibliotecaDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\biblioteca\DiaAtencionDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\circulacion\CirculacionDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\circulacion\EstadoPrestamo.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\circulacion\EstadoReserva.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\circulacion\ReservaDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\circulacion\SancionDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\ArticuloDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\EjemplarDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\EstadoEjemplar.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\Grado.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\LibroDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\MaterialDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\TesisDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\material\TipoMaterial.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\BibliotecarioDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\DocenteDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\EstadoUsuario.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\EstudianteDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\TipoDocumento.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\TipoUsuarioDTO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibModel\src\main\java\pe\edu\pucp\softinv\model\usuario\UsuarioDTO.java
+>>>>>>> Stashed changes

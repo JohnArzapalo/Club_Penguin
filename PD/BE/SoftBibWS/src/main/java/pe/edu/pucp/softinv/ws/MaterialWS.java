@@ -5,6 +5,7 @@ import jakarta.jws.WebParam;
 import jakarta.jws.WebService;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.softinv.business.MaterialBO;
 import pe.edu.pucp.softinv.model.biblioteca.BibliotecaDTO;
@@ -117,16 +118,23 @@ public class MaterialWS {
     public int[] obtenerEjemplaresReservadosYDisponibles(@WebParam(name = "materialId")int materialId,@WebParam(name = "bibliotecaId")int bibliotecaId)  throws  SQLException{
         return this.materialBO.obtenerEjemplaresReservadosYDisponibles(materialId,bibliotecaId);
     }
-    
+    @WebMethod(operationName = "materialBusqueda")
+    public int busqueda(        
+        @WebParam(name = "busquedaAvanzada") MaterialDTO material,
+        @WebParam(name = "stringDato") String anioPublicacion,
+        @WebParam(name = "stringTipoMaterial") String tipoMaterialTexto) throws  SQLException{
+        return this.materialBO.busqueda(material, anioPublicacion, tipoMaterialTexto);
+    }
     @WebMethod(operationName = "materialBusquedaAvanzada")
-    public MaterialDTO busqueda(        
+    public List<MaterialDTO> busquedaAvanzada(        
         @WebParam(name = "busquedaAvanzada") MaterialDTO material,
         @WebParam(name = "biblioteca") BibliotecaDTO biblioteca,
         @WebParam(name = "ejemplar") EjemplarDTO ejemplar,
-        @WebParam(name = "stringDato") String anioPublicacion,
+        @WebParam(name = "stringAnioDesde") String anioPublicacionDesde,
+        @WebParam(name = "stringAnioHasta") String anioPublicacionHasta,
         @WebParam(name = "stringTipoMaterial") String tipoMaterialTexto,
         @WebParam(name = "stringDisponibilidad") String disponibilidadTexto) throws  SQLException{
-        return this.materialBO.busquedaAvanzada(material, biblioteca, ejemplar, anioPublicacion, tipoMaterialTexto, disponibilidadTexto);
+        return this.materialBO.busquedaAvanzada(material, biblioteca, ejemplar, anioPublicacionDesde, anioPublicacionHasta, tipoMaterialTexto, disponibilidadTexto);
     }
     
     @WebMethod(operationName = "buscarPorAutor")
@@ -134,32 +142,93 @@ public class MaterialWS {
         return this.materialBO.buscarPorAutor(autor);
     }
     @WebMethod(operationName = "buscarPorAnio")
-    public List<MaterialDTO> buscarPorAnio(@WebParam(name = "autor") String anio) throws  SQLException{
-        return this.materialBO.buscarPorAnio(anio);
+    public List<MaterialDTO> buscarPorAnio(@WebParam(name = "anioDesde") String anioDesde,  @WebParam(name = "anioHasta") String anioHasta) throws  SQLException{
+        return this.materialBO.buscarPorAnio(anioDesde, anioHasta);
     }
     
     @WebMethod(operationName = "buscarPorTipoMaterial")
-    public List<MaterialDTO> buscarPorTipoMaterial(@WebParam(name = "autor") String tipoMaterial) throws  SQLException{
+    public List<MaterialDTO> buscarPorTipoMaterial(@WebParam(name = "tipoMaterial") String tipoMaterial) throws  SQLException{
         return this.materialBO.buscarPorTipoMaterial(tipoMaterial);
     }
     
     @WebMethod(operationName = "buscarPorTema")
-    public List<MaterialDTO> buscarPorTema(@WebParam(name = "autor") String tema) throws  SQLException{
+    public List<MaterialDTO> buscarPorTema(@WebParam(name = "tema") String tema) throws  SQLException{
         return this.materialBO.buscarPorTema(tema);
     }
     
     @WebMethod(operationName = "buscarPorIdioma")
-    public List<MaterialDTO> buscarPorIdioma(@WebParam(name = "autor") String idioma) throws  SQLException{
+    public List<MaterialDTO> buscarPorIdioma(@WebParam(name = "idioma") String idioma) throws  SQLException{
         return this.materialBO.buscarPorIdioma(idioma);
     }
     
     @WebMethod(operationName = "buscarPorDisponibilidad")
-    public List<MaterialDTO> buscarPorDisponibilidad(@WebParam(name = "autor") String disponibildad) throws  SQLException{
+    public List<MaterialDTO> buscarPorDisponibilidad(@WebParam(name = "disponibildad") String disponibildad) throws  SQLException{
         return this.materialBO.buscarPorDisponibilidad(disponibildad);
     }
     
     @WebMethod(operationName = "buscarPorBiblioteca")
-    public List<MaterialDTO> buscarPorBiblioteca(@WebParam(name = "autor") String biblioteca) throws  SQLException{
+    public List<MaterialDTO> buscarPorBiblioteca(@WebParam(name = "biblioteca") String biblioteca) throws  SQLException{
         return this.materialBO.buscarPorBiblioteca(biblioteca);
+    }
+    
+    
+    @WebMethod(operationName = "comprobarPorAutor")
+    public boolean  comprobarPorAutor(@WebParam(name = "autor") String autor, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorAutor(autor, idMaterial);
+    }
+    @WebMethod(operationName = "comprobarPorAnio")
+    public boolean  comprobarPorAnio(@WebParam(name = "anioDesde") String anioDesde,  @WebParam(name = "anioHasta") String anioHasta, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorAnio(anioDesde, anioHasta, idMaterial);
+    }
+    
+    @WebMethod(operationName = "comprobarPorTipoMaterial")
+    public boolean  comprobarPorTipoMaterial(@WebParam(name = "tipoMaterial") String tipoMaterial, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorTipoMaterial(tipoMaterial, idMaterial);
+    }
+    
+    @WebMethod(operationName = "comprobarPorTema")
+    public boolean  comprobarPorTema(@WebParam(name = "tema") String tema, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorTema(tema, idMaterial);
+    }
+    
+    @WebMethod(operationName = "comprobarPorIdioma")
+    public boolean  comprobarPorIdioma(@WebParam(name = "idioma") String idioma, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorIdioma(idioma, idMaterial);
+    }
+    
+    @WebMethod(operationName = "comprobarPorDisponibilidad")
+    public boolean  comprobarPorDisponibilidad(@WebParam(name = "disponibildad") String disponibildad, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorDisponibilidad(disponibildad, idMaterial);
+    }
+    
+    @WebMethod(operationName = "comprobarPorBiblioteca")
+    public boolean  comprobarPorBiblioteca(@WebParam(name = "biblioteca") String biblioteca, @WebParam(name = "idMaterial") String idMaterial) throws  SQLException{
+        return this.materialBO.comprobarPorBiblioteca(biblioteca, idMaterial);
+    }
+    
+    
+    @WebMethod(operationName = "obtenerIdiomasAvanzada")
+    public List<String>  obtenerIdiomasAvanzada() throws  SQLException{
+        return this.materialBO.obtenerIdiomasAvanzada();
+    }
+    
+    @WebMethod(operationName = "obtenerIdiomas")
+    public String  obtenerIdiomas(String idMaterial) throws  SQLException{
+        return this.materialBO.obtenerIdiomas(idMaterial);
+    }
+    
+    
+    @WebMethod(operationName = "obtenerTemas")
+    public String  obtenerTemas(String idMaterial) throws  SQLException{
+        return this.materialBO.obtenerTemas( idMaterial);
+    }
+    
+    
+    
+    @WebMethod(operationName = "envioCorreos")
+    public void envioCorreos( @WebParam(name = "destino") String destino,
+        @WebParam(name = "asunto") String asunto,
+        @WebParam(name = "txt") String txt) throws  SQLException{
+        this.materialBO.envioDeCorreos(destino, asunto, txt);
     }
 }

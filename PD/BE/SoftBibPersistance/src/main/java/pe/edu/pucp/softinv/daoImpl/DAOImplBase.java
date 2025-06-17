@@ -4,6 +4,15 @@ import pe.edu.pucp.softinv.db.DBManager;
 import pe.edu.pucp.softinv.daoImpl.util.Columna;
 import pe.edu.pucp.softinv.daoImpl.util.TipoOperacion;
 
+import java.util.Properties;
+import jakarta.mail.Message;
+import jakarta.mail.MessagingException;
+import jakarta.mail.Session;
+import jakarta.mail.Transport;
+import jakarta.mail.internet.InternetAddress;
+import jakarta.mail.internet.MimeMessage;
+
+
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -19,6 +28,12 @@ import java.util.HashMap;
 
 
 public abstract class DAOImplBase {
+    
+    private String correoDeOrigen;
+    private String correoDeDestino;
+    private String asunto;
+    private String mensajeDeTexto;
+    private String contraseña16Digitos;
     protected String nombreTabla;
     protected ArrayList<Columna> listaColumnas;
     protected Boolean retornarLlavePrimaria;
@@ -26,7 +41,49 @@ public abstract class DAOImplBase {
     protected Connection conexion;
     protected CallableStatement statement;
     protected ResultSet resultSet;
+    
+    
+private boolean envioDeMensajes(){
+    try{
+        Properties p = new Properties();  
+        p.put("mail.smtp.host", "smtp.gmail.com");
+        p.setProperty("mail.smtp.starttls.enable", "true");
+        p.put("mail.smtp.ssl.trust", "smtp.gmail.com");
+        p.setProperty("mail.smtp.port", "587");
+        p.setProperty("mail.smtp.user", correoDeOrigen);
+        p.setProperty("mail.smtp.auth", "true");
+        
+        Session s = Session.getInstance(p);
+        MimeMessage mensaje = new MimeMessage(s);
+        mensaje.setFrom(new InternetAddress(correoDeOrigen));
+        mensaje.addRecipient(Message.RecipientType.TO, new InternetAddress(correoDeDestino));
+        mensaje.setSubject(asunto);
+        mensaje.setText(mensajeDeTexto, "UTF-8");
+        
+        Transport t = s.getTransport("smtp");
+        t.connect(correoDeOrigen, contraseña16Digitos);
+        t.sendMessage(mensaje, mensaje.getAllRecipients());
+        t.close();
+        
+        Logger.getLogger(DAOImplBase.class.getName()).log(Level.INFO, "Correo enviado exitosamente");
+        return true;
+        
+    } catch (MessagingException e) {
+        Logger.getLogger(DAOImplBase.class.getName()).log(Level.SEVERE, "Error al enviar correo", e);
+        return false;
+    }
+}
 
+// Actualizar el método público:
+public boolean envioDeCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos){
+    this.correoDeOrigen = origen;
+    this.correoDeDestino = destino;
+    this.asunto = asunto;
+    this.mensajeDeTexto = txt;
+    this.contraseña16Digitos = contra16Digitos;
+    return envioDeMensajes();
+}
+    
     public DAOImplBase(String nombreTabla) {
         this.nombreTabla = nombreTabla;
         this.retornarLlavePrimaria = false;

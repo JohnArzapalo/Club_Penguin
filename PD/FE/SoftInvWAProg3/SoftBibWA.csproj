@@ -114,6 +114,7 @@
     <Content Include="Content\estilos_registrar_material.css" />
     <Content Include="Content\estilos_sanciones.css" />
     <Content Include="detalle_circulacion.aspx" />
+    <Content Include="registrar_prestamo.aspx" />
     <Content Include="usuarios.aspx" />
     <Content Include="detalle_reserva.aspx" />
     <Content Include="registrar_material.aspx" />
@@ -382,6 +383,45 @@
     <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.vistaPreviaNuevaSancionResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+<<<<<<< Updated upstream
+=======
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.envioCorreosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorAutorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorBibliotecaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorDisponibilidadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorIdiomaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorTemaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorTipoMaterialResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.materialBusquedaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.comprobarPorAnioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerIdiomasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerTemasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\servicios\SoftInvWAProg3.servicios.obtenerIdiomasAvanzadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+>>>>>>> Stashed changes
     <None Include="Connected Services\servicios\TipoUsuarioWS.wsdl" />
     <None Include="Connected Services\servicios\TipoUsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -423,6 +463,13 @@
     </Compile>
     <Compile Include="detalle_circulacion.aspx.designer.cs">
       <DependentUpon>detalle_circulacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registrar_prestamo.aspx.cs">
+      <DependentUpon>registrar_prestamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registrar_prestamo.aspx.designer.cs">
+      <DependentUpon>registrar_prestamo.aspx</DependentUpon>
     </Compile>
     <Compile Include="usuarios.aspx.cs">
       <DependentUpon>usuarios.aspx</DependentUpon>

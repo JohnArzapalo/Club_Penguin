@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\EjemplarDAO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\CirculacionDAOImpl.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\DiaAtencionDAOImpl.java
@@ -19,3 +20,26 @@ C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistan
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\SancionDAOImpl.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\BibliotecaDAO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\EjemplarDAOImpl.java
+=======
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\TipoUsuarioDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\MaterialDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\util\Columna.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\DiaAtencionDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\EjemplarDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\MaterialDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\EjemplarDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\SancionDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\UsuarioDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\DAOImplBase.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\TipoUsuarioDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\SancionDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\CirculacionDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\ReservaDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\BibliotecaDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\UsuarioDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\CirculacionDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\ReservaDAO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\util\TipoOperacion.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\daoImpl\BibliotecaDAOImpl.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibPersistance\src\main\java\pe\edu\pucp\softinv\dao\DiaAtencionDAO.java
+>>>>>>> Stashed changes

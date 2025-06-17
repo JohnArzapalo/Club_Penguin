@@ -275,5 +275,9 @@ public class ReservaDAOImpl extends DAOImplBase implements ReservaDAO{
 
         return lista; 
     
-    }    
+    }
+    @Override
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) {
+        super.envioDeCorreos(origen, destino, asunto, txt, contra16Digitos);
+    }
 }

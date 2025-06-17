@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\BibliotecaBO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\CirculacionBO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\DiaAtencionBO.java
@@ -8,3 +9,15 @@ C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\SancionBO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\TipoUsuarioBO.java
 C:\Users\Ariana\OneDrive\Escritorio\TA-PROG3\Club_Penguin\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\UsuarioBO.java
+=======
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\BibliotecaBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\CirculacionBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\DiaAtencionBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\EjemplarBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\MaterialBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\password\util\PasswordMigrationTool.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\ReservaBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\SancionBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\TipoUsuarioBO.java
+C:\Users\johnm\OneDrive\Desktop\TA PROG3\PD\BE\SoftBibBusiness\src\main\java\pe\edu\pucp\softinv\business\UsuarioBO.java
+>>>>>>> Stashed changes

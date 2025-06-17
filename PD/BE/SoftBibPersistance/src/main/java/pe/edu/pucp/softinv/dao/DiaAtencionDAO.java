@@ -17,5 +17,7 @@ public interface DiaAtencionDAO {
     
     public ArrayList<DiaAtencionDTO> listarPorAtencionBiblioteca(int bibliotecaId);
     
+    public void envioCorreos(String origen, String destino, String asunto, String txt, String contra16Digitos) ;
+    
 }
 
