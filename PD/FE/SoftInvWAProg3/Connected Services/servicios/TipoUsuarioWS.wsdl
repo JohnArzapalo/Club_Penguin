@@ -5,51 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/TipoUsuarioWS?xsd=1" namespace="http://services.pucp.edu.pe" />
     </xsd:schema>
   </types>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS1.wsdl
->>>>>>> Stashed changes
-  <message name="insertarTipoUsuario">
-    <part name="parameters" element="tns:insertarTipoUsuario" />
-  </message>
-  <message name="insertarTipoUsuarioResponse">
-    <part name="parameters" element="tns:insertarTipoUsuarioResponse" />
-  </message>
-  <message name="SQLException">
-    <part name="fault" element="tns:SQLException" />
-  </message>
-  <message name="listarTodosTiposUsuario">
-    <part name="parameters" element="tns:listarTodosTiposUsuario" />
-<<<<<<< Updated upstream
-  </message>
-  <message name="listarTodosTiposUsuarioResponse">
-    <part name="parameters" element="tns:listarTodosTiposUsuarioResponse" />
-  </message>
-=======
-========
   <message name="modificarTipoUsuario">
     <part name="parameters" element="tns:modificarTipoUsuario" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS.wsdl
   </message>
   <message name="modificarTipoUsuarioResponse">
     <part name="parameters" element="tns:modificarTipoUsuarioResponse" />
   </message>
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS1.wsdl
->>>>>>> Stashed changes
-  <message name="eliminarTipoUsuario">
-    <part name="parameters" element="tns:eliminarTipoUsuario" />
-  </message>
-  <message name="eliminarTipoUsuarioResponse">
-    <part name="parameters" element="tns:eliminarTipoUsuarioResponse" />
-  </message>
-  <message name="modificarTipoUsuario">
-    <part name="parameters" element="tns:modificarTipoUsuario" />
-<<<<<<< Updated upstream
-  </message>
-  <message name="modificarTipoUsuarioResponse">
-    <part name="parameters" element="tns:modificarTipoUsuarioResponse" />
-=======
-========
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
   </message>
@@ -67,7 +28,6 @@
   </message>
   <message name="eliminarTipoUsuario">
     <part name="parameters" element="tns:eliminarTipoUsuario" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS.wsdl
   </message>
   <message name="eliminarTipoUsuarioResponse">
     <part name="parameters" element="tns:eliminarTipoUsuarioResponse" />
@@ -77,41 +37,8 @@
   </message>
   <message name="listarTodosTiposUsuarioResponse">
     <part name="parameters" element="tns:listarTodosTiposUsuarioResponse" />
->>>>>>> Stashed changes
-  </message>
-  <message name="obtenerTipoUsuarioPorId">
-    <part name="parameters" element="tns:obtenerTipoUsuarioPorId" />
-  </message>
-  <message name="obtenerTipoUsuarioPorIdResponse">
-    <part name="parameters" element="tns:obtenerTipoUsuarioPorIdResponse" />
   </message>
   <portType name="TipoUsuarioWS">
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="insertarTipoUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuarioRequest" message="tns:insertarTipoUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuarioResponse" message="tns:insertarTipoUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/insertarTipoUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="listarTodosTiposUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioRequest" message="tns:listarTodosTiposUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioResponse" message="tns:listarTodosTiposUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="eliminarTipoUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/eliminarTipoUsuarioRequest" message="tns:eliminarTipoUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/eliminarTipoUsuarioResponse" message="tns:eliminarTipoUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/eliminarTipoUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="modificarTipoUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/modificarTipoUsuarioRequest" message="tns:modificarTipoUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/modificarTipoUsuarioResponse" message="tns:modificarTipoUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/modificarTipoUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-========
     <operation name="modificarTipoUsuario">
       <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/modificarTipoUsuarioRequest" message="tns:modificarTipoUsuario" />
       <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/modificarTipoUsuarioResponse" message="tns:modificarTipoUsuarioResponse" />
@@ -136,22 +63,11 @@
       <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioRequest" message="tns:listarTodosTiposUsuario" />
       <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuarioResponse" message="tns:listarTodosTiposUsuarioResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/listarTodosTiposUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS.wsdl
->>>>>>> Stashed changes
-    </operation>
-    <operation name="obtenerTipoUsuarioPorId">
-      <input wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdRequest" message="tns:obtenerTipoUsuarioPorId" />
-      <output wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorIdResponse" message="tns:obtenerTipoUsuarioPorIdResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/TipoUsuarioWS/obtenerTipoUsuarioPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
   </portType>
   <binding name="TipoUsuarioWSPortBinding" type="tns:TipoUsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="insertarTipoUsuario">
+    <operation name="modificarTipoUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -163,42 +79,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="listarTodosTiposUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="eliminarTipoUsuario">
-<<<<<<< Updated upstream
-=======
-========
-    <operation name="modificarTipoUsuario">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS.wsdl
->>>>>>> Stashed changes
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-<<<<<<< Updated upstream
-    <operation name="modificarTipoUsuario">
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS1.wsdl
-    <operation name="modificarTipoUsuario">
-========
     <operation name="obtenerTipoUsuarioPorId">
       <soap:operation soapAction="" />
       <input>
@@ -236,20 +116,6 @@
       </fault>
     </operation>
     <operation name="listarTodosTiposUsuario">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/TipoUsuarioWS.wsdl
->>>>>>> Stashed changes
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="obtenerTipoUsuarioPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

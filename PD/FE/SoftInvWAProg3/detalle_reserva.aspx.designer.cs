@@ -15,24 +15,6 @@ namespace SoftInvWAProg3
     {
 
         /// <summary>
-        /// Control pnlVolverBibliotecario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlVolverBibliotecario;
-
-        /// <summary>
-        /// Control pnlVolverUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlVolverUsuario;
-
-        /// <summary>
         /// Control ltReservaId.
         /// </summary>
         /// <remarks>

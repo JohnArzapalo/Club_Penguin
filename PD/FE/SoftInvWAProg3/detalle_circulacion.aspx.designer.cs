@@ -15,24 +15,6 @@ namespace SoftInvWAProg3
     {
 
         /// <summary>
-        /// Control pnlVolverBibliotecario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlVolverBibliotecario;
-
-        /// <summary>
-        /// Control pnlVolverUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlVolverUsuario;
-
-        /// <summary>
         /// Control ltPrestamoID.
         /// </summary>
         /// <remarks>
@@ -42,15 +24,6 @@ namespace SoftInvWAProg3
         protected global::System.Web.UI.WebControls.Literal ltPrestamoID;
 
         /// <summary>
-        /// Control pnlReserva.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlReserva;
-
-        /// <summary>
         /// Control ltReserva.
         /// </summary>
         /// <remarks>
@@ -58,15 +31,6 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltReserva;
-
-        /// <summary>
-        /// Control pnlUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlUsuario;
 
         /// <summary>
         /// Control ltUsuario.
@@ -121,51 +85,6 @@ namespace SoftInvWAProg3
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal ltHorarioBiblioteca;
-
-        /// <summary>
-        /// Control pnlSoloLecturaUsuario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlSoloLecturaUsuario;
-
-        /// <summary>
-        /// Control ltEstadoTexto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltEstadoTexto;
-
-        /// <summary>
-        /// Control pnlFechaDevolucion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlFechaDevolucion;
-
-        /// <summary>
-        /// Control ltFechaDevolucion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ltFechaDevolucion;
-
-        /// <summary>
-        /// Control pnlEditorBibliotecario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlEditorBibliotecario;
 
         /// <summary>
         /// Control ddlEstados.

@@ -5,51 +5,15 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/ReservaWS?xsd=1" namespace="http://services.pucp.edu.pe" />
     </xsd:schema>
   </types>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-  <message name="listarReservasVigentesPorUsuario">
-    <part name="parameters" element="tns:listarReservasVigentesPorUsuario" />
-  </message>
-  <message name="listarReservasVigentesPorUsuarioResponse">
-    <part name="parameters" element="tns:listarReservasVigentesPorUsuarioResponse" />
-<<<<<<< Updated upstream
-=======
-========
   <message name="modificarReserva">
     <part name="parameters" element="tns:modificarReserva" />
   </message>
   <message name="modificarReservaResponse">
     <part name="parameters" element="tns:modificarReservaResponse" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
   </message>
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
   </message>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-  <message name="calcularFechaVencimientoReserva">
-    <part name="parameters" element="tns:calcularFechaVencimientoReserva" />
-  </message>
-  <message name="calcularFechaVencimientoReservaResponse">
-    <part name="parameters" element="tns:calcularFechaVencimientoReservaResponse" />
-  </message>
-  <message name="buscarReservasAvanzado">
-    <part name="parameters" element="tns:buscarReservasAvanzado" />
-<<<<<<< Updated upstream
-  </message>
-  <message name="buscarReservasAvanzadoResponse">
-    <part name="parameters" element="tns:buscarReservasAvanzadoResponse" />
-  </message>
-  <message name="Exception">
-    <part name="fault" element="tns:Exception" />
-  </message>
-=======
-========
   <message name="eliminarReserva">
     <part name="parameters" element="tns:eliminarReserva" />
   </message>
@@ -58,7 +22,6 @@
   </message>
   <message name="calcularFechaVencimientoReserva">
     <part name="parameters" element="tns:calcularFechaVencimientoReserva" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
   </message>
   <message name="calcularFechaVencimientoReservaResponse">
     <part name="parameters" element="tns:calcularFechaVencimientoReservaResponse" />
@@ -66,13 +29,9 @@
   <message name="listarReservasVigentesPorUsuario">
     <part name="parameters" element="tns:listarReservasVigentesPorUsuario" />
   </message>
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
-========
   <message name="listarReservasVigentesPorUsuarioResponse">
     <part name="parameters" element="tns:listarReservasVigentesPorUsuarioResponse" />
   </message>
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
   <message name="listarTodasReservas">
     <part name="parameters" element="tns:listarTodasReservas" />
   </message>
@@ -91,24 +50,6 @@
   <message name="obtenerTipoDeMaterialPorIdResponse">
     <part name="parameters" element="tns:obtenerTipoDeMaterialPorIdResponse" />
   </message>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-  <message name="eliminarReserva">
-    <part name="parameters" element="tns:eliminarReserva" />
-  </message>
-  <message name="eliminarReservaResponse">
-    <part name="parameters" element="tns:eliminarReservaResponse" />
-  </message>
-  <message name="modificarReserva">
-    <part name="parameters" element="tns:modificarReserva" />
-  </message>
-  <message name="modificarReservaResponse">
-    <part name="parameters" element="tns:modificarReservaResponse" />
-<<<<<<< Updated upstream
-=======
-========
   <message name="Exception">
     <part name="fault" element="tns:Exception" />
   </message>
@@ -117,8 +58,6 @@
   </message>
   <message name="buscarReservasAvanzadoResponse">
     <part name="parameters" element="tns:buscarReservasAvanzadoResponse" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
   </message>
   <message name="insertarReserva">
     <part name="parameters" element="tns:insertarReserva" />
@@ -127,17 +66,6 @@
     <part name="parameters" element="tns:insertarReservaResponse" />
   </message>
   <portType name="ReservaWS">
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="listarReservasVigentesPorUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest" message="tns:listarReservasVigentesPorUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse" message="tns:listarReservasVigentesPorUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-========
     <operation name="modificarReserva">
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/modificarReservaRequest" message="tns:modificarReserva" />
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/modificarReservaResponse" message="tns:modificarReservaResponse" />
@@ -147,34 +75,17 @@
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/eliminarReservaRequest" message="tns:eliminarReserva" />
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/eliminarReservaResponse" message="tns:eliminarReservaResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/eliminarReserva/Fault/SQLException" name="SQLException" message="tns:SQLException" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
     </operation>
     <operation name="calcularFechaVencimientoReserva">
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaRequest" message="tns:calcularFechaVencimientoReserva" />
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReservaResponse" message="tns:calcularFechaVencimientoReservaResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/calcularFechaVencimientoReserva/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-    </operation>
-    <operation name="buscarReservasAvanzado">
-      <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest" message="tns:buscarReservasAvanzado" />
-      <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse" message="tns:buscarReservasAvanzadoResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/buscarReservasAvanzado/Fault/Exception" name="Exception" message="tns:Exception" />
-    </operation>
-<<<<<<< Updated upstream
-=======
-========
     </operation>
     <operation name="listarReservasVigentesPorUsuario">
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioRequest" message="tns:listarReservasVigentesPorUsuario" />
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuarioResponse" message="tns:listarReservasVigentesPorUsuarioResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarReservasVigentesPorUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
     <operation name="listarTodasReservas">
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarTodasReservasRequest" message="tns:listarTodasReservas" />
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/listarTodasReservasResponse" message="tns:listarTodasReservasResponse" />
@@ -190,28 +101,10 @@
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorIdResponse" message="tns:obtenerTipoDeMaterialPorIdResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/obtenerTipoDeMaterialPorId/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="eliminarReserva">
-      <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/eliminarReservaRequest" message="tns:eliminarReserva" />
-      <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/eliminarReservaResponse" message="tns:eliminarReservaResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/eliminarReserva/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="modificarReserva">
-      <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/modificarReservaRequest" message="tns:modificarReserva" />
-      <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/modificarReservaResponse" message="tns:modificarReservaResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/modificarReserva/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-========
     <operation name="buscarReservasAvanzado">
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoRequest" message="tns:buscarReservasAvanzado" />
       <output wsam:Action="http://services.pucp.edu.pe/ReservaWS/buscarReservasAvanzadoResponse" message="tns:buscarReservasAvanzadoResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/ReservaWS/buscarReservasAvanzado/Fault/Exception" name="Exception" message="tns:Exception" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
     </operation>
     <operation name="insertarReserva">
       <input wsam:Action="http://services.pucp.edu.pe/ReservaWS/insertarReservaRequest" message="tns:insertarReserva" />
@@ -221,12 +114,6 @@
   </portType>
   <binding name="ReservaWSPortBinding" type="tns:ReservaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< Updated upstream
-    <operation name="listarReservasVigentesPorUsuario">
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
-    <operation name="listarReservasVigentesPorUsuario">
-========
     <operation name="modificarReserva">
       <soap:operation soapAction="" />
       <input>
@@ -240,8 +127,6 @@
       </fault>
     </operation>
     <operation name="eliminarReserva">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -254,10 +139,6 @@
       </fault>
     </operation>
     <operation name="calcularFechaVencimientoReserva">
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -269,31 +150,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-    <operation name="buscarReservasAvanzado">
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-<<<<<<< Updated upstream
-      <fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </fault>
-    </operation>
-=======
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
-========
     <operation name="listarReservasVigentesPorUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -306,8 +162,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
     <operation name="listarTodasReservas">
       <soap:operation soapAction="" />
       <input>
@@ -344,15 +198,7 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </fault>
     </operation>
-<<<<<<< Updated upstream
-    <operation name="eliminarReserva">
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
-    <operation name="eliminarReserva">
-========
     <operation name="buscarReservasAvanzado">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -360,31 +206,8 @@
       <output>
         <soap:body use="literal" />
       </output>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS1.wsdl
->>>>>>> Stashed changes
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="modificarReserva">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-<<<<<<< Updated upstream
-=======
-========
       <fault name="Exception">
         <soap:fault use="literal" name="Exception" namespace="" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/ReservaWS.wsdl
->>>>>>> Stashed changes
       </fault>
     </operation>
     <operation name="insertarReserva">

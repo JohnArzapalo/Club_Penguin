@@ -17,10 +17,6 @@
   <xs:element name="buscarPorTipoMaterialResponse" type="tns:buscarPorTipoMaterialResponse" />
   <xs:element name="buscarPorTitulo" type="tns:buscarPorTitulo" />
   <xs:element name="buscarPorTituloResponse" type="tns:buscarPorTituloResponse" />
-<<<<<<< Updated upstream
-  <xs:element name="eliminarMaterial" type="tns:eliminarMaterial" />
-  <xs:element name="eliminarMaterialResponse" type="tns:eliminarMaterialResponse" />
-=======
   <xs:element name="comprobarPorAnio" type="tns:comprobarPorAnio" />
   <xs:element name="comprobarPorAnioResponse" type="tns:comprobarPorAnioResponse" />
   <xs:element name="comprobarPorAutor" type="tns:comprobarPorAutor" />
@@ -39,30 +35,20 @@
   <xs:element name="eliminarMaterialResponse" type="tns:eliminarMaterialResponse" />
   <xs:element name="envioCorreos" type="tns:envioCorreos" />
   <xs:element name="envioCorreosResponse" type="tns:envioCorreosResponse" />
->>>>>>> Stashed changes
   <xs:element name="insertarMaterial" type="tns:insertarMaterial" />
   <xs:element name="insertarMaterialResponse" type="tns:insertarMaterialResponse" />
   <xs:element name="listarTodosMateriales" type="tns:listarTodosMateriales" />
   <xs:element name="listarTodosMaterialesResponse" type="tns:listarTodosMaterialesResponse" />
-<<<<<<< Updated upstream
-  <xs:element name="materialBusquedaAvanzada" type="tns:materialBusquedaAvanzada" />
-  <xs:element name="materialBusquedaAvanzadaResponse" type="tns:materialBusquedaAvanzadaResponse" />
-=======
   <xs:element name="materialBusqueda" type="tns:materialBusqueda" />
   <xs:element name="materialBusquedaAvanzada" type="tns:materialBusquedaAvanzada" />
   <xs:element name="materialBusquedaAvanzadaResponse" type="tns:materialBusquedaAvanzadaResponse" />
   <xs:element name="materialBusquedaResponse" type="tns:materialBusquedaResponse" />
->>>>>>> Stashed changes
   <xs:element name="modificarMaterial" type="tns:modificarMaterial" />
   <xs:element name="modificarMaterialResponse" type="tns:modificarMaterialResponse" />
   <xs:element name="obtenerCopias" type="tns:obtenerCopias" />
   <xs:element name="obtenerCopiasResponse" type="tns:obtenerCopiasResponse" />
   <xs:element name="obtenerEjemplaresReservadosYDisponibles" type="tns:obtenerEjemplaresReservadosYDisponibles" />
   <xs:element name="obtenerEjemplaresReservadosYDisponiblesResponse" type="tns:obtenerEjemplaresReservadosYDisponiblesResponse" />
-<<<<<<< Updated upstream
-  <xs:element name="obtenerMaterialPorId" type="tns:obtenerMaterialPorId" />
-  <xs:element name="obtenerMaterialPorIdResponse" type="tns:obtenerMaterialPorIdResponse" />
-=======
   <xs:element name="obtenerIdiomas" type="tns:obtenerIdiomas" />
   <xs:element name="obtenerIdiomasAvanzada" type="tns:obtenerIdiomasAvanzada" />
   <xs:element name="obtenerIdiomasAvanzadaResponse" type="tns:obtenerIdiomasAvanzadaResponse" />
@@ -71,7 +57,6 @@
   <xs:element name="obtenerMaterialPorIdResponse" type="tns:obtenerMaterialPorIdResponse" />
   <xs:element name="obtenerTemas" type="tns:obtenerTemas" />
   <xs:element name="obtenerTemasResponse" type="tns:obtenerTemasResponse" />
->>>>>>> Stashed changes
   <xs:complexType name="libroDTO">
     <xs:complexContent mixed="false">
       <xs:extension base="tns:materialDTO">
@@ -122,11 +107,7 @@
   </xs:complexType>
   <xs:complexType name="buscarPorBiblioteca">
     <xs:sequence>
-<<<<<<< Updated upstream
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-=======
       <xs:element minOccurs="0" name="biblioteca" type="xs:string" />
->>>>>>> Stashed changes
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="buscarPorBibliotecaResponse">
@@ -166,8 +147,6 @@
   <xs:complexType name="stackTraceElement" final="extension restriction">
     <xs:sequence />
   </xs:complexType>
-<<<<<<< Updated upstream
-=======
   <xs:complexType name="comprobarPorIdioma">
     <xs:sequence>
       <xs:element minOccurs="0" name="idioma" type="xs:string" />
@@ -243,7 +222,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
     </xs:sequence>
   </xs:complexType>
->>>>>>> Stashed changes
   <xs:complexType name="modificarMaterial">
     <xs:sequence>
       <xs:element minOccurs="0" name="material" type="tns:materialDTO" />
@@ -254,8 +232,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-<<<<<<< Updated upstream
-=======
   <xs:complexType name="comprobarPorBiblioteca">
     <xs:sequence>
       <xs:element minOccurs="0" name="biblioteca" type="xs:string" />
@@ -285,7 +261,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
->>>>>>> Stashed changes
   <xs:complexType name="listarTodosMateriales">
     <xs:sequence />
   </xs:complexType>
@@ -296,11 +271,7 @@
   </xs:complexType>
   <xs:complexType name="buscarPorTipoMaterial">
     <xs:sequence>
-<<<<<<< Updated upstream
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-=======
       <xs:element minOccurs="0" name="tipoMaterial" type="xs:string" />
->>>>>>> Stashed changes
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="buscarPorTipoMaterialResponse">
@@ -319,8 +290,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-<<<<<<< Updated upstream
-=======
   <xs:complexType name="obtenerMaterialPorId">
     <xs:sequence>
       <xs:element name="materialId" type="xs:int" />
@@ -362,18 +331,13 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
->>>>>>> Stashed changes
   <xs:complexType name="materialBusquedaAvanzada">
     <xs:sequence>
       <xs:element minOccurs="0" name="busquedaAvanzada" type="tns:materialDTO" />
       <xs:element minOccurs="0" name="biblioteca" type="tns:bibliotecaDTO" />
       <xs:element minOccurs="0" name="ejemplar" type="tns:ejemplarDTO" />
-<<<<<<< Updated upstream
-      <xs:element minOccurs="0" name="stringDato" type="xs:string" />
-=======
       <xs:element minOccurs="0" name="stringAnioDesde" type="xs:string" />
       <xs:element minOccurs="0" name="stringAnioHasta" type="xs:string" />
->>>>>>> Stashed changes
       <xs:element minOccurs="0" name="stringTipoMaterial" type="xs:string" />
       <xs:element minOccurs="0" name="stringDisponibilidad" type="xs:string" />
     </xs:sequence>
@@ -397,65 +361,6 @@
   </xs:complexType>
   <xs:complexType name="materialBusquedaAvanzadaResponse">
     <xs:sequence>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS1.xsd
->>>>>>> Stashed changes
-      <xs:element minOccurs="0" name="return" type="tns:materialDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerMaterialPorId">
-    <xs:sequence>
-      <xs:element name="materialId" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerMaterialPorIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:materialDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorAnio">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorAnioResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorIdioma">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorIdiomaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorDisponibilidad">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorDisponibilidadResponse">
-    <xs:sequence>
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/MaterialWS.xsd
->>>>>>> Stashed changes
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorAutor">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorAutorResponse">
-    <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
     </xs:sequence>
   </xs:complexType>
@@ -469,16 +374,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
     </xs:sequence>
   </xs:complexType>
-<<<<<<< Updated upstream
-  <xs:complexType name="buscarPorTema">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="autor" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="buscarPorTemaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:materialDTO" />
-=======
   <xs:complexType name="comprobarPorTema">
     <xs:sequence>
       <xs:element minOccurs="0" name="tema" type="xs:string" />
@@ -500,7 +395,6 @@
   <xs:complexType name="comprobarPorAnioResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:boolean" />
->>>>>>> Stashed changes
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerCopias">
@@ -513,8 +407,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-<<<<<<< Updated upstream
-=======
   <xs:complexType name="envioCorreos">
     <xs:sequence>
       <xs:element minOccurs="0" name="destino" type="xs:string" />
@@ -536,7 +428,6 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
->>>>>>> Stashed changes
   <xs:complexType name="insertarMaterial">
     <xs:sequence>
       <xs:element minOccurs="0" name="titulo" type="xs:string" />

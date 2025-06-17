@@ -18,24 +18,9 @@
   <xs:element name="obtenerCirculacionPorIdResponse" type="tns:obtenerCirculacionPorIdResponse" />
   <xs:element name="obtenerSancionAsociada" type="tns:obtenerSancionAsociada" />
   <xs:element name="obtenerSancionAsociadaResponse" type="tns:obtenerSancionAsociadaResponse" />
-  <xs:complexType name="obtenerSancionAsociada">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="circulacionId" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerSancionAsociadaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:sancionDTO" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="sancionDTO">
+  <xs:complexType name="modificarCirculacion">
     <xs:sequence>
       <xs:element minOccurs="0" name="circulacion" type="tns:circulacionDTO" />
-      <xs:element minOccurs="0" name="diasSancion" type="xs:int" />
-      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaTermino" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="observacion" type="xs:string" />
-      <xs:element minOccurs="0" name="sancionId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="circulacionDTO">
@@ -112,6 +97,11 @@
       <xs:element minOccurs="0" name="tipoUsuarioId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarCirculacionResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="SQLException">
     <xs:sequence>
       <xs:element minOccurs="0" name="SQLState" type="xs:string" />
@@ -144,14 +134,24 @@
   <xs:complexType name="stackTraceElement" final="extension restriction">
     <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="modificarCirculacion">
+  <xs:complexType name="obtenerSancionAsociada">
     <xs:sequence>
-      <xs:element minOccurs="0" name="circulacion" type="tns:circulacionDTO" />
+      <xs:element minOccurs="0" name="circulacionId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarCirculacionResponse">
+  <xs:complexType name="obtenerSancionAsociadaResponse">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element minOccurs="0" name="return" type="tns:sancionDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sancionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="circulacion" type="tns:circulacionDTO" />
+      <xs:element minOccurs="0" name="diasSancion" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaTermino" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="observacion" type="xs:string" />
+      <xs:element minOccurs="0" name="sancionId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerCirculacionPorId">

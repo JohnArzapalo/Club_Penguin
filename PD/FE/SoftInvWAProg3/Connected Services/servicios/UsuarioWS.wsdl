@@ -5,21 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/UsuarioWS?xsd=1" namespace="http://services.pucp.edu.pe" />
     </xsd:schema>
   </types>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
->>>>>>> Stashed changes
-  <message name="buscarUsuariosAvanzado">
-    <part name="parameters" element="tns:buscarUsuariosAvanzado" />
-  </message>
-  <message name="buscarUsuariosAvanzadoResponse">
-    <part name="parameters" element="tns:buscarUsuariosAvanzadoResponse" />
-  </message>
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
   <message name="obtenerUsuarioPorId">
     <part name="parameters" element="tns:obtenerUsuarioPorId" />
   </message>
@@ -28,31 +13,13 @@
   </message>
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
-========
   </message>
   <message name="buscarUsuariosAvanzado">
     <part name="parameters" element="tns:buscarUsuariosAvanzado" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
   </message>
-  <message name="insertarUsuario">
-    <part name="parameters" element="tns:insertarUsuario" />
+  <message name="buscarUsuariosAvanzadoResponse">
+    <part name="parameters" element="tns:buscarUsuariosAvanzadoResponse" />
   </message>
-  <message name="insertarUsuarioResponse">
-    <part name="parameters" element="tns:insertarUsuarioResponse" />
-  </message>
-  <message name="validarUsuario">
-    <part name="parameters" element="tns:validarUsuario" />
-  </message>
-  <message name="validarUsuarioResponse">
-    <part name="parameters" element="tns:validarUsuarioResponse" />
-  </message>
-<<<<<<< Updated upstream
-  <portType name="UsuarioWS">
-=======
   <message name="validarUsuario">
     <part name="parameters" element="tns:validarUsuario" />
   </message>
@@ -66,54 +33,20 @@
     <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
   <portType name="UsuarioWS">
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="buscarUsuariosAvanzado">
-      <input wsam:Action="http://services.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoRequest" message="tns:buscarUsuariosAvanzado" />
-      <output wsam:Action="http://services.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoResponse" message="tns:buscarUsuariosAvanzadoResponse" />
-    </operation>
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
     <operation name="obtenerUsuarioPorId">
       <input wsam:Action="http://services.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
       <output wsam:Action="http://services.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse" message="tns:obtenerUsuarioPorIdResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="insertarUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/UsuarioWS/insertarUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-========
     <operation name="buscarUsuariosAvanzado">
       <input wsam:Action="http://services.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoRequest" message="tns:buscarUsuariosAvanzado" />
       <output wsam:Action="http://services.pucp.edu.pe/UsuarioWS/buscarUsuariosAvanzadoResponse" message="tns:buscarUsuariosAvanzadoResponse" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
     </operation>
     <operation name="validarUsuario">
       <input wsam:Action="http://services.pucp.edu.pe/UsuarioWS/validarUsuarioRequest" message="tns:validarUsuario" />
       <output wsam:Action="http://services.pucp.edu.pe/UsuarioWS/validarUsuarioResponse" message="tns:validarUsuarioResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/UsuarioWS/validarUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-<<<<<<< Updated upstream
-  </portType>
-  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
-  </portType>
-  <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-========
     <operation name="insertarUsuario">
       <input wsam:Action="http://services.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
       <output wsam:Action="http://services.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
@@ -134,8 +67,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
     <operation name="buscarUsuariosAvanzado">
       <soap:operation soapAction="" />
       <input>
@@ -145,15 +76,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-<<<<<<< Updated upstream
-    <operation name="obtenerUsuarioPorId">
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
-    <operation name="obtenerUsuarioPorId">
-========
     <operation name="validarUsuario">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -177,27 +100,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="validarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/UsuarioWS.wsdl
->>>>>>> Stashed changes
   </binding>
   <service name="UsuarioWS">
     <port name="UsuarioWSPort" binding="tns:UsuarioWSPortBinding">

@@ -5,8 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftBibWS/CirculacionWS?xsd=1" namespace="http://services.pucp.edu.pe" />
     </xsd:schema>
   </types>
-<<<<<<< Updated upstream
-=======
   <message name="listarPrestamosPorUsuario">
     <part name="parameters" element="tns:listarPrestamosPorUsuario" />
   </message>
@@ -16,7 +14,6 @@
   <message name="SQLException">
     <part name="fault" element="tns:SQLException" />
   </message>
->>>>>>> Stashed changes
   <message name="buscarCirculacionesAvanzado">
     <part name="parameters" element="tns:buscarCirculacionesAvanzado" />
   </message>
@@ -26,58 +23,12 @@
   <message name="ParseException">
     <part name="fault" element="tns:ParseException" />
   </message>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
->>>>>>> Stashed changes
-  <message name="SQLException">
-    <part name="fault" element="tns:SQLException" />
-  </message>
-  <message name="eliminarCirculacion">
-    <part name="parameters" element="tns:eliminarCirculacion" />
-  </message>
-  <message name="eliminarCirculacionResponse">
-    <part name="parameters" element="tns:eliminarCirculacionResponse" />
-  </message>
-  <message name="insertarCirculacion">
-    <part name="parameters" element="tns:insertarCirculacion" />
-  </message>
-  <message name="insertarCirculacionResponse">
-    <part name="parameters" element="tns:insertarCirculacionResponse" />
-  </message>
-  <message name="obtenerSancionAsociada">
-    <part name="parameters" element="tns:obtenerSancionAsociada" />
-  </message>
-  <message name="obtenerSancionAsociadaResponse">
-    <part name="parameters" element="tns:obtenerSancionAsociadaResponse" />
-  </message>
-  <message name="listarPrestamosPorUsuario">
-    <part name="parameters" element="tns:listarPrestamosPorUsuario" />
-  </message>
-  <message name="listarPrestamosPorUsuarioResponse">
-    <part name="parameters" element="tns:listarPrestamosPorUsuarioResponse" />
-  </message>
-  <message name="obtenerCirculacionPorId">
-    <part name="parameters" element="tns:obtenerCirculacionPorId" />
-  </message>
-  <message name="obtenerCirculacionPorIdResponse">
-    <part name="parameters" element="tns:obtenerCirculacionPorIdResponse" />
-  </message>
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
   <message name="modificarCirculacion">
     <part name="parameters" element="tns:modificarCirculacion" />
   </message>
   <message name="modificarCirculacionResponse">
     <part name="parameters" element="tns:modificarCirculacionResponse" />
   </message>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
-========
   <message name="obtenerSancionAsociada">
     <part name="parameters" element="tns:obtenerSancionAsociada" />
   </message>
@@ -102,8 +53,6 @@
   <message name="eliminarCirculacionResponse">
     <part name="parameters" element="tns:eliminarCirculacionResponse" />
   </message>
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
   <message name="listarTodasCirculaciones">
     <part name="parameters" element="tns:listarTodasCirculaciones" />
   </message>
@@ -111,43 +60,6 @@
     <part name="parameters" element="tns:listarTodasCirculacionesResponse" />
   </message>
   <portType name="CirculacionWS">
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="buscarCirculacionesAvanzado">
-      <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoRequest" message="tns:buscarCirculacionesAvanzado" />
-      <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoResponse" message="tns:buscarCirculacionesAvanzadoResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/ParseException" name="ParseException" message="tns:ParseException" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="eliminarCirculacion">
-      <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/eliminarCirculacionRequest" message="tns:eliminarCirculacion" />
-      <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse" message="tns:eliminarCirculacionResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/eliminarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="insertarCirculacion">
-      <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/insertarCirculacionRequest" message="tns:insertarCirculacion" />
-      <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/insertarCirculacionResponse" message="tns:insertarCirculacionResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/insertarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="obtenerSancionAsociada">
-      <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerSancionAsociadaRequest" message="tns:obtenerSancionAsociada" />
-      <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerSancionAsociadaResponse" message="tns:obtenerSancionAsociadaResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerSancionAsociada/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="listarPrestamosPorUsuario">
-      <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest" message="tns:listarPrestamosPorUsuario" />
-      <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse" message="tns:listarPrestamosPorUsuarioResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuario/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-    </operation>
-    <operation name="obtenerCirculacionPorId">
-      <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdRequest" message="tns:obtenerCirculacionPorId" />
-      <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorIdResponse" message="tns:obtenerCirculacionPorIdResponse" />
-      <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerCirculacionPorId/Fault/SQLException" name="SQLException" message="tns:SQLException" />
-<<<<<<< Updated upstream
-=======
-========
     <operation name="listarPrestamosPorUsuario">
       <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioRequest" message="tns:listarPrestamosPorUsuario" />
       <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarPrestamosPorUsuarioResponse" message="tns:listarPrestamosPorUsuarioResponse" />
@@ -158,18 +70,12 @@
       <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzadoResponse" message="tns:buscarCirculacionesAvanzadoResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/ParseException" name="ParseException" message="tns:ParseException" />
       <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/buscarCirculacionesAvanzado/Fault/SQLException" name="SQLException" message="tns:SQLException" />
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
     </operation>
     <operation name="modificarCirculacion">
       <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/modificarCirculacionRequest" message="tns:modificarCirculacion" />
       <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/modificarCirculacionResponse" message="tns:modificarCirculacionResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/modificarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
-========
     <operation name="obtenerSancionAsociada">
       <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerSancionAsociadaRequest" message="tns:obtenerSancionAsociada" />
       <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/obtenerSancionAsociadaResponse" message="tns:obtenerSancionAsociadaResponse" />
@@ -190,8 +96,6 @@
       <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/eliminarCirculacionResponse" message="tns:eliminarCirculacionResponse" />
       <fault wsam:Action="http://services.pucp.edu.pe/CirculacionWS/eliminarCirculacion/Fault/SQLException" name="SQLException" message="tns:SQLException" />
     </operation>
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
     <operation name="listarTodasCirculaciones">
       <input wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarTodasCirculacionesRequest" message="tns:listarTodasCirculaciones" />
       <output wsam:Action="http://services.pucp.edu.pe/CirculacionWS/listarTodasCirculacionesResponse" message="tns:listarTodasCirculacionesResponse" />
@@ -200,8 +104,6 @@
   </portType>
   <binding name="CirculacionWSPortBinding" type="tns:CirculacionWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-<<<<<<< Updated upstream
-=======
     <operation name="listarPrestamosPorUsuario">
       <soap:operation soapAction="" />
       <input>
@@ -214,7 +116,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
->>>>>>> Stashed changes
     <operation name="buscarCirculacionesAvanzado">
       <soap:operation soapAction="" />
       <input>
@@ -230,12 +131,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-<<<<<<< Updated upstream
-    <operation name="eliminarCirculacion">
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
-    <operation name="eliminarCirculacion">
-========
     <operation name="modificarCirculacion">
       <soap:operation soapAction="" />
       <input>
@@ -249,8 +144,6 @@
       </fault>
     </operation>
     <operation name="obtenerSancionAsociada">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -274,39 +167,6 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-<<<<<<< Updated upstream
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
->>>>>>> Stashed changes
-    <operation name="obtenerSancionAsociada">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-    <operation name="listarPrestamosPorUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-      <fault name="SQLException">
-        <soap:fault use="literal" name="SQLException" namespace="" />
-      </fault>
-    </operation>
-<<<<<<< Updated upstream
-=======
-========
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
     <operation name="obtenerCirculacionPorId">
       <soap:operation soapAction="" />
       <input>
@@ -319,15 +179,7 @@
         <soap:fault use="literal" name="SQLException" namespace="" />
       </fault>
     </operation>
-<<<<<<< Updated upstream
-    <operation name="modificarCirculacion">
-=======
-<<<<<<<< Updated upstream:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS1.wsdl
-    <operation name="modificarCirculacion">
-========
     <operation name="eliminarCirculacion">
->>>>>>>> Stashed changes:PD/FE/SoftInvWAProg3/Connected Services/servicios/CirculacionWS.wsdl
->>>>>>> Stashed changes
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
